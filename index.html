@@ -445,6 +445,55 @@ function renderNewSections() {
   });
 }
 
+    async function loadSongIndex() {
+  const res = await fetch('data/songs/index.json');
+  if (!res.ok) {
+    throw new Error('Não foi possível carregar index.json');
+  }
+  return await res.json();
+}
+
+async function saveSongIndex(updatedIndex, token) {
+  const repo = 'jesus1977-dotcom/desensaio';
+  const path = 'data/songs/index.json';
+
+  // obter SHA actual
+  const getRes = await fetch(
+    `https://api.github.com/repos/${repo}/contents/${path}`,
+    {
+      headers: {
+        'Authorization': `token ${token}`
+      }
+    }
+  );
+
+  const getData = await getRes.json();
+  const sha = getData.sha;
+
+  const content = btoa(JSON.stringify(updatedIndex, null, 2));
+
+  const putRes = await fetch(
+    `https://api.github.com/repos/${repo}/contents/${path}`,
+    {
+      method: 'PUT',
+      headers: {
+        'Authorization': `token ${token}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        message: 'Actualizar index.json (nova música)',
+        content,
+        sha
+      })
+    }
+  );
+
+  if (!putRes.ok) {
+    const err = await putRes.json();
+    throw err;
+  }
+}
+
 async function saveNewSong() {
   const token = localStorage.getItem('githubToken');
   if (!token) {
@@ -510,8 +559,32 @@ const song = {
 
   alert('Música criada com sucesso!');
 
-  // === 4. Abrir a música criada ===
-  window.location.href = `index.html?song=${slug}.json`;
+// === 4. Actualizar index.json ===
+try {
+  const index = await loadSongIndex();
+
+  index.push({
+    file: `${slug}.json`,
+    artist,
+    title,
+    genre: genre || null,
+    decade: decade || null,
+    plays: 0,
+    added: new Date().toISOString().slice(0, 10)
+  });
+
+  await saveSongIndex(index, token);
+} catch (e) {
+  alert('Música criada, mas erro ao actualizar index.json.');
+  console.error(e);
+  return;
+}
+
+alert('Música criada e index actualizado com sucesso!');
+
+// === 5. Abrir a música criada ===
+window.location.href = `index.html?song=${slug}.json`;
+
 }
 
 
