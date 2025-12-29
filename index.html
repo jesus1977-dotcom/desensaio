@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Música – Ensaio</title>
+
+ <style>
+  /* ===== BASE ===== */
+  body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #eee;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+  }
+
+  button {
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px 14px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  /* ===== SIDEBAR ESQUERDA ===== */
+  #sidebar {
+    width: 220px;
+    position: sticky;
+    top: 20px;
+    height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  #sections {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 15px;
+  }
+
+  /* ===== BOTÕES DE SECÇÃO (AZUL PETRÓLEO) ===== */
+  #sections button {
+    width: 100%;
+    margin-bottom: 8px;
+    background: #0f2a33;           /* azul petróleo escuro */
+    color: #ffffff;
+    border: 1px solid #ff8c1a;     /* laranja fino */
+    text-align: center;
+  }
+
+  #sections button:hover {
+    background: #17414f;
+    box-shadow: 0 0 12px rgba(255, 140, 26, 0.6);
+    transform: translateY(-1px);
+  }
+
+  /* ===== CONTROLOS AUTOSCROLL (VERDE AZEITONA) ===== */
+  #controls {
+    border-top: 1px solid #333;
+    padding-top: 10px;
+  }
+
+  #controls button {
+    width: 100%;
+    margin-bottom: 8px;
+    background: #556b2f;           /* verde azeitona */
+    color: #ffffff;
+    border: 1px solid #c7d36f;
+    text-align: center;
+  }
+
+  #controls button:hover {
+    background: #6b8e23;
+    box-shadow: 0 0 12px rgba(199, 211, 111, 0.7);
+    transform: translateY(-1px);
+  }
+
+  /* ===== SLIDER DE VELOCIDADE (ELEGANTE) ===== */
+  #controls input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #6b8e23, #c7d36f);
+    outline: none;
+    margin-top: 8px;
+  }
+
+  #controls input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid #556b2f;
+    cursor: pointer;
+  }
+
+  #controls input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid #556b2f;
+    cursor: pointer;
+  }
+
+  /* ===== BOTÃO EDITAR ===== */
+  #editBtn {
+    background: #333;
+    border: 1px solid #ff8c1a;
+    color: #ffffff;
+  }
+
+  #editBtn:hover {
+    background: #444;
+    box-shadow: 0 0 10px rgba(255, 140, 26, 0.6);
+  }
+
+  /* ===== CONTEÚDO DA MÚSICA ===== */
+  #content {
+    flex: 1;
+    padding-left: 30px;
+    max-width: 900px;
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+
+  .meta {
+    color: #aaa;
+    margin-bottom: 20px;
+  }
+
+  .section {
+    margin-bottom: 40px;
+  }
+
+  .section h2 {
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+
+  pre {
+    font-family: monospace;
+    font-size: 20px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+  }
+
+  .tab {
+    background: #222;
+    padding: 10px;
+  }
+</style>
+
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div id="sidebar">
+    <div id="sections"></div>
+<div style="margin-bottom:8px; font-size:13px; color:#aaa;">
+  Autoscroll
+</div>
+
+    <div id="controls">
+      <button id="scrollBtn" onclick="toggleScroll()">Play</button>
+
+
+      <div style="margin-top:10px;">
+        Velocidade
+        <input type="range" min="1" max="10" value="3" id="speed">
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTEÚDO -->
+  <div id="content">
+    <h1>
+      <span id="titleText"></span>
+      <button id="editBtn" onclick="toggleEdit()" style="margin-left:20px;">
+        ✏️ Editar
+      </button>
+    </h1>
+
+    <div class="meta" id="meta"></div>
+
+    <div id="music"></div>
+  </div>
+
+  <!-- MODO CRIAÇÃO -->
+<div id="createMode" style="display:none; margin-bottom:30px;">
+
+  <h2>➕ Nova música</h2>
+
+  <div style="margin-bottom:10px;">
+    <label>Artista</label><br>
+    <input id="newArtist" type="text" style="width:100%; padding:8px;">
+  </div>
+
+  <div style="margin-bottom:10px;">
+    <label>Título</label><br>
+    <input id="newTitle" type="text" style="width:100%; padding:8px;">
+  </div>
+
+  <div style="margin-bottom:10px;">
+    <label>Género</label><br>
+    <input id="newGenre" type="text" style="width:100%; padding:8px;">
+  </div>
+
+  <div style="margin-bottom:10px;">
+    <label>Década</label><br>
+    <input id="newDecade" type="text" style="width:100%; padding:8px;">
+  </div>
+
+  <div style="margin-bottom:10px;">
+    <label>Colar música (texto bruto)</label><br>
+    <textarea id="rawText" rows="10" style="width:100%; padding:10px;"></textarea>
+  </div>
+
+  <button onclick="createSectionsFromText()">✂️ Criar secções</button>
+
+  <button onclick="saveNewSong()" style="margin-left:10px;">
+  💾 Guardar música
+</button>
+
+  <hr style="margin:30px 0; border-color:#333;">
+</div>
+
+  <!-- SCRIPT ÚNICO -->
+  <script>
+/* ===== AUTOSCROLL ===== */
+let scrollInterval = null;
+let scrolling = false;
+
+function toggleScroll() {
+  if (scrolling) {
+    stopScroll();
+  } else {
+    startScroll();
+  }
+}
+
+function startScroll() {
+  scrollInterval = setInterval(() => {
+    const speed = Number(document.getElementById('speed').value);
+    window.scrollBy(0, speed);
+  }, 50);
+
+  scrolling = true;
+  document.getElementById('scrollBtn').innerText = 'Stop';
+}
+
+function stopScroll() {
+  clearInterval(scrollInterval);
+  scrollInterval = null;
+  scrolling = false;
+  document.getElementById('scrollBtn').innerText = 'Play';
+}
+
+
+function toggleScroll() {
+  if (scrolling) {
+    stopScroll();
+  } else {
+    startScroll();
+  }
+}
+
+function startScroll() {
+  scrollInterval = setInterval(() => {
+    const speed = document.getElementById('speed').value;
+    window.scrollBy(0, speed);
+  }, 50);
+
+  scrolling = true;
+  document.getElementById('scrollBtn').innerText = 'Stop';
+}
+
+function stopScroll() {
+  clearInterval(scrollInterval);
+  scrollInterval = null;
+  scrolling = false;
+  document.getElementById('scrollBtn').innerText = 'Play';
+}
+
+    /* ===== EDITAR ===== */
+    let editMode = false;
+
+// ===== ESTADO DA NOVA MÚSICA =====
+let newSections = [];
+
+    function toggleEdit() {
+      editMode = !editMode;
+
+      document.querySelectorAll('pre').forEach(pre => {
+        pre.contentEditable = editMode;
+        pre.style.border = editMode ? '1px dashed #666' : 'none';
+        pre.style.background = editMode ? '#1a1a1a' : '';
+      });
+
+      document.getElementById('editBtn').innerText =
+        editMode ? '💾 Terminar edição' : '✏️ Editar';
+    }
+
+// ===== PARÂMETROS DO URL =====
+const params = new URLSearchParams(window.location.search);
+const fileParam = params.get('file');
+const isNewSong = params.has('new');
+if (isNewSong) {
+  document.getElementById('createMode').style.display = 'block';
+}
+
+    /* ===== CARREGAR MÚSICA ===== */
+
+// CASO: NOVA MÚSICA
+if (isNewSong) {
+  document.getElementById('titleText').innerText = 'Nova música';
+  document.getElementById('meta').innerText = 'Modo criação';
+
+  document.getElementById('sections').innerHTML = '';
+  document.getElementById('music').innerHTML = '';
+
+} 
+// CASO: MÚSICA EXISTENTE
+else {
+  const fileToLoad = fileParam || 'data/songs/karma-police.json';
+
+  fetch('data/songs/' + fileToLoad)
+    .then(res => res.json())
+    .then(song => {
+      document.getElementById('titleText').innerText =
+        song.meta.artist + ' – ' + song.meta.title;
+
+      document.getElementById('meta').innerText =
+        `Álbum: ${song.meta.album || '-'} | Ano: ${song.meta.year} | Tom: ${song.meta.key}`;
+
+      const sectionsDiv = document.getElementById('sections');
+      const musicDiv = document.getElementById('music');
+
+      sectionsDiv.innerHTML = '';
+      musicDiv.innerHTML = '';
+
+      song.sections.forEach(section => {
+        const btn = document.createElement('button');
+        btn.innerText = section.label;
+        btn.onclick = () => {
+          document.getElementById(section.id).scrollIntoView({ behavior: 'smooth' });
+        };
+        sectionsDiv.appendChild(btn);
+
+        const secDiv = document.createElement('div');
+        secDiv.className = 'section';
+        secDiv.id = section.id;
+
+        const h2 = document.createElement('h2');
+        h2.innerText = section.label;
+        secDiv.appendChild(h2);
+
+        const pre = document.createElement('pre');
+        pre.innerText = section.content.join('\n');
+        pre.contentEditable = editMode;
+
+        if (section.type === 'tab') {
+          pre.classList.add('tab');
+        }
+
+        secDiv.appendChild(pre);
+        musicDiv.appendChild(secDiv);
+      });
+    })
+    .catch(err => {
+      document.getElementById('music').innerText =
+        'Erro a carregar a música.';
+      console.error(err);
+    });
+}
+
+function createSectionsFromText() {
+  const raw = document.getElementById('rawText').value.trim();
+  if (!raw) {
+    alert('Cola primeiro o texto da música.');
+    return;
+  }
+
+  // dividir por blocos (linhas vazias)
+  const blocks = raw.split(/\n\s*\n/);
+
+  newSections = blocks.map((block, index) => ({
+    id: 'sec-' + Date.now() + '-' + index,
+    label: 'Secção ' + (index + 1),
+    type: 'lyrics_chords',
+    content: block.split('\n')
+  }));
+
+  renderNewSections();
+}
+
+function renderNewSections() {
+  const sectionsDiv = document.getElementById('sections');
+  const musicDiv = document.getElementById('music');
+
+  sectionsDiv.innerHTML = '';
+  musicDiv.innerHTML = '';
+
+  newSections.forEach((section, index) => {
+    // BOTÃO SIDEBAR
+    const btn = document.createElement('button');
+    btn.innerText = section.label;
+    btn.onclick = () => {
+      document.getElementById(section.id).scrollIntoView({ behavior: 'smooth' });
+    };
+    sectionsDiv.appendChild(btn);
+
+    // BLOCO DA SECÇÃO
+    const secDiv = document.createElement('div');
+    secDiv.className = 'section';
+    secDiv.id = section.id;
+
+    // TÍTULO EDITÁVEL
+    const h2 = document.createElement('h2');
+    h2.contentEditable = true;
+    h2.innerText = section.label;
+    h2.onblur = () => {
+      section.label = h2.innerText.trim() || section.label;
+      renderNewSections();
+    };
+    secDiv.appendChild(h2);
+
+    // BOTÃO APAGAR
+    const delBtn = document.createElement('button');
+    delBtn.innerText = '🗑 Apagar secção';
+    delBtn.style.marginBottom = '10px';
+    delBtn.onclick = () => {
+      if (confirm('Apagar esta secção?')) {
+        newSections.splice(index, 1);
+        renderNewSections();
+      }
+    };
+    secDiv.appendChild(delBtn);
+
+    // CONTEÚDO EDITÁVEL
+    const pre = document.createElement('pre');
+    pre.contentEditable = true;
+    pre.innerText = section.content.join('\n');
+    pre.onblur = () => {
+      section.content = pre.innerText.split('\n');
+    };
+    secDiv.appendChild(pre);
+
+    musicDiv.appendChild(secDiv);
+  });
+}
+
+function saveNewSong() {
+  if (newSections.length === 0) {
+    alert('Cria primeiro as secções.');
+    return;
+  }
+
+  const artist = document.getElementById('newArtist').value.trim();
+  const title = document.getElementById('newTitle').value.trim();
+  const genre = document.getElementById('newGenre').value.trim();
+  const decade = document.getElementById('newDecade').value.trim();
+
+  if (!artist || !title) {
+    alert('Artista e título são obrigatórios.');
+    return;
+  }
+
+  const slug = title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+
+  const songJson = {
+    meta: {
+      artist,
+      title,
+      genre,
+      decade
+    },
+    sections: newSections.map(s => ({
+      id: s.id,
+      label: s.label,
+      type: s.type,
+      content: s.content
+    }))
+  };
+
+  const indexEntry = {
+    file: slug + '.json',
+    artist,
+    title,
+    genre,
+    decade,
+    plays: 0,
+    added: new Date().toISOString().slice(0, 10)
+  };
+
+  showOutput(songJson, indexEntry);
+}
+
+function showOutput(songJson, indexEntry) {
+  const output = document.createElement('div');
+  output.style.background = '#111';
+  output.style.border = '1px solid #333';
+  output.style.padding = '20px';
+  output.style.marginTop = '30px';
+
+  output.innerHTML = `
+    <h3>📄 Ficheiro da música (guardar em data/songs/${indexEntry.file})</h3>
+    <pre>${JSON.stringify(songJson, null, 2)}</pre>
+
+    <h3>📚 Linha para index.json</h3>
+    <pre>${JSON.stringify(indexEntry, null, 2)}</pre>
+  `;
+
+  document.getElementById('content').appendChild(output);
+}
+
+  </script>
+
+</body>
+</html>

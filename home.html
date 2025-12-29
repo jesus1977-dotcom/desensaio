@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Repertório – Ensaio</title>
+
+  <style>
+    body {
+      background: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 30px;
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    .card button {
+      width: 100%;
+      margin-bottom: 8px;
+      padding: 10px;
+      border-radius: 20px;
+      border: none;
+      background: #0f2a33;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background: #17414f;
+    }
+
+    .primary {
+      background: #ff8c1a !important;
+      color: #000 !important;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🎸 Repertório de Ensaio</h1>
+
+<div class="grid">
+
+  <!-- ALEATÓRIO -->
+  <div class="card">
+    <h2>🎲 Aleatório</h2>
+    <button class="primary" onclick="openRandom()">Tocar surpresa</button>
+  </div>
+
+  <!-- NOVA MÚSICA -->
+  <div class="card">
+    <h2>➕ Nova música</h2>
+    <button onclick="openNew()">Adicionar nova música</button>
+  </div>
+
+  <!-- MAIS TOCADAS -->
+  <div class="card">
+    <h2>🔥 Mais tocadas</h2>
+    <div id="mostPlayed"></div>
+  </div>
+
+  <!-- ALFABETO -->
+  <div class="card">
+    <h2>🔤 Alfabeto</h2>
+    <div id="alphabet"></div>
+  </div>
+
+  <!-- GÉNERO -->
+  <div class="card">
+    <h2>🎸 Género</h2>
+    <div id="genres"></div>
+  </div>
+
+  <!-- DÉCADA -->
+  <div class="card">
+    <h2>📅 Década</h2>
+    <div id="decades"></div>
+  </div>
+
+  <!-- RECENTES -->
+  <div class="card">
+    <h2>🆕 Adições recentes</h2>
+    <div id="recent"></div>
+  </div>
+
+</div>
+
+<script>
+fetch('data/songs/index.json')
+  .then(r => r.json())
+  .then(songs => {
+
+    // 🔥 Mais tocadas
+    songs
+      .slice()
+      .sort((a,b) => (b.plays || 0) - (a.plays || 0))
+      .slice(0,6)
+      .forEach(s => addButton('mostPlayed', s));
+
+    // 🔤 Alfabeto
+    [...new Set(songs.map(s => s.title[0].toUpperCase()))]
+      .sort()
+      .forEach(letter => {
+        addFilter('alphabet', letter, s => s.title[0].toUpperCase() === letter);
+      });
+
+    // 🎸 Género
+    [...new Set(songs.map(s => s.genre))]
+      .sort()
+      .forEach(g => {
+        addFilter('genres', g, s => s.genre === g);
+      });
+
+    // 📅 Década
+    [...new Set(songs.map(s => s.decade))]
+      .sort()
+      .forEach(d => {
+        addFilter('decades', d, s => s.decade === d);
+      });
+
+    // 🆕 Recentes
+    songs
+      .slice()
+      .sort((a,b) => new Date(b.added) - new Date(a.added))
+      .slice(0,6)
+      .forEach(s => addButton('recent', s));
+
+    function addButton(targetId, song) {
+      const btn = document.createElement('button');
+      btn.innerText = song.artist + ' – ' + song.title;
+      btn.onclick = () => {
+        window.location = 'index.html?file=' + song.file;
+      };
+      document.getElementById(targetId).appendChild(btn);
+    }
+
+    function addFilter(targetId, label, predicate) {
+      const btn = document.createElement('button');
+      btn.innerText = label;
+      btn.onclick = () => {
+        const song = songs.find(predicate);
+        if (song) {
+          window.location = 'index.html?file=' + song.file;
+        }
+      };
+      document.getElementById(targetId).appendChild(btn);
+    }
+
+    window.openRandom = function() {
+      const s = songs[Math.floor(Math.random() * songs.length)];
+      window.location = 'index.html?file=' + s.file;
+    };
+
+    window.openNew = function() {
+      window.location = 'index.html?new=1';
+    };
+  });
+</script>
+
+</body>
+</html>
