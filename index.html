@@ -275,32 +275,6 @@ function stopScroll() {
   document.getElementById('scrollBtn').innerText = 'Play';
 }
 
-
-function toggleScroll() {
-  if (scrolling) {
-    stopScroll();
-  } else {
-    startScroll();
-  }
-}
-
-function startScroll() {
-  scrollInterval = setInterval(() => {
-    const speed = document.getElementById('speed').value;
-    window.scrollBy(0, speed);
-  }, 50);
-
-  scrolling = true;
-  document.getElementById('scrollBtn').innerText = 'Stop';
-}
-
-function stopScroll() {
-  clearInterval(scrollInterval);
-  scrollInterval = null;
-  scrolling = false;
-  document.getElementById('scrollBtn').innerText = 'Play';
-}
-
     /* ===== EDITAR ===== */
     let editMode = false;
 
@@ -322,7 +296,8 @@ let newSections = [];
 
 // ===== PARÂMETROS DO URL =====
 const params = new URLSearchParams(window.location.search);
-const fileParam = params.get('file');
+const fileParam = params.get('song');
+
 const isNewSong = params.has('new');
 if (isNewSong) {
   document.getElementById('createMode').style.display = 'block';
@@ -341,9 +316,10 @@ if (isNewSong) {
 } 
 // CASO: MÚSICA EXISTENTE
 else {
-  const fileToLoad = fileParam || 'data/songs/karma-police.json';
+  const fileToLoad = fileParam || 'karma-police.json';
 
-  fetch('data/songs/' + fileToLoad)
+fetch(`data/songs/${fileToLoad}`)
+
     .then(res => res.json())
     .then(song => {
       document.getElementById('titleText').innerText =
