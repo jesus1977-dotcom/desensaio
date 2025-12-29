@@ -452,14 +452,15 @@ async function saveNewSong() {
     return;
   }
 
-  // === 1. Recolher dados básicos ===
-  const artist = prompt('Artista?');
-  const title = prompt('Título da música?');
+const artist = document.getElementById('newArtist').value.trim();
+const title = document.getElementById('newTitle').value.trim();
+const genre = document.getElementById('newGenre').value.trim();
+const decade = document.getElementById('newDecade').value.trim();
 
-  if (!artist || !title) {
-    alert('Artista e título são obrigatórios.');
-    return;
-  }
+if (!artist || !title) {
+  alert('Artista e título são obrigatórios.');
+  return;
+}
 
   const slug = `${artist}-${title}`
     .toLowerCase()
@@ -467,13 +468,16 @@ async function saveNewSong() {
     .replace(/(^-|-$)/g, '');
 
   // === 2. Estrutura mínima da música ===
-  const song = {
-    meta: {
-      artist,
-      title
-    },
-    sections: []
-  };
+const song = {
+  meta: {
+    artist,
+    title,
+    genre: genre || null,
+    decade: decade || null
+  },
+  sections: newSections || []
+};
+
 
   const content = btoa(JSON.stringify(song, null, 2));
 
