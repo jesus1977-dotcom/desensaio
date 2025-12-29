@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "artist": "GNR",
+    "title": "Vídeo Maria",
+    "genre": "Rock Português",
+    "decade": "1980"
+  },
+  "sections": [
+    {
+      "id": "sec-1766973532200-0",
+      "label": "Intro",
+      "type": "lyrics_chords",
+      "content": [
+        "Tom: C",
+        "[Intro] Am  Dm A  G  F  G"
+      ]
+    },
+    {
+      "id": "sec-1766973532200-1",
+      "label": "Verse 1",
+      "type": "lyrics_chords",
+      "content": [
+        "F                                      G",
+        "Tarde de chuva, a península inteira a chorar",
+        "F",
+        "Entro numa igreja fria como",
+        "             G",
+        "Um círio cintilante",
+        "F                                     G",
+        "Sentada, imóvel, fumando em frente ao altar",
+        "F",
+        "Silhueta, um esboço",
+        "                      G",
+        "A esfinge de um anjo fumegante"
+      ]
+    },
+    {
+      "id": "sec-1766973532200-2",
+      "label": "Instrumental 1",
+      "type": "lyrics_chords",
+      "content": [
+        "( A  G  F  G ) ",
+        "( A  G  F  G ) "
+      ]
+    },
+    {
+      "id": "sec-1766973532200-3",
+      "label": "Verse 2",
+      "type": "lyrics_chords",
+      "content": [
+        "F                              G",
+        "Há em mim um profano desejo a crescer",
+        "F                                 G",
+        "Sinto a língua morta e o latim vai mudar",
+        "F                                G",
+        "Os santos do altar devem tentar compreender",
+        "F",
+        "O que ela faz aqui fumando?",
+        "G",
+        "Estará a meditar?"
+      ]
+    },
+    {
+      "id": "sec-1766973532200-4",
+      "label": "Instrumental 2",
+      "type": "lyrics_chords",
+      "content": [
+        "( A  G  F  G ) ",
+        "( A  G  F  G ) "
+      ]
+    },
+    {
+      "id": "sec-1766973532200-5",
+      "label": "Chorus 1",
+      "type": "lyrics_chords",
+      "content": [
+        "Dm  C   Bm E   Am",
+        "Ai, ui,        atirem-me água benta",
+        "Dm                    C",
+        "Ajoelho-me, benzo-me, arrependo-me",
+        "             Bm E  Am",
+        "Esconjuro-a        atirem-me água fria",
+        "Dm                     C            E",
+        "Por ela assalto a caixa de esmolas",
+        "Am",
+        "Atirem-me água benta",
+        "Dm                      C            E",
+        "Com ela eu desço ao inferno de Dante",
+        "Am",
+        "Atirem-me água fria"
+      ]
+    },
+    {
+      "id": "sec-1766973532200-6",
+      "label": "Instrumental 3",
+      "type": "lyrics_chords",
+      "content": [
+        "( F  G )"
+      ]
+    },
+    {
+      "id": "sec-1766973532200-7",
+      "label": "Chorus 2",
+      "type": "lyrics_chords",
+      "content": [
+        "Dm  C  E  Am",
+        "Ai, ui,   atirem-me água benta",
+        "Dm                       C          E",
+        "Por ela assalto a caixa de esmolas",
+        "Am",
+        "Atirem-me água fria",
+        "Dm                 C            E",
+        "Por parecer latina calculo que o nome dela",
+        "Am",
+        "É Maria",
+        "Dm                        C             E",
+        "É casta, eu sei, se é virgem ou não depende",
+        " Am",
+        "Da vossa fantasia",
+        "Dm                  C            E",
+        "Por parecer latina suponho que o nome dela",
+        "Am",
+        "É Maria",
+        "Dm                     C                E",
+        "É casta, eu sei, se é virgem ou não depende",
+        "Am",
+        "Da vossa fantasia"
+      ]
+    }
+  ]
+}
