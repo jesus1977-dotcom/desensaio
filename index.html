@@ -241,6 +241,10 @@
   <button onclick="saveToken()">Guardar token</button>
 </div>
 
+  <button onclick="testGitHubWrite()" style="margin-top:10px;">
+  🧪 Testar escrita no GitHub
+</button>
+
   <hr style="margin:30px 0; border-color:#333;">
 </div>
 
@@ -545,6 +549,45 @@ function showOutput(songJson, indexEntry) {
 
   localStorage.setItem('githubToken', token);
   alert('Token guardado no browser.');
+}
+
+    async function testGitHubWrite() {
+  const token = localStorage.getItem('githubToken');
+  if (!token) {
+    alert('Token não encontrado.');
+    return;
+  }
+
+  const repo = 'jesus1977-dotcom/desensaio';
+  const path = 'data/teste-api.txt';
+  const message = 'Teste de escrita via GitHub API';
+
+  const content = btoa('Isto é um teste.\nTudo OK.');
+
+  const res = await fetch(
+    `https://api.github.com/repos/${repo}/contents/${path}`,
+    {
+      method: 'PUT',
+      headers: {
+        'Authorization': `token ${token}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        message,
+        content
+      })
+    }
+  );
+
+  const data = await res.json();
+
+  if (res.ok) {
+    alert('Ficheiro criado com sucesso no GitHub!');
+    console.log(data);
+  } else {
+    alert('Erro ao escrever no GitHub. Ver console.');
+    console.error(data);
+  }
 }
 
   </script>
