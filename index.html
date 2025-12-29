@@ -230,7 +230,7 @@
   💾 Guardar música
 </button>
 
-  <div style="margin-top:20px;">
+  <div id="tokenSetup" style="margin-top:20px; display:none;">
   <label>GitHub Token (uma vez)</label><br>
   <input
     id="githubToken"
@@ -240,10 +240,6 @@
   >
   <button onclick="saveToken()">Guardar token</button>
 </div>
-
-  <button onclick="testGitHubWrite()" style="margin-top:10px;">
-  🧪 Testar escrita no GitHub
-</button>
 
   <hr style="margin:30px 0; border-color:#333;">
 </div>
@@ -473,54 +469,71 @@ function renderNewSections() {
   });
 }
 
-function saveNewSong() {
-  if (newSections.length === 0) {
-    alert('Cria primeiro as secções.');
+async function saveNewSong() {
+  const token = localStorage.getItem('githubToken');
+  if (!token) {
+    alert('Token do GitHub não encontrado.');
     return;
   }
 
-  const artist = document.getElementById('newArtist').value.trim();
-  const title = document.getElementById('newTitle').value.trim();
-  const genre = document.getElementById('newGenre').value.trim();
-  const decade = document.getElementById('newDecade').value.trim();
+  // === 1. Recolher dados básicos ===
+  const artist = prompt('Artista?');
+  const title = prompt('Título da música?');
 
   if (!artist || !title) {
     alert('Artista e título são obrigatórios.');
     return;
   }
 
-  const slug = title
+  const slug = `${artist}-${title}`
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');
 
-  const songJson = {
+  // === 2. Estrutura mínima da música ===
+  const song = {
     meta: {
       artist,
-      title,
-      genre,
-      decade
+      title
     },
-    sections: newSections.map(s => ({
-      id: s.id,
-      label: s.label,
-      type: s.type,
-      content: s.content
-    }))
+    sections: []
   };
 
-  const indexEntry = {
-    file: slug + '.json',
-    artist,
-    title,
-    genre,
-    decade,
-    plays: 0,
-    added: new Date().toISOString().slice(0, 10)
-  };
+  const content = btoa(JSON.stringify(song, null, 2));
 
-  showOutput(songJson, indexEntry);
+  const repo = 'jesus1977-dotcom/desensaio';
+  const path = `data/songs/${slug}.json`;
+
+  // === 3. Commit no GitHub ===
+  const res = await fetch(
+    `https://api.github.com/repos/${repo}/contents/${path}`,
+    {
+      method: 'PUT',
+      headers: {
+        'Authorization': `token ${token}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        message: `Criar música ${artist} – ${title}`,
+        content
+      })
+    }
+  );
+
+  const data = await res.json();
+
+  if (!res.ok) {
+    alert('Erro ao criar ficheiro.');
+    console.error(data);
+    return;
+  }
+
+  alert('Música criada com sucesso!');
+
+  // === 4. Abrir a música criada ===
+  window.location.href = `index.html?song=${slug}.json`;
 }
+
 
 function showOutput(songJson, indexEntry) {
   const output = document.createElement('div');
@@ -589,6 +602,13 @@ function showOutput(songJson, indexEntry) {
     console.error(data);
   }
 }
+
+    document.addEventListener('DOMContentLoaded', () => {
+  const hasToken = localStorage.getItem('githubToken');
+  if (!hasToken) {
+    document.getElementById('tokenSetup').style.display = 'block';
+  }
+});
 
   </script>
 
