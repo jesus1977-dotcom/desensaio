@@ -445,13 +445,30 @@ function renderNewSections() {
   });
 }
 
-    async function loadSongIndex() {
-  const res = await fetch('data/songs/index.json');
+async function loadSongIndex(token) {
+  const repo = 'jesus1977-dotcom/desensaio';
+  const path = 'data/songs/index.json';
+
+  const res = await fetch(
+    `https://api.github.com/repos/${repo}/contents/${path}`,
+    {
+      headers: {
+        'Authorization': `token ${token}`
+      }
+    }
+  );
+
   if (!res.ok) {
-    throw new Error('Não foi possível carregar index.json');
+    const err = await res.json();
+    throw err;
   }
-  return await res.json();
+
+  const data = await res.json();
+  const content = atob(data.content);
+
+  return JSON.parse(content);
 }
+
 
 async function saveSongIndex(updatedIndex, token) {
   const repo = 'jesus1977-dotcom/desensaio';
@@ -561,7 +578,8 @@ const song = {
 
 // === 4. Actualizar index.json ===
 try {
-  const index = await loadSongIndex();
+  const index = await loadSongIndex(token);
+
 
   index.push({
     file: `${slug}.json`,
