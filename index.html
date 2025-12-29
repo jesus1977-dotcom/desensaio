@@ -230,6 +230,17 @@
   💾 Guardar música
 </button>
 
+  <div style="margin-top:20px;">
+  <label>GitHub Token (uma vez)</label><br>
+  <input
+    id="githubToken"
+    type="password"
+    placeholder="ghp_..."
+    style="width:100%; padding:8px;"
+  >
+  <button onclick="saveToken()">Guardar token</button>
+</div>
+
   <hr style="margin:30px 0; border-color:#333;">
 </div>
 
@@ -523,6 +534,17 @@ function showOutput(songJson, indexEntry) {
   `;
 
   document.getElementById('content').appendChild(output);
+}
+
+    function saveToken() {
+  const token = document.getElementById('githubToken').value.trim();
+  if (!token) {
+    alert('Token vazio.');
+    return;
+  }
+
+  localStorage.setItem('githubToken', token);
+  alert('Token guardado no browser.');
 }
 
   </script>
