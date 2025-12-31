@@ -113,19 +113,24 @@
       font-weight: bold;
     }
 
-    /* 🧩 Card Alfabeto – alinhamento interno */
+ /* =========================
+   ALFABETO EM GRID
+========================= */
+
 #alphabet {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
 }
 
-/* 🔤 Botões do alfabeto / pesquisa */
+/* Botões das letras */
 #alphabet button {
-  width: 100%;
-  box-sizing: border-box;
+  padding: 6px 0;
+  font-size: 13px;
+  border-radius: 10px;
   text-align: center;
 }
+
 
 /* 🔍 Campo de pesquisa */
 #artistSearch {
