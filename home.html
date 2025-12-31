@@ -121,12 +121,12 @@ fetch('data/songs/index.json')
       .slice(0,6)
       .forEach(s => addButton('mostPlayed', s));
 
-    // 🔤 Alfabeto
-    [...new Set(songs.map(s => s.title[0].toUpperCase()))]
-      .sort()
-      .forEach(letter => {
-        addFilter('alphabet', letter, s => s.title[0].toUpperCase() === letter);
-      });
+  // 🔤 Alfabeto (por ARTISTA)
+[...new Set(songs.map(s => s.artist[0].toUpperCase()))]
+  .sort()
+  .forEach(letter => {
+    addFilter('alphabet', letter, s => s.artist[0].toUpperCase() === letter);
+  });
 
     // 🎸 Género
     [...new Set(songs.map(s => s.genre))]
