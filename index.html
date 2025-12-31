@@ -606,6 +606,9 @@ function saveToken() {
  async function saveNewSong() {
   try {
 
+    const btn = document.getElementById('saveBtn');
+if (btn) btn.disabled = true;
+
     // 1. VALIDAR
     const artist = document.getElementById('newArtist').value.trim();
     const title  = document.getElementById('newTitle').value.trim();
@@ -668,6 +671,7 @@ function saveToken() {
 
   } catch (err) {
     console.error(err);
+    if (btn) btn.disabled = false;
     alert('Erro ao gravar no GitHub.\n' + err.message);
   }
 }
