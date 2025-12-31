@@ -625,23 +625,36 @@ function renderNewSections() {
 
     /* ---------- DROPDOWN DE SECÇÃO (SEM TÍTULO EDITÁVEL) ---------- */
 
-    const select = document.createElement('select');
-    SECTION_BASES.forEach(base => {
-      const opt = document.createElement('option');
-      opt.value = base;
-      opt.innerText = base;
-      select.appendChild(opt);
-    });
+  const select = document.createElement('select');
+
+/* opção neutra (default) */
+const placeholder = document.createElement('option');
+placeholder.value = '';
+placeholder.innerText = '— seleccionar —';
+placeholder.disabled = true;
+placeholder.selected = true;
+select.appendChild(placeholder);
+
+/* opções reais */
+SECTION_BASES.forEach(base => {
+  const opt = document.createElement('option');
+  opt.value = base;
+  opt.innerText = base;
+  select.appendChild(opt);
+});
+
 
     const h2 = document.createElement('h2');
     h2.innerText = section.label;
 
-    select.onchange = () => {
-      const label = nextLabel(select.value);
-      section.label = label;
-      h2.innerText = label;
-      btn.innerText = label;
-    };
+  select.onchange = () => {
+  if (!select.value) return;
+
+  const label = nextLabel(select.value);
+  section.label = label;
+  h2.innerText = label;
+};
+
 
     secDiv.appendChild(select);
     secDiv.appendChild(h2);
