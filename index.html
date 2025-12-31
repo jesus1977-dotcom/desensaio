@@ -667,7 +667,8 @@ async function saveNewSong() {
     );
 
 // 5. LER INDEX.JSON PELA API (FONTE DE VERDADE)
-const indexApiUrl = 'https://api.github.com/repos/jesus1977-dotcom/desensaio/contents/data/index.json';
+const indexApiUrl =
+  'https://api.github.com/repos/jesus1977-dotcom/desensaio/contents/data/songs/index.json';
 
 const indexRes = await fetch(indexApiUrl, {
   headers: { Authorization: `token ${token}` }
@@ -687,7 +688,7 @@ if (!indexData.some(e => e.file === fileName)) {
 
 // 7. GRAVAR INDEX.JSON
 await githubPutFile(
-  'data/index.json',
+  'data/songs/index.json',
   JSON.stringify(indexData, null, 2),
   `Actualizar index: ${artist} – ${title}`,
   token
