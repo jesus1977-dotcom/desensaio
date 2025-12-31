@@ -285,7 +285,7 @@
   <script>
     /* ===== PROTECÇÃO ADMIN (FRONTEND) ===== */
 
-const ADMIN_PASSWORD = 'trocar_esta_password';
+const ADMIN_PASSWORD = 'Benfica';
 
 let isAdmin = sessionStorage.getItem('isAdmin') === 'true';
 
@@ -393,7 +393,7 @@ fetch(`data/songs/${fileToLoad}`)
         song.meta.artist + ' – ' + song.meta.title;
 
       document.getElementById('meta').innerText =
-        `Álbum: ${song.meta.album || '-'} | Ano: ${song.meta.year} | Tom: ${song.meta.key}`;
+  `Género: ${song.meta.genre || '-'} | Década: ${song.meta.decade || '-'}`;
 
       const sectionsDiv = document.getElementById('sections');
       const musicDiv = document.getElementById('music');
