@@ -154,13 +154,6 @@
     margin-bottom: 10px;
   }
 
-  pre {
-    font-family: monospace;
-    font-size: 20px;
-    line-height: 1.5;
-    white-space: pre-wrap;
-  }
-
   .tab {
     background: #222;
     padding: 10px;
@@ -185,29 +178,26 @@
 }
 
 pre {
+  margin: 0;
+  padding: 0;
   font-family: monospace;
   font-size: 20px;
-  line-height: 1.25;
-  margin: 0;
-  padding: 0;
-  white-space: pre;
-}
-
-.chord-row,
-.lyric-row {
-  display: block;   /* ⬅️ ISTO É A CHAVE */
-  margin: 0;
-  padding: 0;
+  line-height: 1.05;      /* ⬅️ compactação real */
+  white-space: normal;   /* ⬅️ CRÍTICO */
 }
 
 .chord-row {
   font-weight: bold;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 
 .lyric-row {
-  font-weight: normal;
+  margin: 0 0 2px 0;  /* ⬅️ respiro mínimo ENTRE frases */
+  padding: 0;
+  line-height: 1.05;
 }
-
 
 </style>
 
@@ -494,9 +484,9 @@ function renderSong(song) {
 pre.innerHTML = section.content
   .map(line => {
     const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
-    return `<span class="${isChord ? 'chord-row' : 'lyric-row'}">${line || ''}</span>`;
+    return `<div class="${isChord ? 'chord-row' : 'lyric-row'}">${line || ''}</div>`;
   })
-  .join('\n');
+  .join('');
 
 secDiv.appendChild(pre);
 
@@ -685,10 +675,10 @@ SECTION_BASES.forEach(base => {
     pre.innerHTML = section.content
       .map(line => {
         const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
-      return `<span class="${isChord ? 'chord-row' : 'lyric-row'}">${line || ''}</span>`;
+      return `<div class="${isChord ? 'chord-row' : 'lyric-row'}">${line || ''}</div>`;
 
       })
-      .join('\n');
+      .join('');
 
     pre.onblur = () => {
       section.content = pre.innerText.split('\n');
