@@ -200,6 +200,35 @@
   }
 }
 
+    /* =========================
+   LIST OVERLAY
+========================= */
+
+#listOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.overlay-box {
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 25px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+.overlay-box button {
+  width: 100%;
+}
+
   </style>
 </head>
 
@@ -265,6 +294,17 @@
 
 </div>
 
+  <div id="listOverlay" style="display:none;">
+  <div class="overlay-box">
+    <h2 id="listTitle"></h2>
+    <div id="listContent"></div>
+
+    <button onclick="closeOverlay()" style="margin-top:15px;">
+      Fechar
+    </button>
+  </div>
+</div>
+
   <footer class="site-footer">
   <div class="footer-left">
     © 2026 · Apontamentos Europa América Borrallo Pinheiro
@@ -276,10 +316,13 @@
 </footer>
 
 <script>
-  const ADMIN_PASSWORD = 'Benfica';
-  let isAdmin = sessionStorage.getItem('isAdmin') === 'true';
+/* =========================
+   ADMIN (FRONTEND)
+========================= */
+const ADMIN_PASSWORD = 'Benfica';
+let isAdmin = sessionStorage.getItem('isAdmin') === 'true';
 
-  function requireAdmin(action) {
+function requireAdmin(action) {
   if (isAdmin) {
     action();
     return;
@@ -296,18 +339,53 @@
   }
 }
 
+/* =========================
+   OVERLAY (LISTAS)
+========================= */
+function openOverlay(title, items, onClick) {
+  const overlay = document.getElementById('listOverlay');
+  const listTitle = document.getElementById('listTitle');
+  const listContent = document.getElementById('listContent');
+
+  listTitle.innerText = title;
+  listContent.innerHTML = '';
+
+  items.forEach(item => {
+    const btn = document.createElement('button');
+    btn.innerText = item.label;
+    btn.onclick = () => onClick(item);
+    listContent.appendChild(btn);
+  });
+
+  overlay.style.display = 'flex';
+}
+
+function closeOverlay() {
+  document.getElementById('listOverlay').style.display = 'none';
+}
+
+/* =========================
+   APP
+========================= */
 fetch('data/songs/index.json')
   .then(r => r.json())
   .then(songs => {
 
-    /* 🔥 MAIS TOCADAS */
+    /* 🔥 MAIS TOCADAS (ABRE MÚSICA DIRECTA) */
     songs
       .slice()
       .sort((a, b) => (b.plays || 0) - (a.plays || 0))
       .slice(0, 6)
-      .forEach(s => addButton('mostPlayed', s));
+      .forEach(s => addSongButton('mostPlayed', s));
 
-    /* 🔤 ALFABETO (POR ARTISTA) */
+    /* 🆕 RECENTES (ABRE MÚSICA DIRECTA) */
+    songs
+      .slice()
+      .sort((a, b) => new Date(b.added) - new Date(a.added))
+      .slice(0, 6)
+      .forEach(s => addSongButton('recent', s));
+
+    /* 🔤 ALFABETO (LETRA → ARTISTAS) */
     const alphabetDiv = document.getElementById('alphabet');
 
     const artistLetters = [...new Set(
@@ -316,78 +394,112 @@ fetch('data/songs/index.json')
         .map(s => s.artist.trim()[0].toUpperCase())
     )].sort();
 
-    artistLetters.forEach(letter => {
-      addFilter(
-        'alphabet',
-        letter,
-        s => s.artist && s.artist.trim()[0].toUpperCase() === letter
-      );
-    });
+    renderAlphabet();
 
-    /* 🔍 PESQUISA POR ARTISTA (AUTOCOMPLETE) */
+    function renderAlphabet() {
+      alphabetDiv.innerHTML = '';
+      artistLetters.forEach(letter => {
+        const btn = document.createElement('button');
+        btn.innerText = letter;
+        btn.onclick = () => handleLetter(letter);
+        alphabetDiv.appendChild(btn);
+      });
+    }
+
+    function handleLetter(letter) {
+      const artists = [...new Set(
+        songs
+          .filter(s => s.artist && s.artist[0].toUpperCase() === letter)
+          .map(s => s.artist)
+      )].sort();
+
+      openOverlay(
+        `Artistas com "${letter}"`,
+        artists.map(a => ({ label: a, artist: a })),
+        item => handleArtist(item.artist)
+      );
+    }
+
+    function handleArtist(artist) {
+      const artistSongs = songs.filter(s => s.artist === artist);
+
+      openOverlay(
+        artist,
+        artistSongs.map(s => ({
+          label: s.title,
+          file: s.file
+        })),
+        item => window.location = 'index.html?file=' + item.file
+      );
+    }
+
+    /* 🔍 PESQUISA POR ARTISTA */
     const searchInput = document.getElementById('artistSearch');
 
     const artists = [...new Set(
-      songs
-        .filter(s => s.artist)
-        .map(s => s.artist.trim())
+      songs.map(s => s.artist)
     )].sort();
 
     searchInput.addEventListener('input', () => {
-      const query = searchInput.value.toLowerCase();
+      const q = searchInput.value.trim().toLowerCase();
 
-      alphabetDiv.innerHTML = '';
-
-      if (!query) {
-        // volta a mostrar o alfabeto se o campo estiver vazio
-        artistLetters.forEach(letter => {
-          addFilter(
-            'alphabet',
-            letter,
-            s => s.artist && s.artist.trim()[0].toUpperCase() === letter
-          );
-        });
+      if (!q) {
+        renderAlphabet();
         return;
       }
 
-      artists
-        .filter(artist => artist.toLowerCase().includes(query))
-        .forEach(artist => {
-          const btn = document.createElement('button');
-          btn.innerText = artist;
-          btn.onclick = () => {
-            const song = songs.find(s => s.artist === artist);
-            if (song) {
-              window.location = 'index.html?file=' + song.file;
-            }
-          };
-          alphabetDiv.appendChild(btn);
-        });
+      const matches = artists.filter(a =>
+        a.toLowerCase().includes(q)
+      );
+
+      alphabetDiv.innerHTML = '';
+
+      matches.forEach(artist => {
+        const btn = document.createElement('button');
+        btn.innerText = artist;
+        btn.onclick = () => handleArtist(artist);
+        alphabetDiv.appendChild(btn);
+      });
     });
 
-    /* 🎸 GÉNERO */
+    /* 🎸 GÉNERO → LISTA DE MÚSICAS */
     [...new Set(songs.map(s => s.genre))]
       .sort()
-      .forEach(g => {
-        addFilter('genres', g, s => s.genre === g);
+      .forEach(genre => {
+        addGenericButton('genres', genre, () => {
+          const genreSongs = songs.filter(s => s.genre === genre);
+          openOverlay(
+            `Género: ${genre}`,
+            genreSongs.map(s => ({
+              label: `${s.artist} – ${s.title}`,
+              file: s.file
+            })),
+            item => window.location = 'index.html?file=' + item.file
+          );
+        });
       });
 
-    /* 📅 DÉCADA */
+    /* 📅 DÉCADA → LISTA DE MÚSICAS */
     [...new Set(songs.map(s => s.decade))]
       .sort()
-      .forEach(d => {
-        addFilter('decades', d, s => s.decade === d);
+      .forEach(decade => {
+        addGenericButton('decades', decade, () => {
+          const decadeSongs = songs.filter(s => s.decade === decade);
+          openOverlay(
+            `Década: ${decade}`,
+            decadeSongs.map(s => ({
+              label: `${s.artist} – ${s.title}`,
+              file: s.file
+            })),
+            item => window.location = 'index.html?file=' + item.file
+          );
+        });
       });
 
-    /* 🆕 RECENTES */
-    songs
-      .slice()
-      .sort((a, b) => new Date(b.added) - new Date(a.added))
-      .slice(0, 6)
-      .forEach(s => addButton('recent', s));
-
-    /* FUNÇÕES AUXILIARES */
-    function addButton(targetId, song) {
+    /* =========================
+       BOTÕES AUXILIARES
+    ========================= */
+    function addSongButton(targetId, song) {
       const btn = document.createElement('button');
       btn.innerText = song.artist + ' – ' + song.title;
       btn.onclick = () => {
@@ -396,18 +508,14 @@ fetch('data/songs/index.json')
       document.getElementById(targetId).appendChild(btn);
     }
 
-    function addFilter(targetId, label, predicate) {
+    function addGenericButton(targetId, label, action) {
       const btn = document.createElement('button');
       btn.innerText = label;
-      btn.onclick = () => {
-        const song = songs.find(predicate);
-        if (song) {
-          window.location = 'index.html?file=' + song.file;
-        }
-      };
+      btn.onclick = action;
       document.getElementById(targetId).appendChild(btn);
     }
 
+    /* 🔀 BOTÕES GLOBAIS */
     window.openRandom = function () {
       const s = songs[Math.floor(Math.random() * songs.length)];
       window.location = 'index.html?file=' + s.file;
@@ -419,6 +527,7 @@ fetch('data/songs/index.json')
 
   });
 </script>
+  
 
 
 </body>
