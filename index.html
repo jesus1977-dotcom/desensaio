@@ -184,9 +184,14 @@
   <div id="content">
     <h1>
       <span id="titleText"></span>
-      <button id="editBtn" onclick="toggleEdit()" style="margin-left:20px;">
-        ✏️ Editar
-      </button>
+     <button
+  id="editBtn"
+  onclick="requireAdmin(toggleEdit)"
+  style="margin-left:20px;"
+>
+  ✏️ Editar
+</button>
+
     </h1>
 
     <div class="meta" id="meta"></div>
@@ -246,6 +251,29 @@
 
   <!-- SCRIPT ÚNICO -->
   <script>
+    /* ===== PROTECÇÃO ADMIN (FRONTEND) ===== */
+
+const ADMIN_PASSWORD = 'trocar_esta_password';
+
+let isAdmin = sessionStorage.getItem('isAdmin') === 'true';
+
+function requireAdmin(action) {
+  if (isAdmin) {
+    action();
+    return;
+  }
+
+  const pwd = prompt('Acesso restrito. Palavra-passe:');
+
+  if (pwd === ADMIN_PASSWORD) {
+    isAdmin = true;
+    sessionStorage.setItem('isAdmin', 'true');
+    action();
+  } else {
+    alert('Password incorrecta.');
+  }
+}
+
 /* ===== AUTOSCROLL ===== */
 let scrollInterval = null;
 let scrolling = false;
