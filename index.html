@@ -165,6 +165,25 @@
     background: #222;
     padding: 10px;
   }
+
+  #rightPanel input,
+#rightPanel select,
+#rightPanel textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 25px;
+  border: 1px solid #444;
+  background: #1a1a1a;
+  color: #eee;
+  outline: none;
+}
+
+#rightPanel input:focus,
+#rightPanel select:focus,
+#rightPanel textarea:focus {
+  border-color: #ff8c1a;
+}
+
 </style>
 
 </head>
@@ -212,81 +231,81 @@
 
   </div>
 
-  <!-- PAINEL DIREITO (CRIAÇÃO) -->
-  <div id="rightPanel">
+<!-- PAINEL DIREITO (CRIAÇÃO) -->
+<div id="rightPanel">
 
-    <div id="createMode" style="display:none;">
+  <div id="createMode" style="display:none;">
 
-      <h2>➕ Nova música</h2>
+    <h2>➕ Nova música</h2>
 
-      <div style="margin-bottom:10px;">
-        <label>Artista</label><br>
-        <input id="newArtist" type="text" style="width:100%; padding:8px;">
-      </div>
+    <div style="margin-bottom:10px;">
+      <label>Artista</label><br>
+      <input id="newArtist" type="text">
+    </div>
 
-      <div style="margin-bottom:10px;">
-        <label>Título</label><br>
-        <input id="newTitle" type="text" style="width:100%; padding:8px;">
-      </div>
+    <div style="margin-bottom:10px;">
+      <label>Título</label><br>
+      <input id="newTitle" type="text">
+    </div>
 
-      <div style="margin-bottom:10px;">
-        <label>Género</label><br>
-        <select id="newGenre" style="width:100%; padding:8px;">
-          <option value="">— seleccionar género —</option>
-          <option>Rock</option>
-          <option>Pop</option>
-          <option>Indie</option>
-          <option>Alternative Rock</option>
-          <option>Rock Português</option>
-          <option>Pop Português</option>
-          <option>Folk</option>
-          <option>Blues</option>
-          <option>Jazz</option>
-          <option>Funk / Soul</option>
-          <option>Metal</option>
-          <option>Punk</option>
-          <option>Reggae</option>
-          <option>Hip Hop / Rap</option>
-          <option>Electronic</option>
-          <option>Disco</option>
-          <option>Country</option>
-          <option>Clássica</option>
-        </select>
-      </div>
+    <div style="margin-bottom:10px;">
+      <label>Género</label><br>
+      <select id="newGenre">
+        <option value="">— seleccionar género —</option>
+        <option>Rock</option>
+        <option>Pop</option>
+        <option>Indie</option>
+        <option>Alternative Rock</option>
+        <option>Rock Português</option>
+        <option>Pop Português</option>
+        <option>Folk</option>
+        <option>Blues</option>
+        <option>Jazz</option>
+        <option>Funk / Soul</option>
+        <option>Metal</option>
+        <option>Punk</option>
+        <option>Reggae</option>
+        <option>Hip Hop / Rap</option>
+        <option>Electronic</option>
+        <option>Disco</option>
+        <option>Country</option>
+        <option>Clássica</option>
+      </select>
+    </div>
 
-      <div style="margin-bottom:10px;">
-        <label>Década</label><br>
-        <select id="newDecade" style="width:100%; padding:8px;">
-          <option value="">— seleccionar década —</option>
-          <option>2020</option>
-          <option>2010</option>
-          <option>2000</option>
-          <option>1990</option>
-          <option>1980</option>
-          <option>1970</option>
-          <option>1960</option>
-          <option>1950</option>
-          <option>Anterior a 1950</option>
-        </select>
-      </div>
+    <div style="margin-bottom:10px;">
+      <label>Década</label><br>
+      <select id="newDecade">
+        <option value="">— seleccionar década —</option>
+        <option>2020</option>
+        <option>2010</option>
+        <option>2000</option>
+        <option>1990</option>
+        <option>1980</option>
+        <option>1970</option>
+        <option>1960</option>
+        <option>1950</option>
+        <option>Anterior a 1950</option>
+      </select>
+    </div>
 
-      <div style="margin-bottom:10px;">
-        <label>Colar música (texto bruto)</label><br>
-        <textarea id="rawText" rows="10" style="width:100%; padding:10px;"></textarea>
-      </div>
+    <div style="margin-bottom:10px;">
+      <label>Colar música (texto bruto)</label><br>
+      <textarea id="rawText" rows="10"></textarea>
+    </div>
 
-      <button onclick="createSectionsFromText()">✂️ Criar secções</button>
-      <button onclick="saveNewSong()" style="margin-left:10px;">💾 Guardar música</button>
+    <button onclick="createSectionsFromText()">✂️ Criar secções</button>
+    <button onclick="saveNewSong()">💾 Guardar música</button>
 
-      <div id="tokenSetup" style="margin-top:20px; display:none;">
-        <label>GitHub Token</label><br>
-        <input id="githubToken" type="password" style="width:100%; padding:8px;">
-        <button onclick="saveToken()">Guardar token</button>
-      </div>
-
+    <div id="tokenSetup" style="margin-top:20px; display:none;">
+      <label>GitHub Token</label><br>
+      <input id="githubToken" type="password">
+      <button onclick="saveToken()">Guardar token</button>
     </div>
 
   </div>
+
+</div>
 
 <script>
 /* ======================================================
