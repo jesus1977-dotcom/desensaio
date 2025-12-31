@@ -683,7 +683,7 @@ const indexData = JSON.parse(atob(indexFile.content));
 
 // 6. ACTUALIZAR DADOS
 if (!indexData.some(e => e.file === fileName)) {
-  indexData.push({ file: fileName, artist, title });
+  indexData.push({ file: fileName, artist, title, genre, decade });
 }
 
 // 7. GRAVAR INDEX.JSON
