@@ -570,6 +570,108 @@ function saveToken() {
   localStorage.setItem('githubToken', token);
   alert('Token guardado no browser.');
 }
+
+  async function saveNewSong() {
+
+  // 1. VALIDAR
+  const artist = document.getElementById('newArtist').value.trim();
+  const title  = document.getElementById('newTitle').value.trim();
+  const genre  = document.getElementById('newGenre').value;
+  const decade = document.getElementById('newDecade').value;
+
+  if (!artist || !title || newSections.length === 0) {
+    alert('Faltam dados obrigatórios.');
+    return;
+  }
+
+  const token = localStorage.getItem('githubToken');
+  if (!token) {
+    alert('Token GitHub não definido.');
+    return;
+  }
+
+  // 2. NOME DO FICHEIRO
+  const slug = `${artist}-${title}`
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+
+  const fileName = `${slug}.json`;
+
+  // 3. OBJECTO DA MÚSICA
+  const songData = {
+    meta: { artist, title, genre, decade },
+    sections: newSections
+  };
+
+  // 4. CRIAR FICHEIRO DA MÚSICA
+  await githubPutFile(
+    `data/songs/${fileName}`,
+    JSON.stringify(songData, null, 2),
+    `Nova música: ${artist} – ${title}`,
+    token
+  );
+
+  // 5. LER INDEX.JSON
+  const indexRes = await fetch('data/index.json');
+  const indexData = await indexRes.json();
+
+  indexData.push({
+    file: fileName,
+    artist,
+    title
+  });
+
+  // 6. ACTUALIZAR INDEX.JSON
+  await githubPutFile(
+    `data/index.json`,
+    JSON.stringify(indexData, null, 2),
+    `Actualizar index: ${artist} – ${title}`,
+    token
+  );
+
+  alert('Música gravada com sucesso.');
+  location.href = `index.html?song=${fileName}`;
+}
+
+  async function githubPutFile(path, content, message, token) {
+
+  const apiUrl = `https://api.github.com/repos/jesus1977-dotcom/desensaio/contents/${path}`;
+
+  let sha = null;
+
+  // ver se já existe
+  const res = await fetch(apiUrl, {
+    headers: { Authorization: `token ${token}` }
+  });
+
+  if (res.ok) {
+    const data = await res.json();
+    sha = data.sha;
+  }
+
+  const body = {
+    message,
+    content: btoa(unescape(encodeURIComponent(content))),
+    sha
+  };
+
+  const put = await fetch(apiUrl, {
+    method: 'PUT',
+    headers: {
+      Authorization: `token ${token}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(body)
+  });
+
+  if (!put.ok) {
+    const err = await put.text();
+    throw new Error(err);
+  }
+}
+
 </script>
 
 
