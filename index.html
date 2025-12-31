@@ -531,12 +531,11 @@ function createSectionsFromText() {
   }
 
   const blocks = raw.split(/\n\s*\n/);
-  newSections = blocks.map((block, i) => ({
-    id: `sec-${Date.now()}-${i}`,
-    label: `Secção ${i + 1}`,
-    type: 'lyrics_chords',
-    content: block.split('\n')
-  }));
+newSections = blocks.map((block, i) => ({
+  id: `sec-${Date.now()}-${i}`,
+  label: `Secção ${i + 1}`,
+  content: block.split('\n')
+}));
 
   renderNewSections();
 }
