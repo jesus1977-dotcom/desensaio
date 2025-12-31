@@ -603,11 +603,12 @@ function saveToken() {
   alert('Token guardado no browser.');
 }
 
- async function saveNewSong() {
+async function saveNewSong() {
+  const btn = document.getElementById('saveBtn');
+
   try {
 
-    const btn = document.getElementById('saveBtn');
-if (btn) btn.disabled = true;
+    if (btn) btn.disabled = true;
 
     // 1. VALIDAR
     const artist = document.getElementById('newArtist').value.trim();
@@ -671,10 +672,12 @@ if (btn) btn.disabled = true;
 
   } catch (err) {
     console.error(err);
-    if (btn) btn.disabled = false;
     alert('Erro ao gravar no GitHub.\n' + err.message);
+  } finally {
+    if (btn) btn.disabled = false;
   }
 }
+
 
 async function githubPutFile(path, content, message, token) {
 
