@@ -193,6 +193,13 @@ pre {
   white-space: pre;
 }
 
+.chord-row,
+.lyric-row {
+  display: block;   /* ⬅️ ISTO É A CHAVE */
+  margin: 0;
+  padding: 0;
+}
+
 .chord-row {
   font-weight: bold;
 }
@@ -200,6 +207,7 @@ pre {
 .lyric-row {
   font-weight: normal;
 }
+
 
 </style>
 
@@ -488,11 +496,9 @@ pre.innerHTML = section.content
     const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
     return `<span class="${isChord ? 'chord-row' : 'lyric-row'}">${line || ''}</span>`;
   })
-  .join('');
-
+  .join('\n');
 
 secDiv.appendChild(pre);
-
 
     musicDiv.appendChild(secDiv);
   });
@@ -682,7 +688,7 @@ SECTION_BASES.forEach(base => {
       return `<span class="${isChord ? 'chord-row' : 'lyric-row'}">${line || ''}</span>`;
 
       })
-      .join('');
+      .join('\n');
 
     pre.onblur = () => {
       section.content = pre.innerText.split('\n');
