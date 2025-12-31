@@ -429,7 +429,7 @@ fetch('data/songs/index.json')
           label: s.title,
           file: s.file
         })),
-        item => window.location = 'index.html?file=' + item.file
+        item => window.location = 'index.html?song=' + item.file
       );
     }
 
@@ -474,7 +474,7 @@ fetch('data/songs/index.json')
               label: `${s.artist} – ${s.title}`,
               file: s.file
             })),
-            item => window.location = 'index.html?file=' + item.file
+            item => window.location = 'index.html?song=' + item.file
           );
         });
       });
@@ -491,7 +491,7 @@ fetch('data/songs/index.json')
               label: `${s.artist} – ${s.title}`,
               file: s.file
             })),
-            item => window.location = 'index.html?file=' + item.file
+            item => window.location = 'index.html?song=' + item.file
           );
         });
       });
@@ -503,7 +503,7 @@ fetch('data/songs/index.json')
       const btn = document.createElement('button');
       btn.innerText = song.artist + ' – ' + song.title;
       btn.onclick = () => {
-        window.location = 'index.html?file=' + song.file;
+        window.location = 'index.html?song=' + song.file;
       };
       document.getElementById(targetId).appendChild(btn);
     }
@@ -518,7 +518,7 @@ fetch('data/songs/index.json')
     /* 🔀 BOTÕES GLOBAIS */
     window.openRandom = function () {
       const s = songs[Math.floor(Math.random() * songs.length)];
-      window.location = 'index.html?file=' + s.file;
+      window.location = 'index.html?song=' + s.file;
     };
 
     window.openNew = function () {
