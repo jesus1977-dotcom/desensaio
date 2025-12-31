@@ -185,28 +185,21 @@
 }
 
 pre {
-  margin: 0;
-  padding: 0;
   font-family: monospace;
   font-size: 20px;
-  line-height: 1;
-}
-
-/* LINHA DE ACORDES */
-.chord-row {
-  font-weight: bold;
-  line-height: 1;
+  line-height: 1.25;
   margin: 0;
   padding: 0;
+  white-space: pre;
 }
 
-/* LINHA DE LETRA */
+.chord-row {
+  font-weight: bold;
+}
+
 .lyric-row {
-  line-height: 1.1;
-  margin: 0 0 4px 0; /* pequeno respiro ENTRE frases */
-  padding: 0;
+  font-weight: normal;
 }
-
 
 </style>
 
@@ -493,12 +486,7 @@ function renderSong(song) {
 pre.innerHTML = section.content
   .map(line => {
     const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
-    return `
-  <div class="${isChord ? 'chord-row' : 'lyric-row'}">
-    ${line || '&nbsp;'}
-  </div>
-`;
-
+    return `<span class="${isChord ? 'chord-row' : 'lyric-row'}">${line || ''}</span>`;
   })
   .join('');
 
@@ -691,11 +679,7 @@ SECTION_BASES.forEach(base => {
     pre.innerHTML = section.content
       .map(line => {
         const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
-        return `
-  <div class="${isChord ? 'chord-row' : 'lyric-row'}">
-    ${line || '&nbsp;'}
-  </div>
-`;
+      return `<span class="${isChord ? 'chord-row' : 'lyric-row'}">${line || ''}</span>`;
 
       })
       .join('');
