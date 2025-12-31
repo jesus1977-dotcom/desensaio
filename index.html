@@ -489,40 +489,43 @@ async function toggleEdit() {
   }
 
   // sair e GRAVAR
-  const token = localStorage.getItem('githubToken');
-  if (!token) {
-    alert('Token GitHub não definido.');
-    return;
+  try {
+    const token = localStorage.getItem('githubToken');
+    if (!token) {
+      alert('Token GitHub não definido.');
+      return;
+    }
+
+    const updatedSections = [];
+    document.querySelectorAll('.section').forEach(sec => {
+      const id = sec.id;
+      let label = sec.querySelector('h2').innerText.trim();
+      if (!label) {
+        throw new Error('Há secções com título vazio.');
+      }
+      const content = sec.querySelector('pre').innerText.split('\n');
+      updatedSections.push({ id, label, content });
+    });
+
+    const res = await fetch(`data/songs/${fileParam}`);
+    const song = await res.json();
+    song.sections = updatedSections;
+
+    await githubPutFile(
+      `data/songs/${fileParam}`,
+      JSON.stringify(song, null, 2),
+      `Editar música: ${song.meta.artist} – ${song.meta.title}`,
+      token
+    );
+
+    alert('Alterações guardadas.');
+    location.reload();
+
+  } catch (err) {
+    alert(err.message);
+    document.getElementById('editBtn').innerText = '✏️ Editar';
+    editMode = false;
   }
-
-  const updatedSections = [];
-  document.querySelectorAll('.section').forEach(sec => {
-    const id = sec.id;
-    let label = sec.querySelector('h2').innerText.trim();
-if (!label) {
-  alert('Há secções com título vazio. Corrige antes de guardar.');
-  throw new Error('Secção com título vazio');
-}
-
-    const content = sec.querySelector('pre').innerText.split('\n');
-    updatedSections.push({ id, label, content });
-  });
-
-  const res = await fetch(`data/songs/${fileParam}`);
-  const song = await res.json();
-  song.sections = updatedSections;
-
-  await githubPutFile(
-    `data/songs/${fileParam}`,
-    JSON.stringify(song, null, 2),
-    `Editar música: ${song.meta.artist} – ${song.meta.title}`,
-    token
-  );
-
-  alert('Alterações guardadas.');
-  location.reload();
-}
-
 
 /* ======================================================
    CRIAR SECÇÕES
@@ -537,7 +540,7 @@ function createSectionsFromText() {
 
   const blocks = raw.split(/\n\s*\n/);
 newSections = blocks.map((block, i) => ({
-  id: `sec-${Date.now()}-${i}`,
+  id: `sec-${crypto.randomUUID()}`,
   label: `Secção ${i + 1}`,
   content: block.split('\n')
 }));
@@ -721,13 +724,11 @@ async function githubPutFile(path, content, message, token) {
     body: JSON.stringify(body)
   });
 
-  if (!put.ok) {
-    const err = await put.text();
-    throw new Error(err);
-  }
+ if (!put.ok) {
+  const err = await put.json();
+  throw new Error(err.message || 'Erro GitHub');
 }
-
-
+}
 </script>
 
 
