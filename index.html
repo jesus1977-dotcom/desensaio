@@ -376,9 +376,16 @@ if (isNewSong) {
 } 
 // CASO: MÚSICA EXISTENTE
 else {
-  const fileToLoad = fileParam || 'karma-police.json';
+  const fileToLoad = fileParam;
 
-fetch(`/data/songs/${fileToLoad}`)
+if (!fileToLoad) {
+  document.getElementById('music').innerText =
+    'Nenhuma música especificada.';
+  throw new Error('Parâmetro song em falta');
+}
+
+
+fetch(`data/songs/${fileToLoad}`)
 
     .then(res => res.json())
     .then(song => {
