@@ -211,7 +211,7 @@
   </div>
 
   <div class="header-right">
-    <button class="btn-add" onclick="openNew()">➕ Nova música</button>
+    <button class="btn-add" onclick="requireAdmin(openNew)">➕ Nova música</button>
     <button class="btn-random" onclick="openRandom()">🎲 BRONX</button>
   </div>
 </header>
@@ -276,6 +276,26 @@
 </footer>
 
 <script>
+  const ADMIN_PASSWORD = 'Benfica';
+  let isAdmin = sessionStorage.getItem('isAdmin') === 'true';
+
+  function requireAdmin(action) {
+  if (isAdmin) {
+    action();
+    return;
+  }
+
+  const pwd = prompt('Queres mexer? Bota aí a password:');
+
+  if (pwd === ADMIN_PASSWORD) {
+    isAdmin = true;
+    sessionStorage.setItem('isAdmin', 'true');
+    action();
+  } else {
+    alert('Está errada, porra! Tenta outra vez.');
+  }
+}
+
 fetch('data/songs/index.json')
   .then(r => r.json())
   .then(songs => {
