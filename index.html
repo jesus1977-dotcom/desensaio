@@ -567,10 +567,48 @@ function renderNewSections() {
     secDiv.className = 'section';
     secDiv.id = section.id;
 
-    const h2 = document.createElement('h2');
-    h2.contentEditable = true;
-    h2.innerText = section.label;
-   h2.onblur = () => {
+const SECTION_BASES = [
+  'Intro',
+  'Verse',
+  'Chorus',
+  'Bridge',
+  'Instrumental',
+  'Solo',
+  'Outro'
+];
+
+function nextLabel(base) {
+  const nums = newSections
+    .map(s => s.label)
+    .filter(l => l.startsWith(base))
+    .map(l => parseInt(l.replace(base, '').trim()))
+    .filter(n => !isNaN(n));
+
+  const next = nums.length ? Math.max(...nums) + 1 : 1;
+  return `${base} ${next}`;
+}
+
+const select = document.createElement('select');
+SECTION_BASES.forEach(base => {
+  const opt = document.createElement('option');
+  opt.value = base;
+  opt.innerText = base;
+  select.appendChild(opt);
+});
+
+const h2 = document.createElement('h2');
+h2.contentEditable = true;
+h2.innerText = section.label;
+
+select.value = section.label;
+
+select.onchange = () => {
+  const label = nextLabel(select.value);
+  h2.innerText = label;
+  section.label = label;
+};
+
+h2.onblur = () => {
   const v = h2.innerText.trim();
   if (!v) {
     alert('O título da secção não pode ficar vazio.');
@@ -578,10 +616,10 @@ function renderNewSections() {
     return;
   }
   section.label = v;
-  renderNewSections();
 };
 
-    secDiv.appendChild(h2);
+secDiv.appendChild(select);
+secDiv.appendChild(h2);
 
     const delBtn = document.createElement('button');
     delBtn.innerText = '🗑 Apagar secção';
