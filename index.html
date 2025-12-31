@@ -666,22 +666,33 @@ async function saveNewSong() {
       token
     );
 
-    // 5. LER INDEX.JSON (SEM CACHE)
-    const indexRes = await fetch('data/index.json?ts=' + Date.now());
-    const indexData = await indexRes.json();
+// 5. LER INDEX.JSON PELA API (FONTE DE VERDADE)
+const indexApiUrl = 'https://api.github.com/repos/jesus1977-dotcom/desensaio/contents/data/index.json';
 
-    const exists = indexData.some(e => e.file === fileName);
-    if (!exists) {
-      indexData.push({ file: fileName, artist, title });
-    }
+const indexRes = await fetch(indexApiUrl, {
+  headers: { Authorization: `token ${token}` }
+});
 
-    // 6. ACTUALIZAR INDEX.JSON
-    await githubPutFile(
-      `data/index.json`,
-      JSON.stringify(indexData, null, 2),
-      `Actualizar index: ${artist} – ${title}`,
-      token
-    );
+if (!indexRes.ok) {
+  throw new Error('Não foi possível ler index.json');
+}
+
+const indexFile = await indexRes.json();
+const indexData = JSON.parse(atob(indexFile.content));
+
+// 6. ACTUALIZAR DADOS
+if (!indexData.some(e => e.file === fileName)) {
+  indexData.push({ file: fileName, artist, title });
+}
+
+// 7. GRAVAR INDEX.JSON
+await githubPutFile(
+  'data/index.json',
+  JSON.stringify(indexData, null, 2),
+  `Actualizar index: ${artist} – ${title}`,
+  token
+);
+
 
     alert('Música gravada com sucesso.');
     location.href = `index.html?song=${fileName}`;
