@@ -552,7 +552,7 @@ function createSectionsFromText() {
   const blocks = raw.split(/\n\s*\n/);
   newSections = blocks.map((block, i) => ({
     id: `sec-${crypto.randomUUID()}`,
-    label: `Verse ${i + 1}`,
+    label: '',
     content: block.split('\n')
   }));
 
@@ -576,20 +576,21 @@ function renderNewSections() {
     'Outro'
   ];
 
-  function nextLabel(base) {
-    const nums = newSections
-      .map(s => s.label)
-      .filter(l => l.startsWith(base))
-      .map(l => parseInt(l.replace(base, '').trim()))
-      .filter(n => !isNaN(n));
+ function nextLabel(base) {
+  const nums = newSections
+    .map(s => s.label)
+    .filter(l => l && l.startsWith(base)) // ignora vazios
+    .map(l => parseInt(l.replace(base, '').trim()))
+    .filter(n => !isNaN(n));
 
-    const next = nums.length ? Math.max(...nums) + 1 : 1;
-    return `${base} ${next}`;
-  }
+  const next = nums.length ? Math.max(...nums) + 1 : 1;
+  return `${base} ${next}`;
+}
+
 
   newSections.forEach((section, index) => {
     const btn = document.createElement('button');
-    btn.innerText = section.label;
+    btn.innerText = section.label || '(sem secção)';
     btn.onclick = () =>
       document.getElementById(section.id).scrollIntoView({ behavior: 'smooth' });
     sectionsDiv.appendChild(btn);
