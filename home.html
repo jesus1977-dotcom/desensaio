@@ -61,7 +61,7 @@
 
 <body>
 
-<h1>🎸 Repertório de Ensaio</h1>
+<h1>🎸 Apontamentos Europa América Borrallo Pinheiro</h1>
 
 <div class="grid">
 
@@ -86,7 +86,21 @@
   <!-- ALFABETO -->
   <div class="card">
     <h2>🔤 Alfabeto</h2>
-    <div id="alphabet"></div>
+    <input
+  type="text"
+  id="artistSearch"
+  placeholder="Procurar artista..."
+  style="
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+  "
+>
+
+<div id="alphabet"></div>
+
   </div>
 
   <!-- GÉNERO -->
@@ -114,41 +128,93 @@ fetch('data/songs/index.json')
   .then(r => r.json())
   .then(songs => {
 
-    // 🔥 Mais tocadas
+    /* 🔥 MAIS TOCADAS */
     songs
       .slice()
-      .sort((a,b) => (b.plays || 0) - (a.plays || 0))
-      .slice(0,6)
+      .sort((a, b) => (b.plays || 0) - (a.plays || 0))
+      .slice(0, 6)
       .forEach(s => addButton('mostPlayed', s));
 
-  // 🔤 Alfabeto (por ARTISTA)
-[...new Set(songs.map(s => s.artist[0].toUpperCase()))]
-  .sort()
-  .forEach(letter => {
-    addFilter('alphabet', letter, s => s.artist[0].toUpperCase() === letter);
-  });
+    /* 🔤 ALFABETO (POR ARTISTA) */
+    const alphabetDiv = document.getElementById('alphabet');
 
-    // 🎸 Género
+    const artistLetters = [...new Set(
+      songs
+        .filter(s => s.artist)
+        .map(s => s.artist.trim()[0].toUpperCase())
+    )].sort();
+
+    artistLetters.forEach(letter => {
+      addFilter(
+        'alphabet',
+        letter,
+        s => s.artist && s.artist.trim()[0].toUpperCase() === letter
+      );
+    });
+
+    /* 🔍 PESQUISA POR ARTISTA (AUTOCOMPLETE) */
+    const searchInput = document.getElementById('artistSearch');
+
+    const artists = [...new Set(
+      songs
+        .filter(s => s.artist)
+        .map(s => s.artist.trim())
+    )].sort();
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();
+
+      alphabetDiv.innerHTML = '';
+
+      if (!query) {
+        // volta a mostrar o alfabeto se o campo estiver vazio
+        artistLetters.forEach(letter => {
+          addFilter(
+            'alphabet',
+            letter,
+            s => s.artist && s.artist.trim()[0].toUpperCase() === letter
+          );
+        });
+        return;
+      }
+
+      artists
+        .filter(artist => artist.toLowerCase().includes(query))
+        .forEach(artist => {
+          const btn = document.createElement('button');
+          btn.innerText = artist;
+          btn.onclick = () => {
+            const song = songs.find(s => s.artist === artist);
+            if (song) {
+              window.location = 'index.html?file=' + song.file;
+            }
+          };
+          alphabetDiv.appendChild(btn);
+        });
+    });
+
+    /* 🎸 GÉNERO */
     [...new Set(songs.map(s => s.genre))]
       .sort()
       .forEach(g => {
         addFilter('genres', g, s => s.genre === g);
       });
 
-    // 📅 Década
+    /* 📅 DÉCADA */
     [...new Set(songs.map(s => s.decade))]
       .sort()
       .forEach(d => {
         addFilter('decades', d, s => s.decade === d);
       });
 
-    // 🆕 Recentes
+    /* 🆕 RECENTES */
     songs
       .slice()
-      .sort((a,b) => new Date(b.added) - new Date(a.added))
-      .slice(0,6)
+      .sort((a, b) => new Date(b.added) - new Date(a.added))
+      .slice(0, 6)
       .forEach(s => addButton('recent', s));
 
+    /* FUNÇÕES AUXILIARES */
     function addButton(targetId, song) {
       const btn = document.createElement('button');
       btn.innerText = song.artist + ' – ' + song.title;
@@ -170,16 +236,18 @@ fetch('data/songs/index.json')
       document.getElementById(targetId).appendChild(btn);
     }
 
-    window.openRandom = function() {
+    window.openRandom = function () {
       const s = songs[Math.floor(Math.random() * songs.length)];
       window.location = 'index.html?file=' + s.file;
     };
 
-    window.openNew = function() {
+    window.openNew = function () {
       window.location = 'index.html?new=1';
     };
+
   });
 </script>
+
 
 </body>
 </html>
