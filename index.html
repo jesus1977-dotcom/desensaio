@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Desensaio</title>
 
- <style>
+<style>
   /* ===== BASE ===== */
   body {
     font-family: Arial, sans-serif;
@@ -44,9 +44,9 @@
   #sections button {
     width: 100%;
     margin-bottom: 8px;
-    background: #0f2a33;           /* azul petróleo escuro */
+    background: #0f2a33;
     color: #ffffff;
-    border: 1px solid #ff8c1a;     /* laranja fino */
+    border: 1px solid #ff8c1a;
     text-align: center;
   }
 
@@ -65,7 +65,7 @@
   #controls button {
     width: 100%;
     margin-bottom: 8px;
-    background: #556b2f;           /* verde azeitona */
+    background: #556b2f;
     color: #ffffff;
     border: 1px solid #c7d36f;
     text-align: center;
@@ -77,7 +77,7 @@
     transform: translateY(-1px);
   }
 
-  /* ===== SLIDER DE VELOCIDADE (ELEGANTE) ===== */
+  /* ===== SLIDER DE VELOCIDADE ===== */
   #controls input[type="range"] {
     -webkit-appearance: none;
     width: 100%;
@@ -119,11 +119,13 @@
     box-shadow: 0 0 10px rgba(255, 140, 26, 0.6);
   }
 
-  /* ===== CONTEÚDO DA MÚSICA ===== */
+  /* ===== CONTEÚDO (CORREÇÃO CRÍTICA AQUI) ===== */
   #content {
     flex: 1;
     padding-left: 30px;
     max-width: 900px;
+    display: flex;
+    flex-direction: column;
   }
 
   h1 {
