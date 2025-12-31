@@ -579,11 +579,11 @@ function createSectionsFromText() {
   }
 
   const blocks = raw.split(/\n\s*\n/);
-newSections = blocks.map((block, i) => ({
-  id: `sec-${crypto.randomUUID()}`,
-  label: `Secção ${i + 1}`,
-  content: block.split('\n')
-}));
+  newSections = blocks.map((block, i) => ({
+    id: `sec-${crypto.randomUUID()}`,
+    label: `Verse ${i + 1}`,
+    content: block.split('\n')
+  }));
 
   renderNewSections();
 }
@@ -594,6 +594,27 @@ function renderNewSections() {
 
   sectionsDiv.innerHTML = '';
   musicDiv.innerHTML = '';
+
+  const SECTION_BASES = [
+    'Intro',
+    'Verse',
+    'Chorus',
+    'Bridge',
+    'Instrumental',
+    'Solo',
+    'Outro'
+  ];
+
+  function nextLabel(base) {
+    const nums = newSections
+      .map(s => s.label)
+      .filter(l => l.startsWith(base))
+      .map(l => parseInt(l.replace(base, '').trim()))
+      .filter(n => !isNaN(n));
+
+    const next = nums.length ? Math.max(...nums) + 1 : 1;
+    return `${base} ${next}`;
+  }
 
   newSections.forEach((section, index) => {
     const btn = document.createElement('button');
@@ -606,59 +627,30 @@ function renderNewSections() {
     secDiv.className = 'section';
     secDiv.id = section.id;
 
-const SECTION_BASES = [
-  'Intro',
-  'Verse',
-  'Chorus',
-  'Bridge',
-  'Instrumental',
-  'Solo',
-  'Outro'
-];
+    /* ---------- DROPDOWN DE SECÇÃO (SEM TÍTULO EDITÁVEL) ---------- */
 
-function nextLabel(base) {
-  const nums = newSections
-    .map(s => s.label)
-    .filter(l => l.startsWith(base))
-    .map(l => parseInt(l.replace(base, '').trim()))
-    .filter(n => !isNaN(n));
+    const select = document.createElement('select');
+    SECTION_BASES.forEach(base => {
+      const opt = document.createElement('option');
+      opt.value = base;
+      opt.innerText = base;
+      select.appendChild(opt);
+    });
 
-  const next = nums.length ? Math.max(...nums) + 1 : 1;
-  return `${base} ${next}`;
-}
-
-const select = document.createElement('select');
-SECTION_BASES.forEach(base => {
-  const opt = document.createElement('option');
-  opt.value = base;
-  opt.innerText = base;
-  select.appendChild(opt);
-});
-
-const h2 = document.createElement('h2');
-h2.contentEditable = true;
-h2.innerText = section.label;
-
-select.value = section.label;
-
-select.onchange = () => {
-  const label = nextLabel(select.value);
-  h2.innerText = label;
-  section.label = label;
-};
-
-h2.onblur = () => {
-  const v = h2.innerText.trim();
-  if (!v) {
-    alert('O título da secção não pode ficar vazio.');
+    const h2 = document.createElement('h2');
     h2.innerText = section.label;
-    return;
-  }
-  section.label = v;
-};
 
-secDiv.appendChild(select);
-secDiv.appendChild(h2);
+    select.onchange = () => {
+      const label = nextLabel(select.value);
+      section.label = label;
+      h2.innerText = label;
+      btn.innerText = label;
+    };
+
+    secDiv.appendChild(select);
+    secDiv.appendChild(h2);
+
+    /* ---------- BOTÃO APAGAR ---------- */
 
     const delBtn = document.createElement('button');
     delBtn.innerText = '🗑 Apagar secção';
@@ -670,24 +662,23 @@ secDiv.appendChild(h2);
     };
     secDiv.appendChild(delBtn);
 
+    /* ---------- LETRA + ACORDES (SEM ESPAÇAMENTO RIDÍCULO) ---------- */
+
     const pre = document.createElement('pre');
-pre.contentEditable = true;
+    pre.contentEditable = true;
 
-pre.innerHTML = section.content
-  .map(line => {
-    const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
-    return `<div class="${isChord ? 'chord-line' : 'lyric-line'}">
-      ${line || '&nbsp;'}
-    </div>`;
-  })
-  .join('');
+    pre.innerHTML = section.content
+      .map(line => {
+        const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
+        return `<span class="${isChord ? 'chord-line' : 'lyric-line'}">${line || '&nbsp;'}</span><br>`;
+      })
+      .join('');
 
-pre.onblur = () => {
-  section.content = Array.from(pre.children).map(d => d.innerText);
-};
+    pre.onblur = () => {
+      section.content = pre.innerText.split('\n');
+    };
 
-secDiv.appendChild(pre);
-
+    secDiv.appendChild(pre);
     musicDiv.appendChild(secDiv);
   });
 }
