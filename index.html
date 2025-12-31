@@ -468,23 +468,56 @@ function renderSong(song) {
    EDITAR
 ====================================================== */
 
-function toggleEdit() {
+async function toggleEdit() {
   if (isNewSong) {
     alert('Modo edição só para músicas existentes.');
     return;
   }
 
-  editMode = !editMode;
+  if (!editMode) {
+    // entrar em modo edição
+    editMode = true;
 
-  document.querySelectorAll('pre').forEach(pre => {
-    pre.contentEditable = editMode;
-    pre.style.border = editMode ? '1px dashed #666' : 'none';
-    pre.style.background = editMode ? '#1a1a1a' : '';
+    document.querySelectorAll('pre').forEach(pre => {
+      pre.contentEditable = true;
+      pre.style.border = '1px dashed #666';
+      pre.style.background = '#1a1a1a';
+    });
+
+    document.getElementById('editBtn').innerText = '💾 Guardar alterações';
+    return;
+  }
+
+  // sair e GRAVAR
+  const token = localStorage.getItem('githubToken');
+  if (!token) {
+    alert('Token GitHub não definido.');
+    return;
+  }
+
+  const updatedSections = [];
+  document.querySelectorAll('.section').forEach(sec => {
+    const id = sec.id;
+    const label = sec.querySelector('h2').innerText.trim();
+    const content = sec.querySelector('pre').innerText.split('\n');
+    updatedSections.push({ id, label, content });
   });
 
-  document.getElementById('editBtn').innerText =
-    editMode ? '💾 Terminar edição' : '✏️ Editar';
+  const res = await fetch(`data/songs/${fileParam}`);
+  const song = await res.json();
+  song.sections = updatedSections;
+
+  await githubPutFile(
+    `data/songs/${fileParam}`,
+    JSON.stringify(song, null, 2),
+    `Editar música: ${song.meta.artist} – ${song.meta.title}`,
+    token
+  );
+
+  alert('Alterações guardadas.');
+  location.reload();
 }
+
 
 /* ======================================================
    CRIAR SECÇÕES
@@ -617,11 +650,11 @@ function saveToken() {
   const indexRes = await fetch('data/index.json');
   const indexData = await indexRes.json();
 
-  indexData.push({
-    file: fileName,
-    artist,
-    title
-  });
+ const exists = indexData.some(e => e.file === fileName);
+if (!exists) {
+  indexData.push({ file: fileName, artist, title });
+}
+
 
   // 6. ACTUALIZAR INDEX.JSON
   await githubPutFile(
