@@ -74,23 +74,48 @@
       margin-bottom: 20px;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
+ /* =========================
+   GRID PRINCIPAL
+========================= */
 
-    .card {
-      background: #1a1a1a;
-      border: 1px solid #333;
-      border-radius: 20px;
-      padding: 20px;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+@media (max-width: 1400px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
-    .card h2 {
-      margin-top: 0;
-      font-size: 18px;
-    }
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 22px;
+  padding: 22px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
 
     .card button {
       width: 100%;
@@ -143,6 +168,38 @@
   outline: none;
 }
 
+    /* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+  margin-top: 50px;
+  padding: 20px 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 13px;
+  color: #888;
+
+  background: linear-gradient(180deg, #121212, #0e0e0e);
+  border-top: 1px solid #222;
+}
+
+.footer-left,
+.footer-right {
+  opacity: 0.8;
+}
+
+    @media (max-width: 600px) {
+  .site-footer {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
   </style>
 </head>
 
@@ -155,7 +212,7 @@
 
   <div class="header-right">
     <button class="btn-add" onclick="openNew()">➕ Nova música</button>
-    <button class="btn-random" onclick="openRandom()">🎲 Aleatório</button>
+    <button class="btn-random" onclick="openRandom()">🎲 BRONX</button>
   </div>
 </header>
 
@@ -202,11 +259,21 @@
 
   <!-- RECENTES -->
   <div class="card">
-    <h2>🆕 Adições recentes</h2>
+    <h2>🆕 Novidades</h2>
     <div id="recent"></div>
   </div>
 
 </div>
+
+  <footer class="site-footer">
+  <div class="footer-left">
+    © 2026 · Apontamentos Europa América Borrallo Pinheiro
+  </div>
+
+  <div class="footer-right">
+    Desensaio · v1.0
+  </div>
+</footer>
 
 <script>
 fetch('data/songs/index.json')
