@@ -184,7 +184,7 @@
   border-color: #ff8c1a;
 }
 
-  pre {
+pre {
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -192,24 +192,17 @@
 
 /* ACORDES */
 .chord-line {
-  display: inline-block;
   font-weight: bold;
   font-size: 22px;
   line-height: 1.05;
-  margin: 0;
-  padding: 0;
-  color: #ff8c1a; /* laranja — destaca bem */
+  color: #ff8c1a;
 }
 
 /* LETRA */
 .lyric-line {
-  display: inline-block;
   font-size: 19px;
-  line-height: 1.15;
-  margin: 0;
-  padding: 0;
+  line-height: 1.1;
 }
-
 
 </style>
 
@@ -496,11 +489,10 @@ function renderSong(song) {
 pre.innerHTML = section.content
   .map(line => {
     const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
-    return `<div class="${isChord ? 'chord-line' : 'lyric-line'}">
-      ${line || '&nbsp;'}
-    </div>`;
+    return `<span class="${isChord ? 'chord-line' : 'lyric-line'}">${line || '&nbsp;'}</span><br>`;
   })
   .join('');
+
 
 secDiv.appendChild(pre);
 
