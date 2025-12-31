@@ -386,55 +386,59 @@ if (!fileToLoad) {
 
 
 fetch(`data/songs/${fileToLoad}`)
+  .then(res => {
+    console.log('Fetch status:', res.status, res.url);
 
-    .then(res => res.json())
-    .then(song => {
-      document.getElementById('titleText').innerText =
-        song.meta.artist + ' – ' + song.meta.title;
+    if (!res.ok) {
+      throw new Error('HTTP ' + res.status);
+    }
+    return res.json();
+  })
+  .then(song => {
+    console.log('Música carregada:', song);
 
-      document.getElementById('meta').innerText =
-  `Género: ${song.meta.genre || '-'} | Década: ${song.meta.decade || '-'}`;
+    document.getElementById('titleText').innerText =
+      song.meta.artist + ' – ' + song.meta.title;
 
-      const sectionsDiv = document.getElementById('sections');
-      const musicDiv = document.getElementById('music');
+    document.getElementById('meta').innerText =
+      `Género: ${song.meta.genre || '-'} | Década: ${song.meta.decade || '-'}`;
 
-      sectionsDiv.innerHTML = '';
-      musicDiv.innerHTML = '';
+    const sectionsDiv = document.getElementById('sections');
+    const musicDiv = document.getElementById('music');
 
-      song.sections.forEach(section => {
-        const btn = document.createElement('button');
-        btn.innerText = section.label;
-        btn.onclick = () => {
-          document.getElementById(section.id).scrollIntoView({ behavior: 'smooth' });
-        };
-        sectionsDiv.appendChild(btn);
+    sectionsDiv.innerHTML = '';
+    musicDiv.innerHTML = '';
 
-        const secDiv = document.createElement('div');
-        secDiv.className = 'section';
-        secDiv.id = section.id;
+    song.sections.forEach(section => {
+      const btn = document.createElement('button');
+      btn.innerText = section.label;
+      btn.onclick = () => {
+        document.getElementById(section.id)
+          .scrollIntoView({ behavior: 'smooth' });
+      };
+      sectionsDiv.appendChild(btn);
 
-        const h2 = document.createElement('h2');
-        h2.innerText = section.label;
-        secDiv.appendChild(h2);
+      const secDiv = document.createElement('div');
+      secDiv.className = 'section';
+      secDiv.id = section.id;
 
-        const pre = document.createElement('pre');
-        pre.innerText = section.content.join('\n');
-        pre.contentEditable = editMode;
+      const h2 = document.createElement('h2');
+      h2.innerText = section.label;
+      secDiv.appendChild(h2);
 
-        if (section.type === 'tab') {
-          pre.classList.add('tab');
-        }
+      const pre = document.createElement('pre');
+      pre.innerText = section.content.join('\n');
+      secDiv.appendChild(pre);
 
-        secDiv.appendChild(pre);
-        musicDiv.appendChild(secDiv);
-      });
-    })
-    .catch(err => {
-      document.getElementById('music').innerText =
-        'Erro a carregar a música.';
-      console.error(err);
+      musicDiv.appendChild(secDiv);
     });
-}
+  })
+  .catch(err => {
+    console.error('ERRO REAL AO CARREGAR:', err);
+    document.getElementById('music').innerText =
+      'Erro a carregar a música.';
+  });
+
 
 function createSectionsFromText() {
   const raw = document.getElementById('rawText').value.trim();
