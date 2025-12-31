@@ -380,10 +380,9 @@ else {
 
 if (!fileToLoad) {
   document.getElementById('music').innerText =
-    'Nenhuma música especificada.';
-  throw new Error('Parâmetro song em falta');
+    'Nenhuma música seleccionada.';
+  return;
 }
-
 
 fetch(`data/songs/${fileToLoad}`)
   .then(res => {
