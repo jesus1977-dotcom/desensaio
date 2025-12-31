@@ -184,6 +184,17 @@
   border-color: #ff8c1a;
 }
 
+  .chord-line {
+  font-weight: bold;
+  font-size: 1.25em;
+  line-height: 1.4;
+}
+
+.lyric-line {
+  font-weight: normal;
+  font-size: 1em;
+}
+
 </style>
 
 </head>
@@ -457,8 +468,18 @@ function renderSong(song) {
     secDiv.appendChild(h2);
 
     const pre = document.createElement('pre');
-    pre.innerText = section.content.join('\n');
-    secDiv.appendChild(pre);
+
+pre.innerHTML = section.content
+  .map(line => {
+    const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
+    return `<div class="${isChord ? 'chord-line' : 'lyric-line'}">
+      ${line || '&nbsp;'}
+    </div>`;
+  })
+  .join('');
+
+secDiv.appendChild(pre);
+
 
     musicDiv.appendChild(secDiv);
   });
@@ -632,12 +653,22 @@ secDiv.appendChild(h2);
     secDiv.appendChild(delBtn);
 
     const pre = document.createElement('pre');
-    pre.contentEditable = true;
-    pre.innerText = section.content.join('\n');
-    pre.onblur = () => {
-      section.content = pre.innerText.split('\n');
-    };
-    secDiv.appendChild(pre);
+pre.contentEditable = true;
+
+pre.innerHTML = section.content
+  .map(line => {
+    const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
+    return `<div class="${isChord ? 'chord-line' : 'lyric-line'}">
+      ${line || '&nbsp;'}
+    </div>`;
+  })
+  .join('');
+
+pre.onblur = () => {
+  section.content = Array.from(pre.children).map(d => d.innerText);
+};
+
+secDiv.appendChild(pre);
 
     musicDiv.appendChild(secDiv);
   });
