@@ -1,4 +1,4 @@
-[
+ [
   {
     "file": "karma-police.json",
     "artist": "Radiohead",
@@ -11,8 +11,8 @@
   {
     "file": "gnr-v-deo-maria.json",
     "artist": "GNR",
-    "title": "Vídeo Maria",
-    "genre": "Rock Português",
+    "title": "VÃ­deo Maria",
+    "genre": "Rock PortuguÃªs",
     "decade": "1980",
     "plays": 0,
     "added": "2025-12-29"
