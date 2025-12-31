@@ -498,7 +498,12 @@ async function toggleEdit() {
   const updatedSections = [];
   document.querySelectorAll('.section').forEach(sec => {
     const id = sec.id;
-    const label = sec.querySelector('h2').innerText.trim();
+    let label = sec.querySelector('h2').innerText.trim();
+if (!label) {
+  alert('Há secções com título vazio. Corrige antes de guardar.');
+  throw new Error('Secção com título vazio');
+}
+
     const content = sec.querySelector('pre').innerText.split('\n');
     updatedSections.push({ id, label, content });
   });
@@ -561,10 +566,17 @@ function renderNewSections() {
     const h2 = document.createElement('h2');
     h2.contentEditable = true;
     h2.innerText = section.label;
-    h2.onblur = () => {
-      section.label = h2.innerText.trim() || section.label;
-      renderNewSections();
-    };
+   h2.onblur = () => {
+  const v = h2.innerText.trim();
+  if (!v) {
+    alert('O título da secção não pode ficar vazio.');
+    h2.innerText = section.label;
+    return;
+  }
+  section.label = v;
+  renderNewSections();
+};
+
     secDiv.appendChild(h2);
 
     const delBtn = document.createElement('button');
