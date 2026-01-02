@@ -252,6 +252,99 @@ h1 {
   background: var(--accent-gold-hover);
 }
 
+  /* =========================
+   PAGE HEADER (INDEX)
+========================= */
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* zona dos botões */
+.page-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* base dos botões do header */
+.btn-header {
+  height: 42px;
+  padding: 0 20px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border-radius: 26px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+
+  cursor: pointer;
+
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,0.1),
+    inset 0 -2px 4px rgba(0,0,0,0.6),
+    0 5px 12px rgba(0,0,0,0.55);
+
+  transition: all 0.18s ease;
+}
+
+/* BOTÃO VOLTAR */
+.btn-back {
+  background: linear-gradient(
+    180deg,
+    #2a2a2a,
+    #181818
+  );
+
+  color: var(--text-main);
+  border: 1px solid var(--border-soft);
+}
+
+.btn-back:hover {
+  background: linear-gradient(
+    180deg,
+    #3a3a3a,
+    #202020
+  );
+
+  transform: translateY(-1px);
+}
+
+/* BOTÃO EDITAR (DOURADO) */
+.btn-edit {
+  background: linear-gradient(
+    180deg,
+    var(--accent-gold),
+    #cfa24f
+  );
+
+  color: #000;
+  border: none;
+}
+
+.btn-edit:hover {
+  background: linear-gradient(
+    180deg,
+    var(--accent-gold-hover),
+    #ddb86a
+  );
+
+  transform: translateY(-1px);
+}
+
 </style>
 
 </head>
@@ -281,24 +374,24 @@ h1 {
   <!-- CONTEÚDO (CENTRO) -->
   <div id="content">
 
- <h1>
-  <span id="titleText"></span>
+<div class="page-header">
+  <h1 id="titleText"></h1>
 
-  <button
-    onclick="window.location.href='home.html'"
-    style="margin-left:20px;"
-  >
-    ⬅ Voltar
-  </button>
+  <div class="page-actions">
+    <button class="btn-header btn-back"
+      onclick="window.location.href='home.html'">
+      ⬅ Voltar
+    </button>
 
-  <button
-    id="editBtn"
-    onclick="requireAdmin(toggleEdit)"
-    style="margin-left:10px;"
-  >
-    ✏️ Editar
-  </button>
-</h1>
+    <button
+      id="editBtn"
+      class="btn-header btn-edit"
+      onclick="requireAdmin(toggleEdit)">
+      ✏️ Editar
+    </button>
+  </div>
+</div>
+
 
     <div class="meta" id="meta"></div>
 
