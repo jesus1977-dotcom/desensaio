@@ -66,29 +66,87 @@ h1 {
 }
 
 /* =========================
-   HEADER
+   HEADER — PREMIUM
 ========================= */
 
 .top-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+
+  padding: 22px 36px;
   margin-bottom: 30px;
 
-  background: linear-gradient(180deg, var(--bg-header), var(--bg-main));
-  border-bottom: 1px solid var(--border-soft);
+  /* fundo com profundidade */
+  background:
+    linear-gradient(
+      180deg,
+      rgba(20, 24, 26, 0.95),
+      rgba(14, 16, 18, 0.92)
+    );
+
+  backdrop-filter: blur(6px);
+
+  /* linha inferior elegante */
+  border-bottom: 1px solid rgba(241, 194, 125, 0.25);
+
+  /* sombra de peso */
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.6),
+    inset 0 -1px 0 rgba(255,255,255,0.05);
 }
 
+/* =========================
+   TÍTULO
+========================= */
+
 .header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+
+  color: #f2f2f2;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
+
+/* emoji / ícone ganha destaque */
+.header-left span,
+.header-left svg {
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
+}
+
+/* =========================
+   ZONA DE BOTÕES
+========================= */
 
 .header-right {
   display: flex;
-  gap: 12px;
+  align-items: center;
+  gap: 14px;
 }
+
+/* botão normal do header */
+.header-right button {
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* =========================
+   RED MODE — HEADER
+========================= */
+
+body.red-mode .top-header {
+  border-bottom: 1px solid rgba(241, 194, 125, 0.35);
+}
+
 
 /* Botão Nova Música */
 .btn-add {
