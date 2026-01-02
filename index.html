@@ -548,6 +548,14 @@ const params = new URLSearchParams(window.location.search);
 const fileParam = params.get('song') || params.get('file');
 const isNewSong = params.has('new');
 
+  /* ======================================================
+   NAVEGAÇÃO AUXILIAR
+====================================================== */
+
+function openChords() {
+  window.location.href = 'pages/chords.html';
+}
+  
 /* ======================================================
    DOM READY
 ====================================================== */
