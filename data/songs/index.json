@@ -52,5 +52,14 @@
     "decade": "1990",
     "added": "2026-01-02T17:12:34.360Z",
     "plays": 0
+  },
+  {
+    "file": "aerosmith-crying.json",
+    "artist": "Aerosmith",
+    "title": "Crying",
+    "genre": "Rock",
+    "decade": "1990",
+    "added": "2026-01-02T17:15:35.504Z",
+    "plays": 0
   }
 ]
