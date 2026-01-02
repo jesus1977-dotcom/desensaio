@@ -744,14 +744,14 @@ fetch('data/songs/index.json')
     songs
       .slice()
       .sort((a, b) => (b.plays || 0) - (a.plays || 0))
-      .slice(0, 6)
+      .slice(0, 10)
       .forEach(s => addSongButton('mostPlayed', s));
 
     /* 🆕 RECENTES (ABRE MÚSICA DIRECTA) */
     songs
       .slice()
       .sort((a, b) => new Date(b.added) - new Date(a.added))
-      .slice(0, 6)
+      .slice(0, 10)
       .forEach(s => addSongButton('recent', s));
 
     /* 🔤 ALFABETO (LETRA → ARTISTAS) */
