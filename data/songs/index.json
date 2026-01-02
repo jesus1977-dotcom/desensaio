@@ -61,5 +61,14 @@
     "decade": "1990",
     "added": "2026-01-02T17:15:35.504Z",
     "plays": 0
+  },
+  {
+    "file": "nirvana-smells-like-teen-spirit.json",
+    "artist": "Nirvana",
+    "title": "Smells Like Teen Spirit",
+    "genre": "Grunge",
+    "decade": "1990",
+    "added": "2026-01-02T17:59:18.276Z",
+    "plays": 0
   }
 ]
