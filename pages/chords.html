@@ -316,10 +316,19 @@ E|-${s[0]}-`;
 /* =========================
    MODAL
 ========================= */
+
 function openModal() {
   editingIndex = null;
+
   document.getElementById('modalTitle').innerText = 'Novo acorde';
-  document.querySelectorAll('#modal input').forEach(i => i.value = '');
+
+  document.getElementById('root').value = 'C';
+  document.getElementById('name').value = '';
+
+  ['s6','s5','s4','s3','s2','s1'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+
   document.getElementById('modal').style.display = 'flex';
 }
 
@@ -327,19 +336,28 @@ function closeModal() {
   document.getElementById('modal').style.display = 'none';
 }
 
+/* =========================
+   GUARDAR / EDITAR
+========================= */
+
 function saveChord() {
   const chord = {
-    root: root.value,
-    name: name.value.trim(),
+    root: document.getElementById('root').value,
+    name: document.getElementById('name').value.trim(),
     strings: [
-      s6.value || 'x',
-      s5.value || 'x',
-      s4.value || 'x',
-      s3.value || 'x',
-      s2.value || 'x',
-      s1.value || 'x'
+      document.getElementById('s6').value || 'x',
+      document.getElementById('s5').value || 'x',
+      document.getElementById('s4').value || 'x',
+      document.getElementById('s3').value || 'x',
+      document.getElementById('s2').value || 'x',
+      document.getElementById('s1').value || 'x'
     ]
   };
+
+  if (!chord.name) {
+    alert('Dá um nome ao acorde.');
+    return;
+  }
 
   if (editingIndex !== null) {
     chords[editingIndex] = chord;
@@ -347,30 +365,54 @@ function saveChord() {
     chords.push(chord);
   }
 
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(chords));
+
   closeModal();
   render();
 }
 
+/* =========================
+   EDITAR
+========================= */
+
 function editChord(i) {
   const c = chords[i];
   editingIndex = i;
-  modalTitle.innerText = 'Editar acorde';
-  root.value = c.root;
-  name.value = c.name;
-  [s6,s5,s4,s3,s2,s1].forEach((el,idx)=>el.value=c.strings[idx]);
-  modal.style.display = 'flex';
+
+  document.getElementById('modalTitle').innerText = 'Editar acorde';
+
+  document.getElementById('root').value = c.root;
+  document.getElementById('name').value = c.name;
+
+  document.getElementById('s6').value = c.strings[0];
+  document.getElementById('s5').value = c.strings[1];
+  document.getElementById('s4').value = c.strings[2];
+  document.getElementById('s3').value = c.strings[3];
+  document.getElementById('s2').value = c.strings[4];
+  document.getElementById('s1').value = c.strings[5];
+
+  document.getElementById('modal').style.display = 'flex';
 }
+
+/* =========================
+   APAGAR
+========================= */
 
 function deleteChord(i) {
-  if (confirm('Apagar este acorde?')) {
-    chords.splice(i,1);
-    render();
-  }
+  if (!confirm('Apagar este acorde?')) return;
+
+  chords.splice(i, 1);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(chords));
+  render();
 }
 
-search.addEventListener('input', render);
+/* =========================
+   PESQUISA + INIT
+========================= */
 
+search.addEventListener('input', render);
 render();
+
 </script>
 
 </body>
