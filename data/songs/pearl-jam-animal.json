@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "artist": "Pearl Jam",
+    "title": "Animal",
+    "genre": "Grunge",
+    "decade": "1990"
+  },
+  "sections": [
+    {
+      "id": "sec-49a4d4bc-49b8-4ba6-9fc9-af876698c272",
+      "label": "Intro 1",
+      "content": [
+        "e|-----------------------------|",
+        "B|-----------------------------|",
+        "G|-----------------------------|",
+        "D|---------------------7-------|",
+        "A|-0---0-0---0---0---0---6-5-0-|",
+        "E|-5---5-5---5---5---5---------|"
+      ]
+    },
+    {
+      "id": "sec-5d190e36-6c80-4852-90b5-85ad40f01a04",
+      "label": "Verse 1",
+      "content": [
+        "C",
+        "One, two, three, four, five against one",
+        "",
+        "",
+        "A",
+        "Five, five, five against one",
+        "Said one, two, three, four, five against one",
+        "Five, five, five against"
+      ]
+    },
+    {
+      "id": "sec-e318f431-8c3e-4fc7-93d2-bd1305c1cb7d",
+      "label": "Bridge 1",
+      "content": [
+        "D A",
+        "Torture from you to me, yeah",
+        "",
+        "",
+        "D A C D G D/F# A",
+        "Abducted from the street"
+      ]
+    },
+    {
+      "id": "sec-29b846e4-2f76-4f29-99df-1a0219b9cfc6",
+      "label": "Chorus 1",
+      "content": [
+        "A",
+        "I'd rather be",
+        "",
+        "",
+        "C",
+        "I'd rather be with",
+        "",
+        "",
+        "D G D/F# A C D G D/F# A",
+        "I'd rather be with an animal"
+      ]
+    },
+    {
+      "id": "sec-10fe542a-c60f-4361-93b3-22d458d147d8",
+      "label": "Verse 2",
+      "content": [
+        "D A",
+        "Why would you want to hurt me",
+        "",
+        "",
+        "D A C D G D/F# A",
+        "Oh, so frightened of your pain, yeah"
+      ]
+    },
+    {
+      "id": "sec-67e1096d-c942-4655-ba95-be363c3b7145",
+      "label": "Chorus 2",
+      "content": [
+        "A",
+        "I'd rather be",
+        "",
+        "",
+        "C",
+        "I'd rather be with",
+        "",
+        "",
+        "D G D/F# A",
+        "I'd rather be with an animal",
+        "",
+        "",
+        "A",
+        "I'd rather be",
+        "",
+        "",
+        "C",
+        "I'd rather be with",
+        "",
+        "",
+        "D G D/F# A",
+        "I'd rather be with an animal"
+      ]
+    },
+    {
+      "id": "sec-e6837049-e2df-4156-bbd2-72d609ff12e2",
+      "label": "Instrumental 1",
+      "content": [
+        "A C D G D/F# x2"
+      ]
+    },
+    {
+      "id": "sec-3e5a60ec-fd5a-45fd-9334-9d1ff1e19e29",
+      "label": "Chorus 3",
+      "content": [
+        "",
+        "",
+        "A",
+        "I'd rather be",
+        "",
+        "",
+        "C",
+        "I'd rather be with",
+        "",
+        "",
+        "D G D/F# A",
+        "I'd rather be with an animal",
+        "",
+        "",
+        "A",
+        "I'd rather be",
+        "",
+        "",
+        "C",
+        "I'd rather be with",
+        "",
+        "",
+        "D G D/F# A",
+        "I'd rather be with an animal"
+      ]
+    },
+    {
+      "id": "sec-d803f9be-0351-43cc-9096-e1fc1603eabf",
+      "label": "Bridge 2",
+      "content": [
+        "A",
+        "Said one, two, three, four, five against one",
+        "Five-five, five, five; five against, five against",
+        "One, two, three, four, five against one",
+        "Five-five, five, five; five against one, said"
+      ]
+    }
+  ]
+}
