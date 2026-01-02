@@ -890,6 +890,20 @@ async function githubPutFile(path, content, message, token) {
 }
 </script>
 
+<script>
+/* =========================
+   THEME BOOTSTRAP
+   (herda da home)
+========================= */
+(function () {
+  const THEME_KEY = 'site-theme';
+  const savedTheme = localStorage.getItem(THEME_KEY);
+
+  if (savedTheme === 'red') {
+    document.body.classList.add('red-mode');
+  }
+})();
+</script>
 
 </body>
 </html>
