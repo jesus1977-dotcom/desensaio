@@ -88,5 +88,14 @@
     "decade": "1990",
     "added": "2026-01-02T18:04:59.013Z",
     "plays": 0
+  },
+  {
+    "file": "pink-floyd-wish-you-were-here.json",
+    "artist": "Pink Floyd",
+    "title": "Wish You Were Here",
+    "genre": "Rock",
+    "decade": "1970",
+    "added": "2026-01-02T18:21:33.204Z",
+    "plays": 0
   }
 ]
