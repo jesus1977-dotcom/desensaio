@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "artist": "Nirvana",
+    "title": "Heart Shaped Box",
+    "genre": "Grunge",
+    "decade": "1990"
+  },
+  "sections": [
+    {
+      "id": "sec-c8356b37-a077-4dda-8adf-e36f0134efe1",
+      "label": "Intro 1",
+      "content": [
+        "A5 F5 D5 A5 F5 D7"
+      ]
+    },
+    {
+      "id": "sec-4f6ff2b4-2a02-44d8-aa00-6eb76d105e50",
+      "label": "Verse 1",
+      "content": [
+        "A F D A F D",
+        "She eyes me like a pisces when I am weak",
+        "",
+        "",
+        "A F D A F D",
+        "I've been locked inside your heart-shaped box for weeks",
+        "",
+        "",
+        "A F D A F D",
+        "I've been drawn into your magnet tarpit trap",
+        "",
+        "",
+        "A F D A F D",
+        "I wish I could eat your cancer when you turn black"
+      ]
+    },
+    {
+      "id": "sec-d70a16d7-bcdd-4818-bde6-94fdda6a770f",
+      "label": "Chorus 1",
+      "content": [
+        "A5 F5 D",
+        "Hey! Wait! I got a new complaint,",
+        "",
+        "",
+        "A5 F5 D5",
+        "forever in debt to your priceless advice",
+        "",
+        "",
+        "A5 F5 D",
+        "Hey! Wait! I got a new complaint,",
+        "",
+        "",
+        "A5 F5 D5",
+        "forever in debt to your priceless advice",
+        "",
+        "",
+        "A5 F5 D",
+        "Hey! Wait! I got a new complaint,",
+        "",
+        "",
+        "A5 F5 D5 F D",
+        "forever in debt to your priceless advice,",
+        "",
+        "",
+        "F D",
+        "Your advice"
+      ]
+    },
+    {
+      "id": "sec-f2bb84a4-0895-4174-9d34-34c03fba3391",
+      "label": "Verse 2",
+      "content": [
+        "A F D A F D",
+        "Meat-eating orchids forgive no one just yet",
+        "",
+        "",
+        "A F D A F D",
+        "Cut myself on angel hair and baby's breath",
+        "",
+        "",
+        "A F D A F D",
+        "Broken hymen of your highness I'm left black",
+        "",
+        "",
+        "A F D A F D",
+        "Throw down your umbilical noose so I can climb right back"
+      ]
+    },
+    {
+      "id": "sec-059cadcc-cec2-4529-938e-cf44e533c76b",
+      "label": "Chorus 2",
+      "content": [
+        "A5 F5 D",
+        "Hey! Wait! I got a new complaint,",
+        "",
+        "",
+        "A5 F5 D5",
+        "forever in debt to your priceless advice",
+        "",
+        "",
+        "A5 F5 D",
+        "Hey! Wait! I got a new complaint,",
+        "",
+        "",
+        "A5 F5 D5",
+        "forever in debt to your priceless advice",
+        "",
+        "",
+        "A5 F5 D",
+        "Hey! Wait! I got a new complaint,",
+        "",
+        "",
+        "A5 F5 D5 F D",
+        "forever in debt to your priceless advice,",
+        "",
+        "",
+        "F D",
+        "Your advice",
+        "",
+        "",
+        "Am F"
+      ]
+    },
+    {
+      "id": "sec-bbdd6080-e1ae-4890-8e59-032c8bfd2850",
+      "label": "Verse 3",
+      "content": [
+        "A F D A F D",
+        "She eyes me like a pisces when I am weak",
+        "",
+        "",
+        "A F D A F D",
+        "I've been locked inside your heart-shaped box for weeks",
+        "",
+        "",
+        "A F D A F D",
+        "I've been drawn into your magnet tarpit trap",
+        "",
+        "",
+        "A F D A F D",
+        "I wish I could eat your cancer when you turn black"
+      ]
+    },
+    {
+      "id": "sec-85b66236-057e-4246-b9d8-de486d92d385",
+      "label": "Chorus 3",
+      "content": [
+        "A5 F5 D",
+        "Hey! Wait! I got a new complaint,",
+        "",
+        "",
+        "A5 F5 D5",
+        "forever in debt to your priceless advice",
+        "",
+        "",
+        "A5 F5 D",
+        "Hey! Wait! I got a new complaint,",
+        "",
+        "",
+        "A5 F5 D5",
+        "forever in debt to your priceless advice",
+        "",
+        "",
+        "A5 F5 D",
+        "Hey! Wait! I got a new complaint,",
+        "",
+        "",
+        "A5 F5 D5 F D",
+        "forever in debt to your priceless advice,",
+        "",
+        "",
+        "F D",
+        "Your advice",
+        "",
+        "",
+        "Am F"
+      ]
+    }
+  ]
+}
