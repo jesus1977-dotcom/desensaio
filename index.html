@@ -590,7 +590,10 @@ function loadExistingSong() {
       if (!res.ok) throw new Error('HTTP ' + res.status);
       return res.json();
     })
-    .then(song => renderSong(song))
+    .then(song => {
+      renderSong(song);
+      incrementPlayCount(fileParam); // 👈 conta SEMPRE
+    })
     .catch(err => {
       console.error(err);
       document.getElementById('music').innerText =
@@ -615,7 +618,8 @@ function renderSong(song) {
     const btn = document.createElement('button');
     btn.innerText = section.label;
     btn.onclick = () =>
-      document.getElementById(section.id).scrollIntoView({ behavior: 'smooth' });
+      document.getElementById(section.id)
+        .scrollIntoView({ behavior: 'smooth' });
     sectionsDiv.appendChild(btn);
 
     const secDiv = document.createElement('div');
@@ -628,18 +632,63 @@ function renderSong(song) {
 
     const pre = document.createElement('pre');
 
-pre.innerHTML = section.content
-  .map(line => {
-    const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
-    return `<div class="${isChord ? 'chord-row' : 'lyric-row'}">${line === '' ? '&nbsp;' : line}</div>`;
+    pre.innerHTML = section.content
+      .map(line => {
+        const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
+        return `<div class="${isChord ? 'chord-row' : 'lyric-row'}">
+          ${line === '' ? '&nbsp;' : line}
+        </div>`;
+      })
+      .join('');
 
-  })
-  .join('');
-
-secDiv.appendChild(pre);
-
+    secDiv.appendChild(pre);
     musicDiv.appendChild(secDiv);
   });
+}
+
+/* ======================================================
+   CONTADOR DE PLAYS (INDEX.JSON)
+====================================================== */
+
+async function incrementPlayCount(fileName) {
+  try {
+    const token = localStorage.getItem('githubToken');
+    if (!token) return; // público conta visualmente, mas não grava
+
+    const apiUrl =
+      'https://api.github.com/repos/jesus1977-dotcom/desensaio/contents/data/songs/index.json';
+
+    // ler index.json
+    const res = await fetch(apiUrl, {
+      headers: { Authorization: `token ${token}` }
+    });
+    if (!res.ok) return;
+
+    const file = await res.json();
+    const data = JSON.parse(atob(file.content));
+
+    const entry = data.find(e => e.file === fileName);
+    if (!entry) return;
+
+    entry.plays = (entry.plays || 0) + 1;
+
+    // gravar de volta
+    await fetch(apiUrl, {
+      method: 'PUT',
+      headers: {
+        Authorization: `token ${token}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        message: `Play: ${entry.artist} – ${entry.title}`,
+        content: btoa(JSON.stringify(data, null, 2)),
+        sha: file.sha
+      })
+    });
+
+  } catch (e) {
+    console.warn('Play não gravado:', e.message);
+  }
 }
 
 /* ======================================================
