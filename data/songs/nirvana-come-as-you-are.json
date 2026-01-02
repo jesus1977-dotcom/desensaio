@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "artist": "Nirvana",
+    "title": "Come As You Are",
+    "genre": "Grunge",
+    "decade": "1990"
+  },
+  "sections": [
+    {
+      "id": "sec-05e6aea4-4fc8-48d8-ad98-7d46362b2c5b",
+      "label": "Intro 1",
+      "content": [
+        "D|-----------------------------------|",
+        "A|-----------------------------------|",
+        "F|-----------------------------------|",
+        "C|-----------------------------------| ",
+        "G|-----------0---0---------2-------2-|",
+        "D|-0-0-1-2-----2---2-2-1-0---0-0-----|",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "sec-40d9ac6d-57cc-41c3-a277-82ce09d6cd2a",
+      "label": "Verse 1",
+      "content": [
+        "F#m E F#m E F#m",
+        "Come as you are, as you were, as I want you to be",
+        "",
+        "",
+        "E F#m E F#m",
+        "As a friend, as a friend, as an old enemy",
+        "",
+        "",
+        "E F#m E F#m",
+        "Take your time, hurry up, the choice is yours - don't be late",
+        "",
+        "",
+        "E F#m E F#m A",
+        "Take a rest, as a friend, as an old memoria"
+      ]
+    },
+    {
+      "id": "sec-40d65f68-38c0-44b2-b498-6f8fc1dffb6d",
+      "label": "Bridge 1",
+      "content": [
+        "F#m A F#m A F#m A",
+        "Memoria Memoria Memoria"
+      ]
+    },
+    {
+      "id": "sec-4e9aaf89-63dd-45ee-a138-a4723ee7fb4b",
+      "label": "Verse 2",
+      "content": [
+        "F#m E F#m E F#m",
+        "Come dowsed in mud, soaked in bleach, as I want you to be",
+        "",
+        "",
+        "E F#m E F#m A",
+        "As a trend, as a friend, as an old memoria"
+      ]
+    },
+    {
+      "id": "sec-98add961-9496-4a22-8eff-e52944524cd1",
+      "label": "Bridge 2",
+      "content": [
+        "F#m A F#m A F#m A",
+        "Memoria Memoria Memoria"
+      ]
+    },
+    {
+      "id": "sec-c41d1c41-6868-4bd9-b3ac-603f673b1ebd",
+      "label": "Chorus 1",
+      "content": [
+        "B D B D",
+        "And I swear that I don't have a gun",
+        "",
+        "",
+        "B D B D",
+        "No, I don't have a gun - No, I don't have a gun"
+      ]
+    },
+    {
+      "id": "sec-f719cfec-4699-4fba-b528-2dc034b9797f",
+      "label": "Instrumental 1",
+      "content": [
+        "F#m   E   x2"
+      ]
+    },
+    {
+      "id": "sec-8b1b476f-c345-40fd-a480-d5b750e306e3",
+      "label": "Solo 1",
+      "content": [
+        "F#m E x8"
+      ]
+    },
+    {
+      "id": "sec-10d13af7-1e38-46cf-9020-9ceb3e4c03aa",
+      "label": "Bridge 3",
+      "content": [
+        "F#m A F#m A F#m A F#m A",
+        "ria Memoria Memoria Memoria"
+      ]
+    },
+    {
+      "id": "sec-d82993c1-7375-49cd-ac6c-1b4b8416b2c6",
+      "label": "Chorus 2",
+      "content": [
+        "B D B D",
+        "And I swear that I don't have a gun",
+        "",
+        "",
+        "B D B D",
+        "No, I don't have a gun - No, I don't have a gun",
+        "",
+        "",
+        "B D B D",
+        "No, I don't have a gun - No, I don't have a gun"
+      ]
+    },
+    {
+      "id": "sec-d293e04e-c93a-46fa-8934-f15d1d334e21",
+      "label": "Instrumental 2",
+      "content": [
+        "D|-----------------------------------|",
+        "A|-----------------------------------|",
+        "F|-----------------------------------|",
+        "C|-----------------------------------| ",
+        "G|-----------0---0---------2-------2-|",
+        "D|-0-0-1-2-----2---2-2-1-0---0-0-----|",
+        "",
+        ""
+      ]
+    }
+  ]
+}
