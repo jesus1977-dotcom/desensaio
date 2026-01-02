@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <title>Desensaio</title>
 
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
 <style>
 
 /* =========================
@@ -383,8 +388,16 @@ body.red-mode .btn-redmode {
 
 .card h2 {
   margin-top: 0;
-  margin-bottom: 16px;
-  font-size: 16px;
+  margin-bottom: 18px;
+
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+
+  text-align: center;
+
+  color: var(--accent-gold);
+  text-transform: uppercase;
 }
 
 /* Botões dentro dos cards */
@@ -592,6 +605,12 @@ body.red-mode .btn-redmode {
     0 3px 6px rgba(0,0,0,0.6);
 }
 
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
 
 </style>
 
@@ -617,49 +636,65 @@ body.red-mode .btn-redmode {
 
 <div class="grid">
 
-  <!-- MAIS TOCADAS -->
-  <div class="card">
-    <h2>🔥 Mais tocadas</h2>
-    <div id="mostPlayed"></div>
-  </div>
+<!-- EM ALTA -->
+<div class="card">
+  <h2 class="card-title">
+    <i class="fa-solid fa-fire"></i>
+    Em alta
+  </h2>
+  <div id="mostPlayed"></div>
+</div>
 
-  <!-- ALFABETO -->
-  <div class="card">
-    <h2>🔤 Alfabeto</h2>
-    <input
-  type="text"
-  id="artistSearch"
-  placeholder="Procurar artista..."
-  style="
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 20px;
-    border: none;
-  "
->
+<!-- ARTISTAS -->
+<div class="card">
+  <h2 class="card-title">
+    <i class="fa-solid fa-font"></i>
+    Artistas
+  </h2>
 
-<div id="alphabet"></div>
+  <input
+    type="text"
+    id="artistSearch"
+    placeholder="Procurar artista..."
+    style="
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 20px;
+      border: none;
+    "
+  >
 
-  </div>
+  <div id="alphabet"></div>
+</div>
 
-  <!-- GÉNERO -->
-  <div class="card">
-    <h2>🎸 Género</h2>
-    <div id="genres"></div>
-  </div>
+<!-- ESTILOS -->
+<div class="card">
+  <h2 class="card-title">
+    <i class="fa-solid fa-guitar"></i>
+    Estilos
+  </h2>
+  <div id="genres"></div>
+</div>
 
-  <!-- DÉCADA -->
-  <div class="card">
-    <h2>📅 Década</h2>
-    <div id="decades"></div>
-  </div>
+<!-- ERAS -->
+<div class="card">
+  <h2 class="card-title">
+    <i class="fa-solid fa-clock-rotate-left"></i>
+    Eras
+  </h2>
+  <div id="decades"></div>
+</div>
 
-  <!-- RECENTES -->
-  <div class="card">
-    <h2>🆕 Novidades</h2>
-    <div id="recent"></div>
-  </div>
+<!-- RECENTES -->
+<div class="card">
+  <h2 class="card-title">
+    <i class="fa-solid fa-bolt"></i>
+    Recentes
+  </h2>
+  <div id="recent"></div>
+</div>
+
 
 </div>
 
