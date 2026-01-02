@@ -79,5 +79,14 @@
     "decade": "1990",
     "added": "2026-01-02T18:02:18.722Z",
     "plays": 0
+  },
+  {
+    "file": "nirvana-heart-shaped-box.json",
+    "artist": "Nirvana",
+    "title": "Heart Shaped Box",
+    "genre": "Grunge",
+    "decade": "1990",
+    "added": "2026-01-02T18:04:59.013Z",
+    "plays": 0
   }
 ]
