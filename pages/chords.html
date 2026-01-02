@@ -3,11 +3,226 @@
 <head>
   <meta charset="UTF-8">
   <title>Acordes</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 30px;
+      font-family: Arial, sans-serif;
+      background: #141617;
+      color: #eaeaea;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 28px;
+      letter-spacing: 0.4px;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .btn {
+      padding: 10px 18px;
+      border-radius: 22px;
+      background: #1e4d5c;
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #256273;
+    }
+
+    #search {
+      width: 100%;
+      padding: 12px 16px;
+      margin-bottom: 20px;
+      border-radius: 25px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .chord {
+      background: #1f2426;
+      border: 1px solid #323232;
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .chord-name {
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+
+    pre {
+      margin: 0;
+      font-family: monospace;
+      font-size: 15px;
+      line-height: 1.2;
+      white-space: pre;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>Acordes</h1>
-<p>Página de consulta de acordes.</p>
+  <div class="top-bar">
+    <h1>Acordes</h1>
+    <button class="btn" onclick="history.back()">Voltar</button>
+  </div>
+
+  <input
+    id="search"
+    type="text"
+    placeholder="Procurar acorde (ex: Cmaj7, sus, add...)"
+  >
+
+  <div id="chordList"></div>
+
+<script>
+/* =========================
+   DICIONÁRIO DE ACORDES
+========================= */
+
+const CHORDS = {
+  "C": `
+e|--0--
+B|--1--
+G|--0--
+D|--2--
+A|--3--
+E|--x--
+`,
+
+  "Cmaj7": `
+e|--0--
+B|--0--
+G|--0--
+D|--2--
+A|--3--
+E|--x--
+`,
+
+  "Cadd2": `
+e|--0--
+B|--1--
+G|--0--
+D|--2--
+A|--3--
+E|--x--
+`,
+
+  "D": `
+e|--2--
+B|--3--
+G|--2--
+D|--0--
+A|--x--
+E|--x--
+`,
+
+  "Dsus2": `
+e|--0--
+B|--3--
+G|--2--
+D|--0--
+A|--x--
+E|--x--
+`,
+
+  "E": `
+e|--0--
+B|--0--
+G|--1--
+D|--2--
+A|--2--
+E|--0--
+`,
+
+  "Esus4": `
+e|--0--
+B|--0--
+G|--2--
+D|--2--
+A|--2--
+E|--0--
+`,
+
+  "A": `
+e|--0--
+B|--2--
+G|--2--
+D|--2--
+A|--0--
+E|--x--
+`,
+
+  "Am": `
+e|--0--
+B|--1--
+G|--2--
+D|--2--
+A|--0--
+E|--x--
+`,
+
+  "Bm": `
+e|--2--
+B|--3--
+G|--4--
+D|--4--
+A|--2--
+E|--x--
+`
+};
+
+/* =========================
+   RENDER
+========================= */
+
+const list = document.getElementById('chordList');
+const search = document.getElementById('search');
+
+function render(names) {
+  list.innerHTML = '';
+
+  names.forEach(name => {
+    const div = document.createElement('div');
+    div.className = 'chord';
+
+    div.innerHTML = `
+      <div class="chord-name">${name}</div>
+      <pre>${CHORDS[name]}</pre>
+    `;
+
+    list.appendChild(div);
+  });
+}
+
+render(Object.keys(CHORDS));
+
+search.addEventListener('input', () => {
+  const q = search.value.trim().toLowerCase();
+
+  const filtered = Object.keys(CHORDS)
+    .filter(name => name.toLowerCase().includes(q));
+
+  render(filtered);
+});
+</script>
 
 </body>
 </html>
