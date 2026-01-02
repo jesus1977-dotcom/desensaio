@@ -371,27 +371,33 @@ h1 {
 
   </div>
 
-  <!-- CONTEÚDO (CENTRO) -->
-  <div id="content">
+<!-- CONTEÚDO (CENTRO) -->
+<div id="content">
 
-<div class="page-header">
-  <h1 id="titleText"></h1>
+  <div class="page-header">
+    <h1 id="titleText" class="page-title"></h1>
 
-  <div class="page-actions">
-    <button class="btn-header btn-back"
-      onclick="window.location.href='home.html'">
-      ⬅ Voltar
-    </button>
+    <div class="page-actions">
+      <button
+        class="btn-header btn-back"
+        onclick="window.location.href='home.html'">
+        Voltar
+      </button>
 
-    <button
-      id="editBtn"
-      class="btn-header btn-edit"
-      onclick="requireAdmin(toggleEdit)">
-      ✏️ Editar
-    </button>
+      <button
+        class="btn-header btn-chords"
+        onclick="openChords()">
+        Acordes
+      </button>
+
+      <button
+        id="editBtn"
+        class="btn-header btn-edit"
+        onclick="requireAdmin(toggleEdit)">
+        Editar
+      </button>
+    </div>
   </div>
-</div>
-
 
     <div class="meta" id="meta"></div>
 
