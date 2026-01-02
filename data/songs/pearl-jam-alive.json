@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "artist": "Pearl Jam",
+    "title": "Alive",
+    "genre": "Grunge",
+    "decade": "1990"
+  },
+  "sections": [
+    {
+      "id": "sec-1e881311-2abf-413a-9be6-67dd733bbb39",
+      "label": "Intro 1",
+      "content": [
+        "e|---------------------------------------------------------|",
+        "B|---------------------------------------------------------|",
+        "G|--0-----2--4--2--2-2-2-------0-----2--4--2-4s5s4--4--2-2-|",
+        "D|-----0-----------------0--------0------------------------|X2",
+        "A|---------------------------------------------------------|",
+        "E|---------------------------------------------------------|"
+      ]
+    },
+    {
+      "id": "sec-ea5173dc-cc9c-4e39-bea1-c8e6bce61e4a",
+      "label": "Verse 1",
+      "content": [
+        "A G",
+        "Son, she said",
+        "",
+        "",
+        "A G",
+        "have I got a little story for you",
+        "",
+        "",
+        "A G A G",
+        "What you thought was your daddy was nothin' but a...",
+        "",
+        "",
+        "A G A G",
+        "While you were sittin' home alone at age thirteen",
+        "",
+        "",
+        "A G A G",
+        "Your real daddy was dyin'",
+        "",
+        "",
+        "F G C",
+        "sorry you didn't see him",
+        "",
+        "",
+        "F G C",
+        "but I'm glad we talked..."
+      ]
+    },
+    {
+      "id": "sec-1b89f42f-9807-4cf3-b7ca-b6e98e2688e0",
+      "label": "Chorus 1",
+      "content": [
+        "E G D A",
+        "Oh I... ooooh, I'm still alive",
+        "",
+        "",
+        "E G D A",
+        "Hey, I, ooooh, I'm still alive",
+        "",
+        "",
+        "E G D A",
+        "Hey I, ooooh, I'm still alive",
+        "",
+        "",
+        "E G A",
+        "Hey...oh..."
+      ]
+    },
+    {
+      "id": "sec-a629f252-d6a7-468f-b245-41cf6c168ca4",
+      "label": "Verse 2",
+      "content": [
+        "A G A",
+        "Oh, she walks slowly,",
+        "",
+        "",
+        "A G",
+        "across a young man's room",
+        "",
+        "",
+        "A G A G",
+        "She said I'm ready...for you",
+        "",
+        "",
+        "A G A G",
+        "I can't remember anything to this very day",
+        "",
+        "",
+        "A G A G",
+        "'Cept the look, the look...",
+        "",
+        "",
+        "F G C F G C",
+        "Oh, you know where, now I can't see,",
+        "",
+        "",
+        "E",
+        "I just stare..."
+      ]
+    },
+    {
+      "id": "sec-06b9e275-1b77-4446-ac79-0ef58691ef97",
+      "label": "Chorus 2",
+      "content": [
+        "E G D A",
+        "Oh I... ooooh, I'm still alive",
+        "",
+        "",
+        "E G D A",
+        "Hey, I, ooooh, I'm still alive",
+        "",
+        "",
+        "E G D A",
+        "Hey I, ooooh, I'm still alive",
+        "",
+        "",
+        "E G D A",
+        "Hey I, ooooh, I'm still alive",
+        "",
+        "",
+        "E G A",
+        "Hey...oh..."
+      ]
+    },
+    {
+      "id": "sec-a496a7fc-7a2e-42dc-85c8-cc7ccca74158",
+      "label": "Bridge 1",
+      "content": [
+        "A Esus Asus A Esus A",
+        "Is something wrong, she said",
+        "",
+        "",
+        "A Esus Asus",
+        "Well of course there is",
+        "",
+        "",
+        "A Esus Asus",
+        "You're still alive, she said",
+        "",
+        "",
+        "B Badd9 C/G",
+        "Oh, and do I deserve to be",
+        "",
+        "",
+        "B Badd9 B",
+        "Is that the question",
+        "",
+        "",
+        "B Badd9 B",
+        "And if so...if so.....who answers...who answers..."
+      ]
+    },
+    {
+      "id": "sec-6a95cb34-eee2-40a7-a10b-691790862a04",
+      "label": "Chorus 3",
+      "content": [
+        "E G D A",
+        "Oh I... ooooh, I'm still alive",
+        "",
+        "",
+        "E G D A",
+        "Hey, I, ooooh, I'm still alive",
+        "",
+        "",
+        "E G D A",
+        "Hey I, ooooh, I'm still alive",
+        "",
+        "",
+        "E G A",
+        "Hey...I...I'm still alive"
+      ]
+    }
+  ]
+}
