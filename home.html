@@ -748,11 +748,23 @@ fetch('data/songs/index.json')
       .forEach(s => addSongButton('mostPlayed', s));
 
     /* 🆕 RECENTES (ABRE MÚSICA DIRECTA) */
-    songs
-      .slice()
-      .sort((a, b) => new Date(b.added) - new Date(a.added))
-      .slice(0, 10)
-      .forEach(s => addSongButton('recent', s));
+  songs
+  .slice()
+  .sort((a, b) => new Date(b.added) - new Date(a.added))
+  .slice(0, 10)
+  .forEach(s => {
+    const btn = document.createElement('button');
+    const when = daysAgoLabel(s.added);
+
+    btn.innerText =
+      `${s.artist} – ${s.title} ${when}`;
+
+    btn.onclick = () => {
+      window.location = 'index.html?song=' + s.file;
+    };
+
+    document.getElementById('recent').appendChild(btn);
+  });
 
     /* 🔤 ALFABETO (LETRA → ARTISTAS) */
     const alphabetDiv = document.getElementById('alphabet');
@@ -915,6 +927,25 @@ fetch('data/songs/index.json')
     localStorage.setItem(THEME_KEY, isRed ? 'red' : 'default');
   };
 })();
+
+  function daysAgoLabel(isoDate) {
+  if (!isoDate) return '';
+
+  const addedDate = new Date(isoDate);
+  const today = new Date();
+
+  // normalizar para meia-noite (evita bugs de horas)
+  addedDate.setHours(0, 0, 0, 0);
+  today.setHours(0, 0, 0, 0);
+
+  const diffMs = today - addedDate;
+  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+  if (diffDays <= 0) return '(hoje)';
+  if (diffDays === 1) return '(há 1 dia)';
+  return `(há ${diffDays} dias)`;
+}
+
 </script>
 
 
