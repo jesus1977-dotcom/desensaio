@@ -4,9 +4,68 @@
   <meta charset="UTF-8">
   <title>Desensaio</title>
 
-  <style>
+<style>
 
-    /* =========================
+/* =========================
+   THEME VARIABLES
+   Midnight Studio (default)
+========================= */
+
+:root {
+  /* Fundos */
+  --bg-main: #141617;
+  --bg-header: #0f1112;
+  --bg-card: #1f2426;
+  --bg-overlay: rgba(0,0,0,0.75);
+
+  /* Texto */
+  --text-main: #eaeaea;
+  --text-muted: #9a9a9a;
+
+  /* Azul petróleo */
+  --accent-primary: #1e4d5c;
+  --accent-primary-hover: #256273;
+
+  /* Dourado elegante */
+  --accent-gold: #d6a756;
+  --accent-gold-hover: #e6bb6a;
+
+  /* Bordas */
+  --border-soft: #2a2a2a;
+  --border-card: #323232;
+}
+
+/* =========================
+   RED MODE 🔴 (Benfica)
+   Activado via body.red-mode
+========================= */
+
+body.red-mode {
+  --accent-primary: #b11226;
+  --accent-primary-hover: #e63946;
+
+  --accent-gold: #f1c27d;
+  --accent-gold-hover: #f6d28b;
+}
+
+/* =========================
+   BASE
+========================= */
+
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 30px;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* =========================
    HEADER
 ========================= */
 
@@ -17,8 +76,8 @@
   padding: 20px 30px;
   margin-bottom: 30px;
 
-  background: linear-gradient(180deg, #0e0e0e, #121212);
-  border-bottom: 1px solid #222;
+  background: linear-gradient(180deg, var(--bg-header), var(--bg-main));
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .header-left {
@@ -36,21 +95,21 @@
   padding: 10px 16px;
   border-radius: 20px;
   border: none;
-  background: #0f2a33;
+  background: var(--accent-primary);
   color: #fff;
   cursor: pointer;
 }
 
 .btn-add:hover {
-  background: #17414f;
+  background: var(--accent-primary-hover);
 }
 
-/* Botão Aleatório — O “rebentar explosivos” 💣 */
+/* Botão Aleatório */
 .btn-random {
   padding: 14px 22px;
   border-radius: 30px;
   border: none;
-  background: #ff8c1a;
+  background: var(--accent-gold);
   color: #000;
   font-weight: bold;
   font-size: 15px;
@@ -58,23 +117,10 @@
 }
 
 .btn-random:hover {
-  background: #ffa94d;
+  background: var(--accent-gold-hover);
 }
 
-    body {
-      background: #111;
-      color: #eee;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 30px;
-    }
-
-    h1 {
-      margin-top: 0;
-      margin-bottom: 20px;
-    }
-
- /* =========================
+/* =========================
    GRID PRINCIPAL
 ========================= */
 
@@ -84,6 +130,7 @@
   gap: 24px;
   align-items: start;
 }
+
 @media (max-width: 1400px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
@@ -102,9 +149,13 @@
   }
 }
 
+/* =========================
+   CARDS
+========================= */
+
 .card {
-  background: #1a1a1a;
-  border: 1px solid #333;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
   border-radius: 22px;
   padding: 22px;
 
@@ -117,28 +168,30 @@
   font-size: 16px;
 }
 
-    .card button {
-      width: 100%;
-      margin-bottom: 8px;
-      padding: 10px;
-      border-radius: 20px;
-      border: none;
-      background: #0f2a33;
-      color: #fff;
-      cursor: pointer;
-    }
+/* Botões dentro dos cards */
+.card button {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background: var(--accent-primary);
+  color: #fff;
+  cursor: pointer;
+}
 
-    .card button:hover {
-      background: #17414f;
-    }
+.card button:hover {
+  background: var(--accent-primary-hover);
+}
 
-    .primary {
-      background: #ff8c1a !important;
-      color: #000 !important;
-      font-weight: bold;
-    }
+/* Botão primário */
+.primary {
+  background: var(--accent-gold) !important;
+  color: #000 !important;
+  font-weight: bold;
+}
 
- /* =========================
+/* =========================
    ALFABETO EM GRID
 ========================= */
 
@@ -148,7 +201,6 @@
   gap: 6px;
 }
 
-/* Botões das letras */
 #alphabet button {
   padding: 6px 0;
   font-size: 13px;
@@ -156,8 +208,7 @@
   text-align: center;
 }
 
-
-/* 🔍 Campo de pesquisa */
+/* Campo de pesquisa */
 #artistSearch {
   width: 100%;
   box-sizing: border-box;
@@ -168,7 +219,7 @@
   outline: none;
 }
 
-    /* =========================
+/* =========================
    FOOTER
 ========================= */
 
@@ -181,10 +232,10 @@
   align-items: center;
 
   font-size: 13px;
-  color: #888;
+  color: var(--text-muted);
 
-  background: linear-gradient(180deg, #121212, #0e0e0e);
-  border-top: 1px solid #222;
+  background: linear-gradient(180deg, var(--bg-main), var(--bg-header));
+  border-top: 1px solid var(--border-soft);
 }
 
 .footer-left,
@@ -192,7 +243,7 @@
   opacity: 0.8;
 }
 
-    @media (max-width: 600px) {
+@media (max-width: 600px) {
   .site-footer {
     flex-direction: column;
     gap: 8px;
@@ -200,14 +251,14 @@
   }
 }
 
-    /* =========================
+/* =========================
    LIST OVERLAY
 ========================= */
 
 #listOverlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.75);
+  background: var(--bg-overlay);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -215,7 +266,7 @@
 }
 
 .overlay-box {
-  background: #1a1a1a;
+  background: var(--bg-card);
   border-radius: 20px;
   padding: 25px;
   width: 90%;
@@ -229,7 +280,8 @@
   width: 100%;
 }
 
-  </style>
+</style>
+
 </head>
 
 <body>
