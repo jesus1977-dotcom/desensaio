@@ -1,0 +1,334 @@
+{
+  "meta": {
+    "artist": "Nirvana",
+    "title": "Smells Like Teen Spirit",
+    "genre": "Grunge",
+    "decade": "1990"
+  },
+  "sections": [
+    {
+      "id": "sec-aae476e1-ca00-4ebc-8e9c-5d4096db05f9",
+      "label": "Intro 1",
+      "content": [
+        "F5 Bb5 Ab5 Db5",
+        "(x2 clean then x2 with distortion)"
+      ]
+    },
+    {
+      "id": "sec-4e139fd5-2cb8-4ab0-92f2-21f58488fc00",
+      "label": "Intro 2",
+      "content": [
+        "e|------------------|",
+        "B|----------6-------|",
+        "G|-------5----------|",
+        "D|------------------| (x6)",
+        "A|------------------|",
+        "E|------------------|"
+      ]
+    },
+    {
+      "id": "sec-c4e6a7e1-34d1-4f7d-8fee-b0c1e777e6d7",
+      "label": "Verse 1",
+      "content": [
+        "N.C.",
+        "Load up on guns, bring your friends",
+        "",
+        "",
+        "N.C.",
+        "It's fun to lose and to pretend",
+        "",
+        "",
+        "N.C.",
+        "She's over-bored and self-assured",
+        "",
+        "",
+        "N.C.",
+        "Oh no I know, a dirty word"
+      ]
+    },
+    {
+      "id": "sec-0fb8f662-8c39-4d56-92d8-bf8ed3c41dd5",
+      "label": "Instrumental 1",
+      "content": [
+        "e|------------------|",
+        "B|----------6-6-----|",
+        "G|-------5-------5--|",
+        "D|------------------| or play Verse riff but faster",
+        "A|------------------|",
+        "E|------------------|"
+      ]
+    },
+    {
+      "id": "sec-3baf6493-f8ff-455b-9903-8cb8962a77dc",
+      "label": "Bridge 1",
+      "content": [
+        "N.C.",
+        "Hello, hello, hello, how low",
+        "",
+        "",
+        "N.C.",
+        "Hello, hello, hello, how low",
+        "",
+        "",
+        "N.C.",
+        "Hello, hello, hello, how low",
+        "",
+        "",
+        "N.C.",
+        "Hello, hello, hello"
+      ]
+    },
+    {
+      "id": "sec-515ea2bb-b90d-4833-8274-830804492e83",
+      "label": "Chorus 1",
+      "content": [
+        "F5 Bb5 Ab5",
+        "With the lights out, it's less dangerous",
+        "",
+        "",
+        "Db5 F5 Bb5 Ab5",
+        "Here we are now, entertain us",
+        "",
+        "",
+        "Db5 F5 Bb5 Ab5",
+        "I feel stupid and contagious",
+        "",
+        "",
+        "Db5 F5 Bb5 Ab5",
+        "Here we are now, entertain us",
+        "",
+        "",
+        "Db5 F5 Bb5 Ab5",
+        "A mulatto, an Albino",
+        "",
+        "",
+        "Db5 F5 Bb5 Ab5 Db5",
+        "A mosquito, my libido, yeah"
+      ]
+    },
+    {
+      "id": "sec-1a92edce-2292-4138-ae4c-5aa149a563d9",
+      "label": "Instrumental 2",
+      "content": [
+        "F5 Gb5 F5 Bb5 Ab5",
+        "e|-----------------|-----------------|",
+        "B|-----------------|-----------------|",
+        "G|-------------3b--|-----------------| (x2)",
+        "D|-----------------|-----------------|",
+        "A|-3---0-3-4-4-----|-3---0-3-8-8-6-6-|",
+        "E|-1---0-1-2-2-----|-1---0-1-6-6-4-4-|",
+        "Hey"
+      ]
+    },
+    {
+      "id": "sec-861b1866-63f4-4f25-8861-94cda69c92ef",
+      "label": "Instrumental 3",
+      "content": [
+        "e|------------------|",
+        "B|----------6-------|",
+        "G|-------5----------|",
+        "D|------------------| (x6)",
+        "A|------------------|",
+        "E|------------------|"
+      ]
+    },
+    {
+      "id": "sec-a65fb5d7-5003-481f-b0c6-233f69a57a0c",
+      "label": "Verse 2",
+      "content": [
+        "N.C.",
+        "I'm worse at what I do best",
+        "",
+        "",
+        "N.C.",
+        "And for this gift, I feel blessed",
+        "",
+        "",
+        "N.C.",
+        "Our little group has always been",
+        "",
+        "",
+        "N.C.",
+        "And always will until the end"
+      ]
+    },
+    {
+      "id": "sec-121a7b5c-ada1-46e2-b401-21d30d7d39cd",
+      "label": "Instrumental 4",
+      "content": [
+        "e|------------------|",
+        "B|----------6-6-----|",
+        "G|-------5-------5--|",
+        "D|------------------| or play Verse riff but faster",
+        "A|------------------|",
+        "E|------------------|"
+      ]
+    },
+    {
+      "id": "sec-85284354-9ffb-48d1-828f-17f819bc3f56",
+      "label": "Bridge 2",
+      "content": [
+        "N.C.",
+        "Hello, hello, hello, how low",
+        "",
+        "",
+        "N.C.",
+        "Hello, hello, hello, how low",
+        "",
+        "",
+        "N.C.",
+        "Hello, hello, hello, how low",
+        "",
+        "",
+        "N.C.",
+        "Hello, hello, hello"
+      ]
+    },
+    {
+      "id": "sec-2a2a4e33-faf5-4cf0-b671-c53ef49722d7",
+      "label": "Chorus 2",
+      "content": [
+        "F5 Bb5 Ab5",
+        "With the lights out, it's less dangerous",
+        "",
+        "",
+        "Db5 F5 Bb5 Ab5",
+        "Here we are now, entertain us",
+        "",
+        "",
+        "Db5 F5 Bb5 Ab5",
+        "I feel stupid and contagious",
+        "",
+        "",
+        "Db5 F5 Bb5 Ab5",
+        "Here we are now, entertain us",
+        "",
+        "",
+        "Db5 F5 Bb5 Ab5",
+        "A mulatto, an Albino",
+        "",
+        "",
+        "Db5 F5 Bb5 Ab5 Db5",
+        "A mosquito, my libido, yeah"
+      ]
+    },
+    {
+      "id": "sec-5e01cec1-860e-4c6a-894f-e6cc963a3baa",
+      "label": "Instrumental 5",
+      "content": [
+        "F5 Gb5 F5 Bb5 Ab5",
+        "e|-----------------|-----------------|",
+        "B|-----------------|-----------------|",
+        "G|-------------3b--|-----------------| (x2)",
+        "D|-----------------|-----------------|",
+        "A|-3---0-3-4-4-----|-3---0-3-8-8-6-6-|",
+        "E|-1---0-1-2-2-----|-1---0-1-6-6-4-4-|",
+        "Hey"
+      ]
+    },
+    {
+      "id": "sec-da2a9b01-9575-4900-84b3-0f070812763e",
+      "label": "Verse 3",
+      "content": [
+        "N.C.",
+        "And I forget just why I taste",
+        "",
+        "",
+        "N.C.",
+        "Oh yeah, I guess it makes me smile",
+        "",
+        "",
+        "N.C.",
+        "I found it hard, it's hard to find",
+        "",
+        "",
+        "N.C.",
+        "Oh well, whatever, nevermind"
+      ]
+    },
+    {
+      "id": "sec-647bfb03-f51b-4996-b96a-e09f34491c02",
+      "label": "Bridge 3",
+      "content": [
+        "e|------------------|",
+        "B|----------6-6-----|",
+        "G|-------5-------5--|",
+        "D|------------------| ",
+        "A|------------------|",
+        "E|------------------|"
+      ]
+    },
+    {
+      "id": "sec-7846b7e5-dc56-4ae3-8fb9-c3ee853c1d9d",
+      "label": "Bridge 4",
+      "content": [
+        "N.C.",
+        "Hello, hello, hello, how low",
+        "",
+        "",
+        "N.C.",
+        "Hello, hello, hello, how low",
+        "",
+        "",
+        "N.C.",
+        "Hello, hello, hello, how low",
+        "",
+        "",
+        "N.C.",
+        "Hello, hello, hello"
+      ]
+    },
+    {
+      "id": "sec-f9530474-f71d-4d12-8b90-68e8d73a5452",
+      "label": "Chorus 3",
+      "content": [
+        "F5 Bb5 Ab5",
+        "With the lights out, it's less dangerous",
+        "",
+        "",
+        "Db5 F5 Bb5 Ab5",
+        "Here we are now, entertain us",
+        "",
+        "",
+        "Db5 F5 Bb5 Ab5",
+        "I feel stupid and contagious",
+        "",
+        "",
+        "Db5 F5 Bb5 Ab5",
+        "Here we are now, entertain us",
+        "",
+        "",
+        "Db5 F5 Bb5 Ab5",
+        "A mulatto, an Albino",
+        "",
+        "",
+        "Db5 F5 Bb5 Ab5",
+        "A mosquito, my libido"
+      ]
+    },
+    {
+      "id": "sec-27c0d0e0-2aa8-4de5-a9ea-063112f2e268",
+      "label": "Outro 1",
+      "content": [
+        "Db5 F5 Bb5 Ab5",
+        "A denial, a denial,",
+        "",
+        "",
+        "Db5 F5 Bb5 Ab5",
+        "A denial, a denial,",
+        "",
+        "",
+        "Db5 F5 Bb5 Ab5",
+        "A denial, a denial,",
+        "",
+        "",
+        "Db5 F5 Bb5 Ab5",
+        "A denial, a denial,",
+        "",
+        "",
+        "Db5 F5",
+        "A denial ..........."
+      ]
+    }
+  ]
+}
