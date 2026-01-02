@@ -294,6 +294,10 @@ h1 {
   <div class="header-right">
     <button class="btn-add" onclick="requireAdmin(openNew)">➕ Nova música</button>
     <button class="btn-random" onclick="openRandom()">🎲 BRONX</button>
+    <button class="btn-add" onclick="toggleTheme()" title="Red Mode 🔴">
+  🔴
+</button>
+
   </div>
 </header>
 
@@ -580,6 +584,25 @@ fetch('data/songs/index.json')
   });
 </script>
   
+<script>
+/* =========================
+   THEME MANAGER
+========================= */
+
+(function () {
+  const THEME_KEY = 'site-theme';
+  const savedTheme = localStorage.getItem(THEME_KEY);
+
+  if (savedTheme === 'red') {
+    document.body.classList.add('red-mode');
+  }
+
+  window.toggleTheme = function () {
+    const isRed = document.body.classList.toggle('red-mode');
+    localStorage.setItem(THEME_KEY, isRed ? 'red' : 'default');
+  };
+})();
+</script>
 
 
 </body>
