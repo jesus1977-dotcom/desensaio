@@ -1,0 +1,248 @@
+{
+  "meta": {
+    "artist": "Aerosmith",
+    "title": "Crying",
+    "genre": "Rock",
+    "decade": "1990"
+  },
+  "sections": [
+    {
+      "id": "sec-647dde7b-c4cb-4595-9562-943773d2bfc4",
+      "label": "Intro 1",
+      "content": [
+        "Bb5 C5 F5 G5",
+        "Bb5 C5 F5 G5",
+        "Bb5 C5 F5 G5",
+        "Bb5 C5 F5 G5 Bb5"
+      ]
+    },
+    {
+      "id": "sec-2d57bc24-0229-4b82-9dab-fa67e3ac1a01",
+      "label": "Verse 1",
+      "content": [
+        "",
+        "",
+        "A E",
+        "there was a time",
+        "",
+        "",
+        "F#m C#m",
+        "when I was so broken-hearted",
+        "",
+        "",
+        "D A E",
+        "love wasn't much of a friend of mine",
+        "",
+        "",
+        "A E",
+        "the tables have turned, yeah",
+        "",
+        "",
+        "F#m C#",
+        "'cause me and them ways have parted",
+        "",
+        "",
+        "D A E",
+        "that kind of love was the killin' kind -- listen"
+      ]
+    },
+    {
+      "id": "sec-d9b3311a-f212-4e3e-be50-779802429313",
+      "label": "Bridge 1",
+      "content": [
+        "",
+        "",
+        "G D G D",
+        "all I want is someone I can't resist",
+        "",
+        "",
+        "C G E",
+        "I know all I need to know by the way that I got kissed"
+      ]
+    },
+    {
+      "id": "sec-e038add8-b28e-48ca-a8a5-7a0d70242a50",
+      "label": "Chorus 1",
+      "content": [
+        "A E",
+        "I was cryin' when I met you",
+        "",
+        "",
+        "F#m D",
+        "now I'm tryin' to forget you",
+        "",
+        "",
+        "A E D",
+        "love is sweet misery",
+        "",
+        "",
+        "A E",
+        "I was cryin' just to get you",
+        "",
+        "",
+        "C#m D",
+        "now I'm dyin' 'cause I let you",
+        "",
+        "",
+        "A E D",
+        "do what you do, down on me"
+      ]
+    },
+    {
+      "id": "sec-471e18ba-9f33-4827-8d5d-22deaf865cf4",
+      "label": "Bridge 2",
+      "content": [
+        "",
+        "",
+        "Bb5 C5 F5 G5",
+        "now there's not even breathin' room",
+        "",
+        "",
+        "Bb5 C5 F5 G5",
+        "between pleasure and pain",
+        "",
+        "",
+        "Bb5 C5 F5 G5",
+        "yeah, you cry when we're makin' love",
+        "",
+        "",
+        "Bb5 C5 F5 G5 Bb5",
+        "must be one and the same"
+      ]
+    },
+    {
+      "id": "sec-bfaaf669-9516-4f27-a65a-f904bd40b26d",
+      "label": "Verse 2",
+      "content": [
+        "A E",
+        "it's down on me",
+        "",
+        "",
+        "F#m C#m",
+        "yeah I got to tell you one thing",
+        "",
+        "",
+        "D A E",
+        "that's been on my mind, girl I gotta say",
+        "",
+        "",
+        "A E",
+        "we're partners in crime",
+        "",
+        "",
+        "F#m C#",
+        "you got that certain something",
+        "",
+        "",
+        "D A E",
+        "what you give to me takes my breath away"
+      ]
+    },
+    {
+      "id": "sec-63e7cdda-32a7-462a-af00-1bee4ac6b680",
+      "label": "Bridge 3",
+      "content": [
+        "G D G D",
+        "now the word out on the street is the devil's in your kiss",
+        "",
+        "",
+        "C G E",
+        "if our love goes up in flames it's a fire I can't resist"
+      ]
+    },
+    {
+      "id": "sec-65c3321e-dd84-4acd-8604-1495ac13d105",
+      "label": "Chorus 2",
+      "content": [
+        "A E",
+        "I was cryin' when I met you",
+        "",
+        "",
+        "F#m D",
+        "now I'm tryin' to forget you",
+        "",
+        "",
+        "A E D",
+        "your love is sweet misery",
+        "",
+        "",
+        "A E",
+        "I was cryin' just to get you",
+        "",
+        "",
+        "C#m D",
+        "now I'm dyin' 'cause I let you",
+        "",
+        "",
+        "A E D",
+        "do what you do to me"
+      ]
+    },
+    {
+      "id": "sec-b7a61bb8-8c6d-48f4-9570-81e6b7eeda3c",
+      "label": "Instrumental 1",
+      "content": [
+        "Bb5 C5 F5 G5",
+        "Bb5 C5 F5 G5",
+        "Bb5 C5 F5 G5",
+        "Bb5 C5 F5 G5 Bb5"
+      ]
+    },
+    {
+      "id": "sec-61e7b279-2489-459a-b5a3-c86d880c1b04",
+      "label": "Bridge 4",
+      "content": [
+        "Eb Bb",
+        "'cause what you got inside",
+        "",
+        "",
+        "Eb Bb",
+        "ain't where your love should stay",
+        "",
+        "",
+        "Ab Eb",
+        "yeah, our love, sweet love, ain't love",
+        "",
+        "",
+        "E",
+        "till ya give your heart away"
+      ]
+    },
+    {
+      "id": "sec-09982bcd-b5e9-44f1-8a50-5aa8a8bd6c85",
+      "label": "Chorus 3",
+      "content": [
+        "A E",
+        "I was cryin' when I met you",
+        "",
+        "",
+        "C#m D",
+        "now I'm tryin' to forget you",
+        "",
+        "",
+        "A E D",
+        "your love is sweet misery",
+        "",
+        "",
+        "A E",
+        "I was cryin' just to get you",
+        "",
+        "",
+        "F#m D",
+        "now I'm dyin' to let you",
+        "",
+        "",
+        "A E D",
+        "do what you do what you do down to..."
+      ]
+    },
+    {
+      "id": "sec-f0f5b17f-9224-4855-95f0-7750df600349",
+      "label": "Instrumental 2",
+      "content": [
+        "A E C#m D A E D",
+        "A E C#m D A E D"
+      ]
+    }
+  ]
+}
