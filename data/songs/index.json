@@ -43,5 +43,14 @@
     "decade": "1990",
     "added": "2026-01-02T16:36:00.801Z",
     "plays": 0
+  },
+  {
+    "file": "aerosmith-crazy.json",
+    "artist": "Aerosmith",
+    "title": "Crazy",
+    "genre": "Rock",
+    "decade": "1990",
+    "added": "2026-01-02T17:12:34.360Z",
+    "plays": 0
   }
 ]
