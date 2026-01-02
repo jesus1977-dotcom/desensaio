@@ -538,7 +538,8 @@ function renderSong(song) {
 pre.innerHTML = section.content
   .map(line => {
     const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
-    return `<div class="${isChord ? 'chord-row' : 'lyric-row'}">${line || ''}</div>`;
+    return `<div class="${isChord ? 'chord-row' : 'lyric-row'}">${line === '' ? '&nbsp;' : line}</div>`;
+
   })
   .join('');
 
@@ -729,7 +730,7 @@ SECTION_BASES.forEach(base => {
     pre.innerHTML = section.content
       .map(line => {
         const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
-      return `<div class="${isChord ? 'chord-row' : 'lyric-row'}">${line || ''}</div>`;
+      return `<div class="${isChord ? 'chord-row' : 'lyric-row'}">${line === '' ? '&nbsp;' : line}</div>`;
 
       })
       .join('');
