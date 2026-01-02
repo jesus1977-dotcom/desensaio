@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "artist": "Pink Floyd",
+    "title": "Wish You Were Here",
+    "genre": "Rock",
+    "decade": "1970"
+  },
+  "sections": [
+    {
+      "id": "sec-f3cc6abc-b70a-4791-88f8-dfd5d273ebfe",
+      "label": "Intro 1",
+      "content": [
+        "Em7 G",
+        "e|------------------3-3----------------3-3---------|",
+        "B|------------------3-3----------------3-3---------|",
+        "G|------------------0-0------0---------0-0---------|",
+        "D|---------0--2-----2-2---2-----2--0---0-0---------| x2",
+        "A|-----0h2-----------------------------2-2---------|",
+        "E|-(3)---------------------------------3-3---------|",
+        " ",
+        " ",
+        "Em7 A7sus4",
+        "e|------------------3-3----------------3-3---------|",
+        "B|------------------3-3----------------3-3---------|",
+        "G|------------------0-0----------------0-0---------|",
+        "D|---------0--2-----2-2--2--0----------2-2---------| x2",
+        "A|-----0h2---------------------2--0----0-0---------|",
+        "E|-(3)---------------------------------------------|",
+        "  ",
+        "G"
+      ]
+    },
+    {
+      "id": "sec-e75191af-2193-4c22-83c9-3e70ac81ec81",
+      "label": "Verse 1",
+      "content": [
+        "C D/F#",
+        "So, so you think you can tell,",
+        "",
+        "",
+        "Am/E G",
+        "Heaven from Hell, blue skies from pain.",
+        "",
+        "",
+        "D/F# C Am",
+        "Can you tell a green field from a cold steel rail, a smile from a veil,",
+        "",
+        "",
+        "G",
+        "Do you think you can tell?"
+      ]
+    },
+    {
+      "id": "sec-7e9db023-b398-49bc-9ed5-2291ea222d7a",
+      "label": "Verse 2",
+      "content": [
+        "C D/F#",
+        "Did they get you to trade your heroes for ghosts,",
+        "",
+        "",
+        "Am/E G D/F#",
+        "Hot ashes for trees, hot air for a cool breeze, cold comfort for change,",
+        "",
+        "",
+        "C Am G",
+        "And did you exchange a walk on part in the war for a lead role in a cage?"
+      ]
+    },
+    {
+      "id": "sec-2e8941c4-e9b0-4fc3-a7d4-14c725f1681e",
+      "label": "Instrumental 1",
+      "content": [
+        "Em7 G Em7 G",
+        "Em7 A7sus4 Em7 A7sus4",
+        "G"
+      ]
+    },
+    {
+      "id": "sec-b7887e14-0467-4be3-bde6-608bfa48f4ea",
+      "label": "Verse 3",
+      "content": [
+        "C D/F#",
+        "How I wish, how I wish you were here.",
+        "",
+        "",
+        "Am/E G",
+        "We're just two lost souls swimming in a fish bowl, year after year,",
+        "",
+        "",
+        "D/F# C",
+        "Running over the same old ground. What have we found?",
+        "",
+        "",
+        "Am G",
+        "The same old fears. Wish you were here!"
+      ]
+    },
+    {
+      "id": "sec-30994fbd-d2b4-47aa-97bb-133d27a90f32",
+      "label": "Instrumental 2",
+      "content": [
+        "Em7 G Em7 G",
+        "Em7 A7sus4 Em7 A7sus4",
+        "G G"
+      ]
+    }
+  ]
+}
