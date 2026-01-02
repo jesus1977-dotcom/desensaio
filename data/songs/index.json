@@ -3,9 +3,18 @@
     "file": "gnr-video-maria.json",
     "artist": "GNR",
     "title": "Video Maria",
-    "genre": "Rock Português",
+    "genre": "Rock PortuguÃªs",
     "decade": "1980",
     "added": "2025-12-31T12:52:18.295Z",
+    "plays": 0
+  },
+  {
+    "file": "eagles-hotel-california.json",
+    "artist": "Eagles",
+    "title": "Hotel California",
+    "genre": "Rock",
+    "decade": "1970",
+    "added": "2026-01-02T15:56:03.180Z",
     "plays": 0
   }
 ]
