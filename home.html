@@ -612,6 +612,36 @@ body.red-mode .btn-redmode {
   gap: 10px;
 }
 
+  /* =========================
+   CONTADOR DE MÚSICAS
+========================= */
+
+.catalog-counter {
+  margin: 0 auto 28px auto;
+  padding: 12px 22px;
+
+  width: fit-content;
+
+  border-radius: 28px;
+  border: 1px solid rgba(241, 194, 125, 0.35);
+
+  background: linear-gradient(
+    180deg,
+    #1f2426,
+    #15191b
+  );
+
+  color: var(--accent-gold);
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-align: center;
+
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,0.08),
+    0 6px 16px rgba(0,0,0,0.55);
+}
+
 </style>
 
 </head>
@@ -633,6 +663,9 @@ body.red-mode .btn-redmode {
   </div>
 </header>
 
+<div class="catalog-counter" id="catalogCounter">
+  A carregar músicas…
+</div>
 
 <div class="grid">
 
@@ -774,6 +807,19 @@ function closeOverlay() {
 fetch('data/songs/index.json')
   .then(r => r.json())
   .then(songs => {
+
+        /* =========================
+       CONTADOR TOTAL DE MÚSICAS
+    ========================= */
+    const total = songs.length;
+    const counter = document.getElementById('catalogCounter');
+
+    if (counter) {
+      counter.innerText =
+        total === 1
+          ? 'Existe 1 música disponível'
+          : `Existem ${total} músicas disponíveis`;
+    }
 
     /* 🔥 MAIS TOCADAS (ABRE MÚSICA DIRECTA) */
     songs
