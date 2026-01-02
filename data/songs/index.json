@@ -34,5 +34,14 @@
     "decade": "1990",
     "added": "2026-01-02T16:11:03.252Z",
     "plays": 0
+  },
+  {
+    "file": "pearl-jam-animal.json",
+    "artist": "Pearl Jam",
+    "title": "Animal",
+    "genre": "Grunge",
+    "decade": "1990",
+    "added": "2026-01-02T16:36:00.801Z",
+    "plays": 0
   }
 ]
