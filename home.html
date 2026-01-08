@@ -846,14 +846,21 @@ fetch('data/songs/index.json')
     }
 
     /* 🔥 MAIS TOCADAS (ABRE MÚSICA DIRECTA) */
-    songs
-      .slice()
-      .sort((a, b) => (b.plays || 0) - (a.plays || 0))
-      .slice(0, 6)
-      .forEach(s => addSongButton('mostPlayed', s));
+    const mostPlayedDiv = document.getElementById('mostPlayed');
+mostPlayedDiv.innerHTML = '';
 
-    /* 🆕 RECENTES (ABRE MÚSICA DIRECTA) */
-  songs
+songs
+  .slice()
+  .sort((a, b) => (b.plays || 0) - (a.plays || 0))
+  .slice(0, 6)
+  .forEach(s => addSongButton('mostPlayed', s));
+
+
+  /* 🆕 RECENTES (ABRE MÚSICA DIRECTA) */
+const recentDiv = document.getElementById('recent');
+recentDiv.innerHTML = '';
+
+songs
   .slice()
   .sort((a, b) => new Date(b.added) - new Date(a.added))
   .slice(0, 6)
@@ -861,14 +868,13 @@ fetch('data/songs/index.json')
     const btn = document.createElement('button');
     const when = daysAgoLabel(s.added);
 
-    btn.innerText =
-      `${s.artist} – ${s.title} ${when}`;
+    btn.innerText = `${s.artist} – ${s.title} ${when}`;
 
     btn.onclick = () => {
       window.location = 'index.html?song=' + s.file;
     };
 
-    document.getElementById('recent').appendChild(btn);
+    recentDiv.appendChild(btn);
   });
 
     /* 🔤 ALFABETO (LETRA → ARTISTAS) */
@@ -907,7 +913,9 @@ fetch('data/songs/index.json')
     }
 
     function handleArtist(artist) {
-      const artistSongs = songs.filter(s => s.artist === artist);
+      const artistSongs = songs
+  .filter(s => s.artist === artist)
+  .sort((a, b) => a.title.localeCompare(b.title, 'pt', { sensitivity: 'base' }));
 
       openOverlay(
         artist,
@@ -953,7 +961,14 @@ fetch('data/songs/index.json')
       .sort()
       .forEach(genre => {
         addGenericButton('genres', genre, () => {
-          const genreSongs = songs.filter(s => s.genre === genre);
+          const genreSongs = songs
+  .filter(s => s.genre === genre)
+  .sort((a, b) => {
+    const artistCompare = a.artist.localeCompare(b.artist, 'pt', { sensitivity: 'base' });
+    if (artistCompare !== 0) return artistCompare;
+    return a.title.localeCompare(b.title, 'pt', { sensitivity: 'base' });
+  });
+
           openOverlay(
             `Género: ${genre}`,
             genreSongs.map(s => ({
@@ -970,7 +985,14 @@ fetch('data/songs/index.json')
       .sort()
       .forEach(decade => {
         addGenericButton('decades', decade, () => {
-          const decadeSongs = songs.filter(s => s.decade === decade);
+          const decadeSongs = songs
+  .filter(s => s.decade === decade)
+  .sort((a, b) => {
+    const artistCompare = a.artist.localeCompare(b.artist, 'pt', { sensitivity: 'base' });
+    if (artistCompare !== 0) return artistCompare;
+    return a.title.localeCompare(b.title, 'pt', { sensitivity: 'base' });
+  });
+
           openOverlay(
             `Década: ${decade}`,
             decadeSongs.map(s => ({
