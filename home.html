@@ -698,6 +698,25 @@ body.red-mode .btn-redmode {
   );
 }
 
+  .song-btn {
+  text-align: left;
+  padding: 12px 14px;
+}
+
+.song-artist {
+  display: block;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+}
+
+.song-title {
+  display: block;
+  font-size: 12px;
+  opacity: 0.85;
+  margin-top: 2px;
+}
+
 </style>
 
 </head>
@@ -927,7 +946,13 @@ songs
     const btn = document.createElement('button');
     const when = daysAgoLabel(s.added);
 
-    btn.innerText = `${s.artist} – ${s.title} ${when}`;
+    btn.classList.add('song-btn');
+
+btn.innerHTML = `
+  <span class="song-artist">${s.artist}</span>
+  <span class="song-title">${s.title} ${when}</span>
+`;
+
 
     btn.onclick = () => {
       window.location = 'index.html?song=' + s.file;
@@ -1068,7 +1093,13 @@ songs
     ========================= */
     function addSongButton(targetId, song) {
       const btn = document.createElement('button');
-      btn.innerText = song.artist + ' – ' + song.title;
+      btn.classList.add('song-btn');
+
+btn.innerHTML = `
+  <span class="song-artist">${song.artist}</span>
+  <span class="song-title">${song.title}</span>
+`;
+
       btn.onclick = () => {
         window.location = 'index.html?song=' + song.file;
       };
