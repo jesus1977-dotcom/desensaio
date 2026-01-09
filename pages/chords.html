@@ -144,28 +144,55 @@ pre {
 }
 
 /* =========================
-   AÇÕES (EDITAR / APAGAR)
+   AÇÕES (ÍCONES)
 ========================= */
 .card-actions {
   position: absolute;
   top: 6px;
-  right: 8px;
+  right: 6px;
 
   display: flex;
-  gap: 6px;
-
-  font-size: 11px;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.card-actions button {
-  background: none;
-  border: none;
-  color: var(--gold);
+.card-actions .action {
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.08);
+
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
   cursor: pointer;
 
-  padding: 0;
+  font-size: 12px;
   line-height: 1;
+
+  padding: 0;
+
+  transition: all 0.15s ease;
 }
+
+/* editar */
+.card-actions .edit {
+  color: var(--gold);
+}
+
+/* apagar */
+.card-actions .delete {
+  color: #ff6b6b;
+}
+
+.card-actions .action:hover {
+  transform: scale(1.1);
+  background: rgba(0,0,0,0.6);
+}
+
 
 /* =========================
    MODAL
@@ -350,10 +377,19 @@ function render() {
       const card = document.createElement('div');
       card.className = 'card';
       card.innerHTML = `
-        <div class="card-actions">
-          <button onclick="editChord(${idx})">Editar</button>
-          <button onclick="deleteChord(${idx})">Apagar</button>
-        </div>
+       <div class="card-actions">
+  <button
+    class="action edit"
+    title="Editar"
+    onclick="editChord(${idx})"
+  >✏️</button>
+
+  <button
+    class="action delete"
+    title="Apagar"
+    onclick="deleteChord(${idx})"
+  >🗑</button>
+</div>
         <div class="card-name">
   ${c.root}<span class="chord-type">${c.name || 'maj'}</span>
 </div>
