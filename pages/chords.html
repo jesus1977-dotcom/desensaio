@@ -92,25 +92,31 @@ h1 {
 ========================= */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, 160px); /* ⬅️ FIXO */
+  gap: 16px;
+  align-items: start;
 }
+
 
 /* CARD — COM ESPAÇO REAL PARA AÇÕES */
 .card {
   background: var(--bg-card);
   border-radius: 14px;
 
-  /* ⬇️ espaço reservado para Editar / Apagar */
-  padding: 28px 12px 10px 12px;
+  padding: 30px 12px 12px;
 
-  min-width: 130px;
+  width: 160px;        /* ⬅️ IGUAL À COLUNA */
+  box-sizing: border-box;
 
   box-shadow:
     inset 0 1px 1px rgba(255,255,255,0.04),
     0 4px 10px rgba(0,0,0,0.5);
 
   position: relative;
+}
+
+   .card * {
+  box-sizing: border-box;
 }
 
 .card:hover {
