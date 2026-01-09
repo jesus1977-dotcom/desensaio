@@ -160,5 +160,14 @@
     "decade": "1980",
     "added": "2026-01-09T16:51:21.366Z",
     "plays": 0
+  },
+  {
+    "file": "aerosmith-amazing.json",
+    "artist": "Aerosmith",
+    "title": "Amazing",
+    "genre": "Rock",
+    "decade": "1990",
+    "added": "2026-01-09T16:54:26.281Z",
+    "plays": 0
   }
 ]
