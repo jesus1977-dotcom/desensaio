@@ -142,5 +142,14 @@
     "decade": "2000",
     "added": "2026-01-09T16:42:06.177Z",
     "plays": 0
+  },
+  {
+    "file": "a-ha-take-on-me.json",
+    "artist": "A-Ha",
+    "title": "Take on me",
+    "genre": "Rock",
+    "decade": "1980",
+    "added": "2026-01-09T16:47:29.668Z",
+    "plays": 0
   }
 ]
