@@ -443,6 +443,18 @@ h1 {
     padding-top: 120px; 
 }
 
+  /* =========================
+   MODO VISUALIZAÇÃO (SEM PAINEL)
+========================= */
+
+body.view-mode #rightPanel {
+  display: none;
+}
+
+body.view-mode #content {
+  max-width: 1200px;   
+}
+
 </style>
 
 </head>
@@ -675,6 +687,10 @@ function openChords() {
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  if (!isNewSong) {
+    document.body.classList.add('view-mode');
+  }
+
   if (isNewSong) {
     initCreateMode();
   } else {
@@ -687,11 +703,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+
 /* ======================================================
    MODO CRIAÇÃO
 ====================================================== */
 
 function initCreateMode() {
+  document.body.classList.remove('view-mode');
   newSections = [];
 
   document.getElementById('createMode').style.display = 'block';
@@ -833,6 +851,8 @@ async function toggleEdit() {
   }
 
   if (!editMode) {
+    document.body.classList.remove('view-mode');
+
     // entrar em modo edição
     editMode = true;
 
