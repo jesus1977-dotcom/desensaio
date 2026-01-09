@@ -197,6 +197,14 @@ pre {
   display: flex;
   justify-content: space-between;
 }
+
+   .chord-type {
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.7;
+  margin-left: 4px;
+}
+
 </style>
 </head>
 
@@ -331,7 +339,10 @@ function render() {
           <button onclick="editChord(${idx})">Editar</button>
           <button onclick="deleteChord(${idx})">Apagar</button>
         </div>
-        <div class="card-name">${c.root}${c.name}</div>
+        <div class="card-name">
+  ${c.root}<span class="chord-type">${c.name || 'maj'}</span>
+</div>
+
         <pre>${formatStrings(c.strings)}</pre>
       `;
       cards.appendChild(card);
