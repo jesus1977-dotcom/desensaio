@@ -616,13 +616,17 @@ function toggleScroll() {
 }
 
 function startScroll() {
+  const container = document.getElementById('content');
+
   scrollInterval = setInterval(() => {
     const speed = Number(document.getElementById('speed').value);
-    window.scrollBy(0, speed);
+    container.scrollTop += speed;
   }, 80);
+
   scrolling = true;
   document.getElementById('scrollBtn').innerText = 'Stop';
 }
+
 
 function stopScroll() {
   clearInterval(scrollInterval);
