@@ -96,15 +96,20 @@ h1 {
   gap: 12px;
 }
 
-
+/* CARD — COM ESPAÇO REAL PARA AÇÕES */
 .card {
   background: var(--bg-card);
   border-radius: 14px;
-  padding: 10px 12px;
+
+  /* ⬇️ espaço reservado para Editar / Apagar */
+  padding: 28px 12px 10px 12px;
+
   min-width: 130px;
+
   box-shadow:
     inset 0 1px 1px rgba(255,255,255,0.04),
     0 4px 10px rgba(0,0,0,0.5);
+
   position: relative;
 }
 
@@ -112,6 +117,7 @@ h1 {
   background: var(--bg-card-hover);
 }
 
+/* NOME DO ACORDE */
 .card-name {
   font-weight: 800;
   font-size: 13px;
@@ -120,21 +126,35 @@ h1 {
   letter-spacing: 0.3px;
 }
 
+/* MAJ / m / etc */
+.chord-type {
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.7;
+  margin-left: 4px;
+}
+
+/* TABLATURA */
 pre {
   margin: 0;
   font-family: monospace;
-   font-size: 12px;
-  line-height: 1.15;
+  font-size: 12px;
+  line-height: 1.05;
   opacity: 0.9;
 }
 
-/* ações */
+/* =========================
+   AÇÕES (EDITAR / APAGAR)
+========================= */
 .card-actions {
   position: absolute;
-  top: 8px;
-  right: 10px;
+  top: 6px;
+  right: 8px;
+
   display: flex;
   gap: 6px;
+
+  font-size: 11px;
 }
 
 .card-actions button {
@@ -142,7 +162,9 @@ pre {
   border: none;
   color: var(--gold);
   cursor: pointer;
-  font-size: 12px;
+
+  padding: 0;
+  line-height: 1;
 }
 
 /* =========================
@@ -197,15 +219,8 @@ pre {
   display: flex;
   justify-content: space-between;
 }
-
-   .chord-type {
-  font-size: 11px;
-  font-weight: 700;
-  opacity: 0.7;
-  margin-left: 4px;
-}
-
 </style>
+
 </head>
 
 <body>
