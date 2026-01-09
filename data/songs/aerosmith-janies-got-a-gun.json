@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "artist": "Aerosmith",
+    "title": "Janies Got a Gun",
+    "genre": "Rock",
+    "decade": "1990"
+  },
+  "sections": [
+    {
+      "id": "sec-548ccf41-5bd6-491c-bbb9-2076f92abc94",
+      "label": "Intro 1",
+      "content": [
+        "F5 G5 Ab5 Bb5",
+        "Dum, dum Dum Honey what have you done?",
+        "",
+        "",
+        "Eb5 F5",
+        "Dum, Dum, dum It's the sound of my gun",
+        "",
+        "",
+        "F5 G5 Ab5 Bb5",
+        "Dum dum dum honey what have you done",
+        "",
+        "",
+        "Eb5 Eb5",
+        "Dum dum dum it's the sound it's the sound",
+        "",
+        "",
+        "F G Bb F G Csus4",
+        "Nah, nah, nah, Nah, nah, nah,",
+        "",
+        "",
+        "F G Bb C Csus4",
+        "Nah, nah, nah....."
+      ]
+    },
+    {
+      "id": "sec-3bb5ccd3-0640-42f9-a41f-f85773b2a64f",
+      "label": "Verse 1",
+      "content": [
+        "F Gm7 Csus4 F Gm7 Csus4",
+        "Janie's got a gun, Janies got a gun",
+        "",
+        "",
+        "F Gm7 Csus4 F Gm7 Csus4",
+        "Her whole world's come undone, from looking straight at the sun",
+        "",
+        "",
+        "F Bb C F Bb C",
+        "What did her daddy do? What did he put you through?"
+      ]
+    },
+    {
+      "id": "sec-a0044b6c-f516-45d1-b40b-61dd34dafe43",
+      "label": "Chorus 1",
+      "content": [
+        "Dm(add9)",
+        "They said when Janie was arrested,",
+        "",
+        "",
+        "Bb(add#11) F. F5. Eb5/F. Ab5/F. Eb5/F. F5",
+        "They found him underneath a train,",
+        "",
+        "",
+        "Dm(add9) Bb(add#11)",
+        "But man he had it coming, now that Janie's got a gun",
+        "",
+        "",
+        "Gm7 C F/C C7..",
+        "She ain't never gonna be the same"
+      ]
+    },
+    {
+      "id": "sec-58129ce0-1116-4049-8f28-3a31602a0a2d",
+      "label": "Verse 2",
+      "content": [
+        "F Gm7 Csus4 F Gm7 Csus4",
+        "Janie's got a gun. Janie's got a gun",
+        "",
+        "",
+        "F Gm7 Csus4 F Gm7 Csus4",
+        "Her dog day's just begun, Now everybody is on the run",
+        "",
+        "",
+        "F Bb C F Bb C",
+        "Tell me now it's untrue, What did her daddy do?",
+        "",
+        "",
+        "Dm(add9)",
+        "He jacked a little bitty baby",
+        "",
+        "",
+        "Bb(add#11) F. F5. Eb5/F. Ab5/F. Eb5/F. F5",
+        "The man has got to be insane",
+        "",
+        "",
+        "Dm(add9) Bb(add#11)",
+        "They say the spell that he was under, The lightning and the thunder",
+        "",
+        "",
+        "Gm7 C F/C C7",
+        "Knew that someone had to stop the rain"
+      ]
+    },
+    {
+      "id": "sec-7d52570a-def1-4444-a78b-fcd5983ad061",
+      "label": "Bridge 1",
+      "content": [
+        "Db Eb Fm7",
+        "Run away, Run away from the pain, Yeah, yeah, Yeah, yeah",
+        "",
+        "",
+        "Db Eb Fm7 Eb5/F Fm7",
+        "Run away, Run away from the pain, Yeah, yeah, Yeah Yeahyeah Yeah, yeah",
+        "",
+        "",
+        "Db Eb Bbm Csus4",
+        "Run away, run away, run,run away"
+      ]
+    },
+    {
+      "id": "sec-9d387f2b-1404-46fa-a899-318fd55d088b",
+      "label": "Verse 3",
+      "content": [
+        "F Gm7 Csus4 F Gm7 Csus4",
+        "Janie's got a gun, Janie's got a gun",
+        "",
+        "",
+        "F Gm7 Csus4 F Gm7 Csus4",
+        "Her dog day's just begun, Now everybody's on the run",
+        "",
+        "",
+        "F Bb C F Bb C",
+        "What did her daddy do? It's Janie's last I.O.U",
+        "",
+        "",
+        "Dm(add9)",
+        "She had to take him down easy",
+        "",
+        "",
+        "Bb(add#11) F. F5. Eb5/F. Ab5/F. Eb5/F. F5",
+        "And put a bullet in his brain",
+        "",
+        "",
+        "Dm(add9) Bb(add#11)",
+        "She said cos nobody believes me, The man was such a sleaze",
+        "",
+        "",
+        "Gm7 C F/C C7",
+        "He aint never gonna be the same"
+      ]
+    },
+    {
+      "id": "sec-8453edad-a50c-4361-98fe-6b6b8a7a1334",
+      "label": "Bridge 2",
+      "content": [
+        "Db Eb Fm7",
+        "Run away, Run away from the pain, Yeah, yeah, Yeah, yeah",
+        "",
+        "",
+        "Db Eb Fm7 Eb5/F Fm7",
+        "Run away, Run away from the pain, Yeah, yeah, Yeah Yeahyeah Yeah, yeah",
+        "",
+        "",
+        "Db Eb Bbm Csus4",
+        "Run away, run away, run,run away"
+      ]
+    },
+    {
+      "id": "sec-42dc3307-ed72-4563-9fac-5cbf8b16836b",
+      "label": "Outro 1",
+      "content": [
+        "F Gm7 Csus4 F Gm7 Csus4",
+        "Janie's got a gun, Janie's got a gun",
+        "",
+        "",
+        "F Gm7 Csus4 F Gm7 Csus4",
+        "Janie's got a gun, everybody's on the run"
+      ]
+    }
+  ]
+}
