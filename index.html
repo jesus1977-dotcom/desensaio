@@ -382,25 +382,24 @@ h1 {
     0 3px 6px rgba(0,0,0,0.4);
 }
 
-  /* =========================
-   SONG HEADER FIXO
+/* =========================
+   SONG HEADER FIXO (CORRECTO)
 ========================= */
 
 .song-header {
   position: sticky;
-  top: 20px; /* respeita o padding do body */
+  top: 0;
+  z-index: 100;
 
-  z-index: 50;
+  background: var(--bg-main);
 
-  background: linear-gradient(
-    180deg,
-    var(--bg-main) 85%,
-    rgba(20,22,23,0.85)
-  );
+  padding: 20px 0 14px 0;
+  margin: -20px 0 10px 0; /* anula o padding do body */
 
-  padding-bottom: 12px;
-  margin-bottom: 10px;
+  box-shadow:
+    0 6px 14px rgba(0,0,0,0.65);
 }
+
 
 /* separador subtil quando começa a rolar */
 .song-header::after {
@@ -409,6 +408,28 @@ h1 {
   height: 1px;
   background: var(--border-soft);
   margin-top: 12px;
+}
+
+  /* =========================
+   TÍTULO DA MÚSICA (2 LINHAS)
+========================= */
+
+.song-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.song-artist {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.song-name {
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0.85;
+  margin-top: 2px;
 }
 
 </style>
@@ -442,7 +463,11 @@ h1 {
 <div id="content">
 <div class="song-header">
   <div class="page-header">
-    <h1 id="titleText" class="page-title"></h1>
+    <div class="song-title">
+  <div id="artistText" class="song-artist"></div>
+  <div id="songText" class="song-name"></div>
+</div>
+
 
     <div class="page-actions">
       <button
@@ -683,8 +708,12 @@ function loadExistingSong() {
 }
 
 function renderSong(song) {
-  document.getElementById('titleText').innerText =
-    `${song.meta.artist} – ${song.meta.title}`;
+ document.getElementById('artistText').innerText =
+  song.meta.artist;
+
+document.getElementById('songText').innerText =
+  song.meta.title;
+
 
   document.getElementById('meta').innerText =
     `Género: ${song.meta.genre || '-'} | Década: ${song.meta.decade || '-'}`;
