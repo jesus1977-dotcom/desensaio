@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "artist": "3 Doors Down",
+    "title": "Here Without You",
+    "genre": "Pop",
+    "decade": "2000"
+  },
+  "sections": [
+    {
+      "id": "sec-8e6747ab-ac01-4b2c-9f04-d02b4d9a2fc0",
+      "label": "Intro 1",
+      "content": [
+        "Am F G"
+      ]
+    },
+    {
+      "id": "sec-662edf01-0337-4150-a067-cca7da10911b",
+      "label": "Verse 1",
+      "content": [
+        "Am",
+        "A hundred days have made me older",
+        "",
+        "",
+        "G Am F G",
+        "Since the last time that I saw your pretty face",
+        "",
+        "",
+        "Am",
+        "A thousand lies have made me colder",
+        "",
+        "",
+        "G Am F G",
+        "And I don't think I can look at this the same",
+        "",
+        "",
+        "Am G",
+        "But all the miles that separate",
+        "",
+        "",
+        "Am F G",
+        "They disappear now, when I'm dreaming of your face"
+      ]
+    },
+    {
+      "id": "sec-d9e1aba9-23fd-4cbc-b2a4-328e10f57118",
+      "label": "Chorus 1",
+      "content": [
+        "C G",
+        "I'm here without you, baby",
+        "",
+        "",
+        "Am",
+        "But you're still on my lonely mind",
+        "",
+        "",
+        "F G C",
+        "I think about you, baby, and I dream about you all the time",
+        "",
+        "",
+        "G",
+        "I'm here without you, baby",
+        "",
+        "",
+        "Am",
+        "But you're still with me in my dreams",
+        "",
+        "",
+        "F G Am G Am F G",
+        "And tonight, there's only you and me, yeah"
+      ]
+    },
+    {
+      "id": "sec-356e6451-f04c-4173-ba49-de9cc082c073",
+      "label": "Verse 2",
+      "content": [
+        "Am",
+        "The miles just keep rolling",
+        "",
+        "",
+        "G Am F G",
+        "As the people leave their way to say hello",
+        "",
+        "",
+        "Am",
+        "I've heard this life is overrated",
+        "",
+        "",
+        "G Am F G",
+        "But I hope that it gets better as we go, ohh yeah yeah"
+      ]
+    },
+    {
+      "id": "sec-cb441739-f138-416d-971f-0565df9bff83",
+      "label": "Chorus 2",
+      "content": [
+        "C G",
+        "I'm here without you, baby",
+        "",
+        "",
+        "Am",
+        "But you're still on my lonely mind",
+        "",
+        "",
+        "F G C",
+        "I think about you, baby, and I dream about you all the time",
+        "",
+        "",
+        "G",
+        "I'm here without you, baby",
+        "",
+        "",
+        "Am",
+        "But you're still with me in my dreams",
+        "",
+        "",
+        "F G Am G Am F G",
+        "And tonight, there's only you and me, yeah"
+      ]
+    },
+    {
+      "id": "sec-992a2dfd-d704-4381-bac7-3052c009f7da",
+      "label": "Bridge 1",
+      "content": [
+        "Am C",
+        "Everything I know, and everywhere I go",
+        "",
+        "",
+        "G F",
+        "It gets hard but it won't take away my love",
+        "",
+        "",
+        "Am C",
+        "And when the last one falls, and when it's all said and done",
+        "",
+        "",
+        "G F",
+        "It gets hard, but it won't take away my love, whoa"
+      ]
+    },
+    {
+      "id": "sec-0f7b06ab-6c18-4162-a60d-af0770b72d32",
+      "label": "Instrumental 1",
+      "content": [
+        "C        G        Am      F -- G"
+      ]
+    },
+    {
+      "id": "sec-c5540bb6-9d3b-43eb-bb33-9384a7c497ab",
+      "label": "Chorus 3",
+      "content": [
+        "C G",
+        "I'm here without you, baby",
+        "",
+        "",
+        "Am",
+        "But you're still on my lonely mind",
+        "",
+        "",
+        "F G",
+        "I think about you, baby, and I dream about you all the time",
+        "",
+        "",
+        "C G",
+        "I'm here without you, baby",
+        "",
+        "",
+        "Am",
+        "But you're still with me in my dreams",
+        "",
+        "",
+        "F G C G Am",
+        "And tonight, girl, there's only you and me, yeah, ohh yeah",
+        "",
+        "",
+        "F G Am",
+        "Ohhh, I'm alone"
+      ]
+    }
+  ]
+}
