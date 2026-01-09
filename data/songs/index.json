@@ -169,5 +169,14 @@
     "decade": "1990",
     "added": "2026-01-09T16:54:26.281Z",
     "plays": 7
+  },
+  {
+    "file": "aerosmith-janies-got-a-gun.json",
+    "artist": "Aerosmith",
+    "title": "Janies Got a Gun",
+    "genre": "Rock",
+    "decade": "1990",
+    "added": "2026-01-09T17:13:14.461Z",
+    "plays": 0
   }
 ]
