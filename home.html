@@ -971,7 +971,11 @@ btn.innerHTML = `
     const artistLetters = [...new Set(
       songs
         .filter(s => s.artist)
-        .map(s => s.artist.trim()[0].toUpperCase())
+        .map(s => {
+  const first = s.artist.trim()[0].toUpperCase();
+  return first.match(/[A-Z]/) ? first : '#';
+})
+
     )].sort();
 
     renderAlphabet();
@@ -986,19 +990,25 @@ btn.innerHTML = `
       });
     }
 
-    function handleLetter(letter) {
-      const artists = [...new Set(
-        songs
-          .filter(s => s.artist && s.artist[0].toUpperCase() === letter)
-          .map(s => s.artist)
-      )].sort();
+   function handleLetter(letter) {
+  const artists = [...new Set(
+    songs
+      .filter(s => {
+        if (!s.artist) return false;
+        const first = s.artist.trim()[0].toUpperCase();
+        return letter === '#'
+          ? !first.match(/[A-Z]/)
+          : first === letter;
+      })
+      .map(s => s.artist)
+  )].sort((a, b) => a.localeCompare(b, 'pt', { sensitivity: 'base' }));
 
-      openOverlay(
-        `Artistas com "${letter}"`,
-        artists.map(a => ({ label: a, artist: a })),
-        item => handleArtist(item.artist)
-      );
-    }
+  openOverlay(
+    `Artistas ${letter === '#' ? '0–9' : `com "${letter}"`}`,
+    artists.map(a => ({ label: a, artist: a })),
+    item => handleArtist(item.artist)
+  );
+}
 
     function handleArtist(artist) {
       const artistSongs = songs
