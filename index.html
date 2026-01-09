@@ -463,7 +463,7 @@ h1 {
 
       <div style="margin-top:10px;">
         Velocidade
-        <input type="range" min="1" max="10" value="2" id="speed">
+        <input type="range" min="0" max="100" value="50" id="speed">
 
       </div>
     </div>
@@ -626,8 +626,13 @@ function startScroll() {
   const container = document.getElementById('scrollArea');
 
   scrollInterval = setInterval(() => {
-    const speed = Number(document.getElementById('speed').value);
-    container.scrollTop += speed;
+    const slider = Number(document.getElementById('speed').value);
+
+// curva exponencial suave (lento no meio, rápido no fim)
+const speed = Math.pow(slider / 100, 2) * 6 + 0.2;
+
+container.scrollTop += speed;
+
   }, 80);
 
   scrolling = true;
