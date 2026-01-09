@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "artist": "Aerosmith",
+    "title": "Amazing",
+    "genre": "Rock",
+    "decade": "1990"
+  },
+  "sections": [
+    {
+      "id": "sec-93584962-0963-4638-9cd3-c17b1944c94c",
+      "label": "Intro 1",
+      "content": [
+        "Am - G/A - Am - G/A"
+      ]
+    },
+    {
+      "id": "sec-de952026-0a03-41da-9d56-b67268d62305",
+      "label": "Verse 1",
+      "content": [
+        "Am G/A",
+        "I kept the right ones out and let the wrong ones in",
+        "",
+        "",
+        "C7 F",
+        "Had an angel of mercy to see me through all my sins",
+        "",
+        "",
+        "Fm/G# C/G",
+        "There were times in my life when I was goin' insane",
+        "",
+        "",
+        "Am/F# F",
+        "Tryin' to walk through the pain"
+      ]
+    },
+    {
+      "id": "sec-a0501f7d-1d92-4f69-ad83-c48d6046bcdf",
+      "label": "Verse 2",
+      "content": [
+        "Am G/A",
+        "When I lost my grip and I hit the floor",
+        "",
+        "",
+        "C7 F",
+        "Yeah, I thought I could leave but couldn't get out the door",
+        "",
+        "",
+        "Fm/G# C/G",
+        "I was so sick and tired of livin' a lie",
+        "",
+        "",
+        "Am/F# F",
+        "I was wishin' that I would die"
+      ]
+    },
+    {
+      "id": "sec-457a4fd7-9901-4b08-85fd-e1f271e799a0",
+      "label": "Chorus 1",
+      "content": [
+        "C Em F Em G G7",
+        "It's amazing, with the blink of an eye you finally see the light",
+        "",
+        "",
+        "C Em F Em G G7",
+        "It's amazing when the moment arrives that you know you'll be alright",
+        "",
+        "",
+        "F Em D7 G7 C C/B",
+        "It's amazing and I'm sayin' a prayer for the desperate hearts tonight"
+      ]
+    },
+    {
+      "id": "sec-bcd4a214-9405-4dec-b16d-b8a63d2d2a5f",
+      "label": "Bridge 1",
+      "content": [
+        "Am D7",
+        "That one last shot's a permanent vacation",
+        "",
+        "",
+        "F C C/B",
+        "And how high can you fly with broken wings?",
+        "",
+        "",
+        "Am D7",
+        "Life's a journey not a destination",
+        "",
+        "",
+        "F G",
+        "And I just can't tell just what tomorrow brings"
+      ]
+    },
+    {
+      "id": "sec-ec6a3382-93ce-40cd-8a46-37dc534b0ed8",
+      "label": "Verse 3",
+      "content": [
+        "Am G/A",
+        "You have to learn to crawl before you learn to walk",
+        "",
+        "",
+        "C7 F",
+        "But I just couldn't listen to all that righteous talk",
+        "",
+        "",
+        "Fm/G# C/G",
+        "Well, I was out on the street, just tryin' to survive",
+        "",
+        "",
+        "Am/F# F",
+        "Scratchin' to stay alive"
+      ]
+    }
+  ]
+}
