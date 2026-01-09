@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "artist": "3 Doors Down",
+    "title": "Kryptonite",
+    "genre": "Pop",
+    "decade": "2000"
+  },
+  "sections": [
+    {
+      "id": "sec-9cad8688-f93c-4455-804a-af224aed7f09",
+      "label": "Intro 1",
+      "content": [
+        "Em C Dsus4 x2 picked",
+        "",
+        "",
+        "Em C D x2 Stummed"
+      ]
+    },
+    {
+      "id": "sec-dc0ed18f-6283-4c7a-b87b-ee13186d41b1",
+      "label": "Verse 1",
+      "content": [
+        "Em C D",
+        "I took a walk around the world to ease my troubled mind",
+        "",
+        "",
+        "Em C D",
+        "I left my body laying somewhere in the sands of time",
+        "",
+        "",
+        "Em C D",
+        "I watched the world float to the dark side of the moon",
+        "",
+        "",
+        "Em C D Em C Dsus4 Em C Dsus4",
+        "I feel there is nothing I can do, yeah"
+      ]
+    },
+    {
+      "id": "sec-af64e0e6-2d9e-4011-86f1-efc1d67a5b84",
+      "label": "Verse 2",
+      "content": [
+        "Em C D",
+        "I watched the world float to the dark side of the moon",
+        "",
+        "",
+        "Em C D",
+        "After all I knew it had to be something to do with you",
+        "",
+        "",
+        "Em C D",
+        "I really don't mind what happens now and then",
+        "",
+        "",
+        "Em C D",
+        "As long as you'll be my friend at the end"
+      ]
+    },
+    {
+      "id": "sec-a84fa228-651d-47a7-ac06-0a0d39758943",
+      "label": "Chorus 1",
+      "content": [
+        "Em C D",
+        "If I go crazy then will you still call me Superman",
+        "",
+        "",
+        "Em C D",
+        "If I'm alive and well, will you be there holding my hand",
+        "",
+        "",
+        "Em C D Em Em C D",
+        "I'll keep you by my side with my superhuman might Kryptonite"
+      ]
+    },
+    {
+      "id": "sec-ddeae752-2392-48c4-af64-0172eb7cfe19",
+      "label": "Instrumental 1",
+      "content": [
+        "Em C Dsus4 x 2"
+      ]
+    },
+    {
+      "id": "sec-548c60cb-5039-4a68-a33e-44de7344c229",
+      "label": "Verse 3",
+      "content": [
+        "Em C D",
+        "You called me strong, you called me weak but your secrets I will keep",
+        "",
+        "",
+        "Em C D",
+        "You took for granted all the times I never let you down",
+        "",
+        "",
+        "Em C D",
+        "You stumbled in and bumped your head, if not for me then you would be dead",
+        "",
+        "",
+        "Em C D",
+        "I picked you up and put you back on solid ground"
+      ]
+    },
+    {
+      "id": "sec-e413b01e-7caf-41a2-8263-4c6e7d6c6003",
+      "label": "Chorus 2",
+      "content": [
+        "Em C D",
+        "If I go crazy then will you still call me Superman",
+        "",
+        "",
+        "Em C D",
+        "If I'm alive and well, will you be there holding my hand",
+        "",
+        "",
+        "Em C D Em Em C D",
+        "I'll keep you by my side with my superhuman might Kryptonite"
+      ]
+    },
+    {
+      "id": "sec-03918931-6990-4306-b018-af8315c71412",
+      "label": "Instrumental 2",
+      "content": [
+        "Em C Dsus4 x 4 (picked)"
+      ]
+    },
+    {
+      "id": "sec-a040feab-d8a6-46df-b9ce-f7836336e0f8",
+      "label": "Chorus 3",
+      "content": [
+        "Em C D",
+        "If I go crazy then will you still call me Superman",
+        "",
+        "",
+        "Em C D",
+        "If I'm alive and well, will you be there holding my hand",
+        "",
+        "",
+        "Em C D Em Em C D",
+        "I'll keep you by my side with my superhuman might Kryptonite Yeah",
+        "",
+        "",
+        "Em C D",
+        "If I go crazy then will you still call me Superman",
+        "",
+        "",
+        "Em C D",
+        "If I'm alive and well, will you be there holding my hand",
+        "",
+        "",
+        "Em C D Em Em C D",
+        "I'll keep you by my side with my superhuman might Kryptonite"
+      ]
+    },
+    {
+      "id": "sec-494a4f27-0308-4b73-ad1a-b8b4e22121bf",
+      "label": "Outro 1",
+      "content": [
+        "Em   C   Dsus4",
+        "         Oh whoa whoa (X3)"
+      ]
+    }
+  ]
+}
