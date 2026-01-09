@@ -402,7 +402,8 @@ h1 {
 
       <div style="margin-top:10px;">
         Velocidade
-        <input type="range" min="1" max="10" value="3" id="speed">
+        <input type="range" min="1" max="10" value="2" id="speed">
+
       </div>
     </div>
 
@@ -559,7 +560,7 @@ function startScroll() {
   scrollInterval = setInterval(() => {
     const speed = Number(document.getElementById('speed').value);
     window.scrollBy(0, speed);
-  }, 50);
+  }, 80);
   scrolling = true;
   document.getElementById('scrollBtn').innerText = 'Stop';
 }
