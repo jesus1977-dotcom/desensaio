@@ -178,5 +178,14 @@
     "decade": "1990",
     "added": "2026-01-09T17:13:14.461Z",
     "plays": 7
+  },
+  {
+    "file": "matchbox-20-push.json",
+    "artist": "Matchbox 20",
+    "title": "Push",
+    "genre": "Pop",
+    "decade": "1990",
+    "added": "2026-01-19T13:45:28.429Z",
+    "plays": 0
   }
 ]
