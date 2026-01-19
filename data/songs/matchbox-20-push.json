@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "artist": "Matchbox 20",
+    "title": "Push",
+    "genre": "Pop",
+    "decade": "1990"
+  },
+  "sections": [
+    {
+      "id": "sec-c3622b38-b791-4f91-ae31-371380c0c397",
+      "label": "Intro 1",
+      "content": [
+        "G  D/F#  Em  Cadd9    x2"
+      ]
+    },
+    {
+      "id": "sec-49ec195a-a361-4cf4-accf-665b434d4d6a",
+      "label": "Verse 1",
+      "content": [
+        "G D/F# Em",
+        "She said I don't know if I've ever been good enough",
+        "",
+        "",
+        "Cadd9 G D/F# Em Cadd9",
+        "I'm a little bit rusty, and I think my head is caving in",
+        "",
+        "",
+        "G D/F# Em",
+        "And I don't know if I've ever been really loved",
+        "",
+        "",
+        "Cadd9 G D/F# Em",
+        "By a hand that's touched me, and I feel like something's gonna give",
+        "",
+        "",
+        "Cadd9",
+        "And I'm a little bit angry"
+      ]
+    },
+    {
+      "id": "sec-1278bc71-5f6b-48e7-9d8d-275a16d2effb",
+      "label": "Bridge 1",
+      "content": [
+        "Dsus2 C",
+        "Oh well, this ain't over no, not here",
+        "",
+        "",
+        "Dsus2",
+        "not while I still need you around",
+        "",
+        "",
+        "C D",
+        "You don't owe me, we might change, yeah we just might feel good"
+      ]
+    },
+    {
+      "id": "sec-4dcfdf0b-e916-4ade-9613-00d77df5176d",
+      "label": "Chorus 1",
+      "content": [
+        "G D Csus2 D",
+        "I wanna push you around, well I will, well I will",
+        "",
+        "",
+        "G D Csus2 D",
+        "I wanna push you down, well I will, well I will",
+        "",
+        "",
+        "Em D C D",
+        "I wanna take you for granted",
+        "",
+        "",
+        "Em D C D",
+        "I wanna take you for granted... Yeah, I will, I will"
+      ]
+    },
+    {
+      "id": "sec-82f9571d-6393-47e5-9e9c-eaf4a4a70a9c",
+      "label": "Instrumental 1",
+      "content": [
+        "G  D/F#  Em  Cadd9    x2"
+      ]
+    },
+    {
+      "id": "sec-dacc2a4b-43b6-4c27-9d08-23813876aaa2",
+      "label": "Verse 2",
+      "content": [
+        "G D/F# Em",
+        "She said I don't know why you ever would lie to me",
+        "",
+        "",
+        "Cadd9 G D/F# Em Cadd9",
+        "Like I'm a little untrusting, when I think that the truth is gonna hurt ya",
+        "",
+        "",
+        "G D/F# Em",
+        "And I don't know why you couldn't just stay with me",
+        "",
+        "",
+        "Cadd9 G D/F# Em",
+        "You couldn't stand to be near me, when my face don't seem to want to shine,",
+        "",
+        "",
+        "Cadd9",
+        "cause it's a little bit dirty"
+      ]
+    },
+    {
+      "id": "sec-09536072-d349-4034-8697-7add679fe5a0",
+      "label": "Bridge 2",
+      "content": [
+        "Dsus2 C",
+        "Oh well, don't just stand there and say nice things to me",
+        "",
+        "",
+        "Dsus2",
+        "I've been cheated, I've been wronged and you",
+        "",
+        "",
+        "C",
+        "You don't owe me, yeah well I can't change",
+        "",
+        "",
+        "D",
+        "I won't do anything at all..."
+      ]
+    },
+    {
+      "id": "sec-9976c3de-f258-4561-a3bd-7ce8296184e0",
+      "label": "Chorus 2",
+      "content": [
+        "G D Csus2 D",
+        "I wanna push you around, well I will, well I will",
+        "",
+        "",
+        "G D Csus2 D",
+        "I wanna push you down, well I will, well I will",
+        "",
+        "",
+        "Em D C D",
+        "I wanna take you for granted",
+        "",
+        "",
+        "Em D C D",
+        "I wanna take you for granted... Yeah, I will, I will"
+      ]
+    },
+    {
+      "id": "sec-bcc80b6e-b030-4a73-b799-23f956915e0e",
+      "label": "Bridge 3",
+      "content": [
+        "Em D/F# C D Em",
+        "Oh, but don't bowl me over, just wait a minute, well it kind of fell apart",
+        "",
+        "",
+        "D/F# C C",
+        "Things get so crazy, crazy",
+        "",
+        "",
+        "Em D/F# Cadd9 D",
+        "Don't rush this baby,",
+        "",
+        "",
+        "Em D/F# Cadd9 D",
+        "don't rush this baby, baby"
+      ]
+    },
+    {
+      "id": "sec-0d26cebe-8ba1-46a8-9c04-7307df2c9292",
+      "label": "Chorus 3",
+      "content": [
+        "G D Csus2 D",
+        "I wanna push you around, well I will, well I will",
+        "",
+        "",
+        "G D Csus2 D",
+        "I wanna push you down, well I will, well I will",
+        "",
+        "",
+        "Em D C D",
+        "I wanna take you for granted... yeah yeah yeah",
+        "",
+        "",
+        "Em D C D",
+        "I wanna take you, take you, yeah well I will",
+        "",
+        "",
+        "G D/F# Em C",
+        "I will I will I will, yeah",
+        "",
+        "",
+        "G D/F# Em C",
+        "I will I will I will, yeah",
+        "",
+        "",
+        "G D/F# Em C",
+        "Push you around, drag you down",
+        "",
+        "",
+        "G D/F# Em C",
+        "I wanna push you around",
+        "",
+        "",
+        "G",
+        "Yeah, I will"
+      ]
+    }
+  ]
+}
