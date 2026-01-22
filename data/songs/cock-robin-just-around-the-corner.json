@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "artist": "Cock Robin",
+    "title": "Just Around The Corner",
+    "genre": "Pop",
+    "decade": "1980"
+  },
+  "sections": [
+    {
+      "id": "sec-ccc85f2b-1ad7-4f9d-bc1a-7542dace1433",
+      "label": "Intro 1",
+      "content": [
+        "G G/F# Em"
+      ]
+    },
+    {
+      "id": "sec-cb629c35-f84c-4432-bc83-ff453f38be52",
+      "label": "Verse 1",
+      "content": [
+        "Em D Em A",
+        "Things aren't quite as they seem inside my domain",
+        "",
+        "",
+        "G F#m Em",
+        "You can't know about everything, only pleasure and pain",
+        "",
+        "",
+        "Em D Em A",
+        "You wonder why I come here with head to my hands",
+        "",
+        "",
+        "G F#m Em",
+        "Where else can I be cured and the king of your mansion",
+        "",
+        "",
+        "Em G",
+        "A thorn in your side, a child to protect",
+        "",
+        "",
+        "D",
+        "That claims he's free"
+      ]
+    },
+    {
+      "id": "sec-9e16c927-16e9-484d-8b92-9bf48aabe472",
+      "label": "Chorus 1",
+      "content": [
+        "D F#m A",
+        "Just around the corner, half a mile to heaven",
+        "",
+        "",
+        "D F#m A",
+        "Strong enough to hold you, starved for some affection",
+        "",
+        "",
+        "G Bm A",
+        "Darling come quickly, come ease my worried mind",
+        "",
+        "",
+        "G F#m A",
+        "For my prayers have not been answered in a long time"
+      ]
+    },
+    {
+      "id": "sec-9fa6a76c-e791-4c57-ad05-761e0070995a",
+      "label": "Instrumental 1",
+      "content": [
+        "G G/F# Em"
+      ]
+    },
+    {
+      "id": "sec-b0537249-3ca6-4020-8622-5388e9a00183",
+      "label": "Verse 2",
+      "content": [
+        "Em D Em A",
+        "I've already made my bed, like it or not",
+        "",
+        "",
+        "G F#m Em",
+        "As long as there's no regrets I'll be here when the ride stops",
+        "",
+        "",
+        "Em G",
+        "These comforts to me and these crosses to bear",
+        "",
+        "",
+        "D",
+        "With which we live"
+      ]
+    },
+    {
+      "id": "sec-3706289b-11c3-46b8-80f0-1e21d8266788",
+      "label": "Chorus 2",
+      "content": [
+        "D F#m A",
+        "Just around the corner, half a mile to heaven",
+        " ",
+        " ",
+        "D F#m A",
+        "Strong enough to hold you, starved for some affection",
+        " ",
+        " ",
+        "G Bm A",
+        "Baby, I can't drag you into this mess",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "sec-585ae193-11d6-459e-b042-4b8aca82e4f9",
+      "label": "Instrumental 2",
+      "content": [
+        "Em G G/F#"
+      ]
+    }
+  ]
+}
