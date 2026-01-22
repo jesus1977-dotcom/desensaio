@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "artist": "The Waterboys",
+    "title": "Fishermans Blues",
+    "genre": "Folk",
+    "decade": "1990"
+  },
+  "sections": [
+    {
+      "id": "sec-c51a6303-31ad-41db-b40f-e8f8a7df5627",
+      "label": "Intro 1",
+      "content": [
+        "G     F     Am     C",
+        "G     F     Am     C"
+      ]
+    },
+    {
+      "id": "sec-4727e26b-65ec-4c1b-92db-f067f00fa44a",
+      "label": "Verse 1",
+      "content": [
+        "G F",
+        "I wish I was a fisherman, tumbling on the seas",
+        "",
+        "",
+        "Am C",
+        "Far away from dry land, and it's bitter memories",
+        "",
+        "",
+        "G F",
+        "Casting out my sweet line, with abandonment and love",
+        "",
+        "",
+        "Am C",
+        "No ceiling bearing down on me, save the starry sky above"
+      ]
+    },
+    {
+      "id": "sec-9d8f9886-d13a-4ab4-afef-29a18474542f",
+      "label": "Chorus 1",
+      "content": [
+        "G F Am G F Am C",
+        "With light in my head, you in my arms, woo woo ooh"
+      ]
+    },
+    {
+      "id": "sec-a1c01383-b8dd-484a-834a-126ff8aa09b9",
+      "label": "Verse 2",
+      "content": [
+        "G F",
+        "I wish I was the brake man, on a hurtlin' fevered train",
+        "",
+        "",
+        "Am C",
+        "Crashing headlong into the heartland, like a cannon in the rain",
+        "",
+        "",
+        "G F",
+        "With the beating of the sleepers, and the burning of the coal",
+        "",
+        "",
+        "Am C",
+        "Counting towns flashing by me, in a night that's full of soul"
+      ]
+    },
+    {
+      "id": "sec-94d03931-7302-4beb-9e4a-e9de8d73740b",
+      "label": "Chorus 2",
+      "content": [
+        "G F Am G F Am C",
+        "With light in my head, you in my arms, woo woo ooh"
+      ]
+    },
+    {
+      "id": "sec-52271a8d-b788-466f-8a2f-4df02039979e",
+      "label": "Verse 3",
+      "content": [
+        "G F",
+        "Oh I know I will be loosened, from bonds that hold me fast",
+        "",
+        "",
+        "Am C",
+        "And the chains all hung around me, will fall away at last",
+        "",
+        "",
+        "G F",
+        "And on that fine and fateful day, I will take thee in my hands",
+        "",
+        "",
+        "Am C",
+        "I will ride on the train, I will be the fisherman"
+      ]
+    },
+    {
+      "id": "sec-e68a1163-05ef-4ff4-85a7-2dd5bb3aa052",
+      "label": "Chorus 3",
+      "content": [
+        "G F Am C",
+        "With light in my head, you in my arms, woo woo ooh",
+        "",
+        "",
+        "G F",
+        "Light in my head, you in my arms",
+        "",
+        "",
+        "Am C",
+        "Light in my head, you in my arms",
+        "",
+        "",
+        "G F",
+        "Light in my head, you in my arms"
+      ]
+    }
+  ]
+}
