@@ -1,0 +1,212 @@
+{
+  "meta": {
+    "artist": "Cock Robin",
+    "title": "The Promise you Made",
+    "genre": "Pop",
+    "decade": "1980"
+  },
+  "sections": [
+    {
+      "id": "sec-c088f602-63f5-4dc3-b002-44d434314e94",
+      "label": "Intro 1",
+      "content": [
+        "",
+        "",
+        "| F | C |",
+        "| Am | C | F | C |",
+        "| Am | C | F | C |"
+      ]
+    },
+    {
+      "id": "sec-10ccee80-450c-4c1a-8332-099676287b7f",
+      "label": "Verse 1",
+      "content": [
+        "Am",
+        "If I laid down my love",
+        "",
+        "",
+        "C F C",
+        "To come to your defense",
+        "",
+        "",
+        "Am",
+        "Would you worry for me",
+        "",
+        "",
+        "C F C (Am)",
+        "With a pain in your chest?"
+      ]
+    },
+    {
+      "id": "sec-caa839fe-0e54-4a34-8127-37dce9feb79a",
+      "label": "Bridge 1",
+      "content": [
+        "G F Am G",
+        "Could I rely on your faith to be strong",
+        "",
+        "",
+        "G F Am G",
+        "To pick me back up and to push me along?"
+      ]
+    },
+    {
+      "id": "sec-cec9f812-9018-4fc7-9d4e-09dc97e0dc62",
+      "label": "Chorus 1",
+      "content": [
+        "G",
+        "Tell me",
+        "",
+        "",
+        "F G Em F",
+        "You'll be there in my hour of need",
+        "",
+        "",
+        "F G Em (Am)",
+        "You won't turn me away",
+        "",
+        "",
+        "F G Em F",
+        "Help me out of the life I lead",
+        "",
+        "",
+        "C Caug",
+        "Remember the promise you made?",
+        "",
+        "",
+        "C E",
+        "Remember the promise you made?"
+      ]
+    },
+    {
+      "id": "sec-dd9850e9-28e7-47b7-a8bf-512a88f8ed67",
+      "label": "Instrumental 1",
+      "content": [
+        "| Am | C | F | C |",
+        "| Am | C | F | C |"
+      ]
+    },
+    {
+      "id": "sec-7e74016f-bd36-4383-ba27-adbef5de9796",
+      "label": "Verse 2",
+      "content": [
+        "Am",
+        "If I gave you my soul",
+        "",
+        "",
+        "C F C",
+        "For a piece of your mind",
+        "",
+        "",
+        "Am",
+        "Would you carry me with you",
+        "",
+        "",
+        "C F C",
+        "To the far edge of time?"
+      ]
+    },
+    {
+      "id": "sec-258e78b8-6d00-4ec7-99d8-7b8a353bcdec",
+      "label": "Bridge 2",
+      "content": [
+        "G F Am G",
+        "Could you understand if you found me untrue?",
+        "",
+        "",
+        "G F Am G",
+        "Would we become one or divided in two?"
+      ]
+    },
+    {
+      "id": "sec-c27276d4-5f80-4351-8aca-d6ee30be2f2c",
+      "label": "Chorus 2",
+      "content": [
+        "G",
+        "Please tell me",
+        "",
+        "",
+        "F G Em F",
+        "You'll be there in my hour of need",
+        "",
+        "",
+        "F G Em (Am)",
+        "You won't turn me away",
+        "",
+        "",
+        "F G Em F",
+        "Help me out of the life I lead",
+        "",
+        "",
+        "C Caug",
+        "Remember the promise you made?",
+        "",
+        "",
+        "C E",
+        "Remember the promise you made?"
+      ]
+    },
+    {
+      "id": "sec-71d5c734-e822-47ad-ba6b-661bd64141e3",
+      "label": "Instrumental 2",
+      "content": [
+        "| Am | C | F | C |",
+        "| Am | C | F | C |"
+      ]
+    },
+    {
+      "id": "sec-9b61c603-ddd5-47af-b33c-d9ee7d363056",
+      "label": "Bridge 3",
+      "content": [
+        "G F Am G",
+        "Could I rely on your faith to be strong",
+        "",
+        "",
+        "G F Am G",
+        "To pick me back up and to push me along?"
+      ]
+    },
+    {
+      "id": "sec-bc342633-f34b-41c0-94e0-8322bc33f066",
+      "label": "Chorus 3",
+      "content": [
+        "G",
+        "Please tell me",
+        "",
+        "",
+        "F G Em F",
+        "You'll be there in my hour of need",
+        "",
+        "",
+        "F G Em (Am)",
+        "You won't turn me away",
+        "",
+        "",
+        "F G Em F",
+        "Help me out of the life I lead",
+        "",
+        "",
+        "C Caug",
+        "Remember the promise you made?",
+        "",
+        "",
+        "C Caug",
+        "Remember the promise you made?",
+        "",
+        "",
+        "C Caug",
+        "Remember the promise you made?",
+        "",
+        "",
+        "C E",
+        "Remember the promise you made?"
+      ]
+    },
+    {
+      "id": "sec-6321ab68-dbaf-4670-9b9b-d6ad48e43903",
+      "label": "Outro 1",
+      "content": [
+        "| Am | C | F | C |"
+      ]
+    }
+  ]
+}
