@@ -214,5 +214,14 @@
     "decade": "1990",
     "added": "2026-01-22T18:06:50.919Z",
     "plays": 0
+  },
+  {
+    "file": "the-cure-close-to-me.json",
+    "artist": "The Cure",
+    "title": "Close to Me",
+    "genre": "Alternative Rock",
+    "decade": "1980",
+    "added": "2026-01-22T18:12:55.112Z",
+    "plays": 0
   }
 ]
