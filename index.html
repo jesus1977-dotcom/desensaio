@@ -283,6 +283,102 @@ h1 {
   gap: 12px;
 }
 
+  /* =========================
+   BOTÕES BRONX E RED MODE — HEADER - CASTRO
+========================= */
+
+.btn-random {
+  height: 42px;
+  padding: 0 20px;
+
+  border-radius: 32px;
+  font-weight: 800;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  color: #ffffff;
+  background: linear-gradient(180deg, #8f3a00, #5c2300);
+  border: 1px solid var(--accent-gold);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  cursor: pointer;
+
+  box-shadow:
+    inset 0 2px 3px rgba(255,255,255,0.15),
+    inset 0 -3px 5px rgba(0,0,0,0.6),
+    0 6px 14px rgba(0,0,0,0.6);
+
+  transition: all 0.18s ease;
+}
+
+.btn-random:hover {
+  background: linear-gradient(180deg, #a14400, #6a2900);
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 2px 4px rgba(255,255,255,0.2),
+    inset 0 -3px 6px rgba(0,0,0,0.65),
+    0 8px 18px rgba(0,0,0,0.7);
+}
+
+.btn-random:active {
+  transform: translateY(1px);
+  box-shadow:
+    inset 0 4px 6px rgba(0,0,0,0.7),
+    inset 0 -1px 2px rgba(255,255,255,0.1),
+    0 3px 6px rgba(0,0,0,0.6);
+}
+
+/* RED MODE HEADER (igual ao home) */
+.btn-redmode {
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 26px;
+
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+
+  color: #f1c27d;
+  background: linear-gradient(180deg, #2a2a2a, #181818);
+  border: 1px solid rgba(241, 194, 125, 0.6);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  cursor: pointer;
+
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,0.08),
+    inset 0 -2px 4px rgba(0,0,0,0.6),
+    0 4px 10px rgba(0,0,0,0.6);
+
+  transition: all 0.18s ease;
+}
+
+.btn-redmode:hover {
+  background: linear-gradient(180deg, #3a3a3a, #202020);
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 3px rgba(255,255,255,0.12),
+    inset 0 -2px 5px rgba(0,0,0,0.7),
+    0 6px 14px rgba(0,0,0,0.7);
+}
+
+body.red-mode .btn-redmode {
+  background: linear-gradient(180deg, #7a0000, #4a0000);
+  color: #ffffff;
+  border-color: var(--accent-gold);
+}
+
+
 /* base dos botões do header */
 .btn-header {
   height: 42px;
@@ -779,6 +875,43 @@ function loadExistingSong() {
         'Erro a carregar a música.';
     });
 }
+
+
+  // CASTRO
+function openRandom() {
+  fetch('data/songs/index.json')
+    .then(r => r.json())
+    .then(songs => {
+      // lê histórico do localStorage
+      let history = JSON.parse(localStorage.getItem('lastSongs')) || [];
+
+      // filtra músicas que não estão nas últimas 20
+      let available = songs.filter(song => !history.includes(song.file));
+
+      // se todas estiverem no histórico, reseta (evita bloqueio total)
+      if (available.length === 0) {
+        available = songs;
+        history = [];
+      }
+
+      // escolhe música aleatória
+      const s = available[Math.floor(Math.random() * available.length)];
+
+      // adiciona ao histórico
+      history.push(s.file);
+
+      // mantém apenas as últimas 20
+      if (history.length > 20) history = history.slice(history.length - 20);
+
+      // salva no localStorage
+      localStorage.setItem('lastSongs', JSON.stringify(history));
+
+      // abre música
+      window.location = 'index.html?song=' + s.file;
+    });
+}
+
+
 
 function renderSong(song) {
  document.getElementById('artistText').innerText =
