@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "artist": "Modern Talking",
+    "title": "Cheri Cheri Lady",
+    "genre": "Pop",
+    "decade": "1980"
+  },
+  "sections": [
+    {
+      "id": "sec-b8f62be7-db47-4491-8ee1-c992cb9fad11",
+      "label": "Intro 1",
+      "content": [
+        "e|--------------------------------------------------------------------|",
+        "B|-3-3-6-6-5-5--------3-3-6-6-5-5--------3-3-6-6-5-5--------3-3-3---3-|",
+        "G|-------------5-5--5-------------5-5--5-------------5-5--5-------5---|",
+        "D|--------------------------------------------------------------------|",
+        "A|--------------------------------------------------------------------|",
+        "E|--------------------------------------------------------------------|"
+      ]
+    },
+    {
+      "id": "sec-877035ad-d79b-4399-a04d-b76cd6239216",
+      "label": "Verse 1",
+      "content": [
+        "",
+        "",
+        "Dm",
+        "Oh, I can not explain Every",
+        "Am",
+        "time it's the same",
+        "Gm C",
+        "Oh I feel that it's real",
+        "Dm",
+        "Take my heart",
+        "Dm",
+        "I've been lonely too long",
+        "Am",
+        "Oh, I can't be so strong",
+        "Gm",
+        "Take the chance for",
+        "C Dm",
+        "romance, take my heart",
+        "Am",
+        "I need you so",
+        "Dm",
+        "There's no time",
+        "Am",
+        "I'll ever go"
+      ]
+    },
+    {
+      "id": "sec-367a5ca5-645d-4cb9-b659-d499759b8f2d",
+      "label": "Chorus 1",
+      "content": [
+        "",
+        "",
+        "Dm",
+        "Cheri, Cheri lady",
+        "Am",
+        "Going through a motion",
+        "Gm",
+        "Love is where you find it",
+        "C Dm",
+        "Listen to your heart",
+        "Dm",
+        "Cheri, Cheri lady",
+        "Am",
+        "Living in devotion",
+        "Gm",
+        "It's always like the first time",
+        "C Dm",
+        "Let me take a part",
+        "Dm",
+        "Cheri, Cheri lady",
+        "Am",
+        "Like there's no tomorrow",
+        "Gm",
+        "Take my heart - don't lose it",
+        "C Dm",
+        "Listen to your heart"
+      ]
+    },
+    {
+      "id": "sec-cf075e19-eedf-4011-ac57-5a5993252a29",
+      "label": "Chorus 2",
+      "content": [
+        "Cheri, Cheri lady",
+        "                  Am",
+        "To know you is to love you",
+        "               Gm   C          Dm",
+        "If you call me baby I'll be always yours"
+      ]
+    },
+    {
+      "id": "sec-99dd0618-e839-4e22-9a19-c4ed447339ec",
+      "label": "Instrumental 1",
+      "content": [
+        "Riff 1"
+      ]
+    },
+    {
+      "id": "sec-7ef64357-cfab-4c53-b54c-831d8b0dcc1f",
+      "label": "Verse 2",
+      "content": [
+        "",
+        "",
+        "Dm",
+        "I get up - I get down",
+        "Am",
+        "All my world turns around",
+        "Gm C",
+        "Who is right ? Who is wrong ?",
+        "Dm",
+        "I don't know",
+        "Dm",
+        "I've got pain in my heart",
+        "Am",
+        "Got a love in my soul",
+        "Gm C Dm",
+        "Easy come, but I think easy go",
+        "Am",
+        "I need you so",
+        "Dm Am",
+        "Although times I move so slow"
+      ]
+    },
+    {
+      "id": "sec-35f6cd61-9f6c-429c-8934-1bead9b45c17",
+      "label": "Chorus 3",
+      "content": [
+        "",
+        "",
+        "Dm",
+        "Cheri, Cheri lady",
+        "Am",
+        "Going through a motion",
+        "Gm",
+        "Love is where you find it",
+        "C Dm",
+        "Listen to your heart",
+        "Dm",
+        "Cheri, Cheri lady",
+        "Am",
+        "Living in devotion",
+        "Gm",
+        "It's always like the first time",
+        "C Dm",
+        "Let me take a part",
+        "Dm",
+        "Cheri, Cheri lady",
+        "Am",
+        "Like there's no tomorrow",
+        "Gm",
+        "Take my heart - don't lose it",
+        "C Dm",
+        "Listen to your heart"
+      ]
+    },
+    {
+      "id": "sec-c6b9d803-2bbf-4df5-a6c9-7020ca1b3519",
+      "label": "Chorus 4",
+      "content": [
+        "Cheri, Cheri lady",
+        "                  Am",
+        "To know you is to love you",
+        "               Gm   C          Dm",
+        "If you call me baby I'll be always yours"
+      ]
+    },
+    {
+      "id": "sec-a2139eae-36ed-4a9a-9209-6ae12deabc00",
+      "label": "Instrumental 2",
+      "content": [
+        "Riff 2:"
+      ]
+    },
+    {
+      "id": "sec-2b4ee312-442d-4a1c-af49-529d18af2814",
+      "label": "Instrumental 3",
+      "content": [
+        "e|--------------------| play 4 times then riff 1 and fade with refrain",
+        "B|-3---3---6-5-3------|",
+        "G|---5---5-------5--5-|",
+        "D|--------------------|",
+        "A|--------------------|",
+        "E|--------------------|"
+      ]
+    },
+    {
+      "id": "sec-8148e85b-5a76-43d4-ab2e-43712701e018",
+      "label": "Chorus 5",
+      "content": [
+        "Dm",
+        "Cheri, Cheri lady",
+        "Am",
+        "Like there's no tomorrow",
+        "Gm",
+        "Take my heart - don't lose it",
+        "C Dm",
+        "Listen to your heart"
+      ]
+    },
+    {
+      "id": "sec-c60d6553-41c6-437e-8a77-65d34142664d",
+      "label": "Chorus 6",
+      "content": [
+        "Cheri, Cheri lady",
+        "                  Am",
+        "To know you is to love you",
+        "               Gm   C          Dm",
+        "If you call me baby I'll be always yours"
+      ]
+    },
+    {
+      "id": "sec-c7438e47-79ac-4a88-811c-cca40fc2a802",
+      "label": "Outro 1",
+      "content": [
+        "Dm Am Gm C Dm Dm"
+      ]
+    }
+  ]
+}
