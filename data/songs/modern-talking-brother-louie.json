@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "artist": "Modern Talking",
+    "title": "Brother Louie",
+    "genre": "Pop",
+    "decade": "1980"
+  },
+  "sections": [
+    {
+      "id": "sec-b9a01185-e9b0-43e6-8200-6b04f1cb9e43",
+      "label": "Intro 1",
+      "content": [
+        "| Em | Am | D | Em |",
+        "| Em | Am | D | Em |"
+      ]
+    },
+    {
+      "id": "sec-534142e1-6774-46e4-8611-17ad063be7d1",
+      "label": "Verse 1",
+      "content": [
+        "Em",
+        "Deep love is a burning fire",
+        "Bm",
+        "Stay, cause then the flames grow higher",
+        "C G D",
+        "Babe, don't let him steal your heart it's easy, easy",
+        "Em",
+        "Girl, this game can't last forever",
+        "Bm",
+        "Why we cannot live together",
+        "Am D",
+        "Try, don't let him take your love from me"
+      ]
+    },
+    {
+      "id": "sec-876a60b2-c498-4cf1-9cbe-2f995bcd20ce",
+      "label": "Chorus 1",
+      "content": [
+        "Em Am",
+        "You're no good, can't you see brother Louie, Louie, Louie",
+        "D Em",
+        "I'm in love, set her free oh, she's only looking to me",
+        "Am",
+        "Only love breaks her heart brother Louie, Louie, Louie",
+        "D Em",
+        "Only love's paradise oh, she's only looking to me",
+        "Am",
+        "Brother Louie, Louie, Louie oh, she's only looking to me",
+        "D Em",
+        "Oh, let it Louie, she's undercover",
+        "Am",
+        "Brother Louie, Louie, Louie oh, doing what he's doing",
+        "D Em",
+        "So, leave it Louie 'cause I'm her lover"
+      ]
+    },
+    {
+      "id": "sec-7f3d8922-b2ee-4b3e-be59-43f34478538d",
+      "label": "Instrumental 1",
+      "content": [
+        "| Em | Am | D | Em |",
+        "| Em | Am | D | Em |"
+      ]
+    },
+    {
+      "id": "sec-e21f40d2-2952-4f16-a8ba-e86d7b7fe8e9",
+      "label": "Verse 2",
+      "content": [
+        "Em",
+        "Stay, 'cause this boy wants to gamble",
+        "Bm",
+        "Stay, love's more than he can handle",
+        "C G D",
+        "girl oh come and stay by me forever, ever",
+        "Em",
+        "Why does he go on pretending",
+        "Bm",
+        "that his love is never ending?",
+        "C D",
+        "Babe, don't let him steel your love from me"
+      ]
+    },
+    {
+      "id": "sec-2312bb42-9574-402e-b91a-661696776622",
+      "label": "Chorus 2",
+      "content": [
+        "Em Am",
+        "You're no good, can't you see brother Louie, Louie, Louie",
+        "D Em",
+        "I'm in love, set her free oh, she's only looking to me",
+        "Am",
+        "Only love breaks her heart brother Louie, Louie, Louie",
+        "D Em",
+        "Only love's paradise oh, she's only looking to me",
+        "Am",
+        "Brother Louie, Louie, Louie oh, she's only looking to me",
+        "D Em",
+        "Oh, let it Louie, she's undercover",
+        "Am",
+        "Brother Louie, Louie, Louie oh, doing what he's doing",
+        "D Em",
+        "So, leave it Louie 'cause I'm her lover"
+      ]
+    },
+    {
+      "id": "sec-1061bfc1-7a7d-4ad2-b868-39ba6154660e",
+      "label": "Instrumental 2",
+      "content": [
+        "| Em | Am | D | Em |",
+        "| Em | Am | D | Em |"
+      ]
+    },
+    {
+      "id": "sec-e4300c7c-0cd6-4563-82e0-b7865d3b8a21",
+      "label": "Chorus 3",
+      "content": [
+        "Am",
+        "Brother Louie, Louie, Louie oh, she's only looking to me",
+        "D Em",
+        "Oh, let it Louie, she's undercover",
+        "Am",
+        "Brother Louie, Louie, Louie oh, doing what he's doing",
+        "D Em",
+        "So, leave it Louie 'cause I'm her lover"
+      ]
+    },
+    {
+      "id": "sec-d2b9a378-9526-4423-9585-cb4086a1de41",
+      "label": "Outro 1",
+      "content": [
+        "| Em | Am | D | Em |",
+        "| Em | Am | D | Em |"
+      ]
+    }
+  ]
+}
