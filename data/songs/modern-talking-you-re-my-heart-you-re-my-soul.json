@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "artist": "Modern Talking",
+    "title": "You're My Heart You're My Soul",
+    "genre": "Pop",
+    "decade": "1980"
+  },
+  "sections": [
+    {
+      "id": "sec-fb1d09b2-9fdb-4001-8d7f-fbf04f16de30",
+      "label": "Verse 1",
+      "content": [
+        "Cm Gm",
+        "Deep in my heart - There's a fire - A burning heart",
+        "Cm Gm",
+        "Deep in my heart - There's desire - For a start",
+        "Bb",
+        "Im dying in emotion",
+        "Cm",
+        "Its my world in fantasy",
+        "Ab Fm7 Bb",
+        "Im living in my, living in my dreams"
+      ]
+    },
+    {
+      "id": "sec-beeab6c0-94ed-465a-946a-9cca76664026",
+      "label": "Chorus 1",
+      "content": [
+        "Cm Fm",
+        "Youre my heart, youre my soul",
+        "Bb Cm",
+        "I keep it shining everywhere I go",
+        "Fm",
+        "Youre my heart, youre my soul",
+        "Bb",
+        "Ill be holding you forever, stay with you together",
+        "Cm Ab",
+        "Youre my heart, youre my soul",
+        "Bb Cm",
+        "Yeah, a feeling that our love will grow",
+        "Ab",
+        "Youre my heart, youre my soul",
+        "Bb Cm",
+        "Thats the only thing I really know"
+      ]
+    },
+    {
+      "id": "sec-62e1d9d7-356b-48e9-8e02-ff11f2d8eaba",
+      "label": "Verse 2",
+      "content": [
+        "Gm",
+        "Lets close the door and believe my burning heart",
+        "Cm Gm",
+        "Feeling allright, come on, open up your heart",
+        "Bb",
+        "Ill keep the candles burning",
+        "Cm",
+        "Let your body melt in mine",
+        "Ab Fm7 Bb",
+        "Im living in my, living in my dreams"
+      ]
+    },
+    {
+      "id": "sec-8f5a7253-bfa8-4df1-8ede-870c940ea84f",
+      "label": "Chorus 2",
+      "content": [
+        "Cm Fm",
+        "Youre my heart, youre my soul",
+        "Bb Cm",
+        "I keep it shining everywhere I go",
+        "Fm",
+        "Youre my heart, youre my soul",
+        "Bb",
+        "Ill be holding you forever, stay with you together",
+        "Cm Ab",
+        "Youre my heart, youre my soul",
+        "Bb Cm",
+        "Yeah, a feeling that our love will grow",
+        "Ab",
+        "Youre my heart, youre my soul",
+        "Bb Cm",
+        "Thats the only thing I really know"
+      ]
+    }
+  ]
+}
