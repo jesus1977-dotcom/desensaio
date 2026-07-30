@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "artist": "Radiohead",
+    "title": "Electioneering",
+    "genre": "Alternative Rock",
+    "decade": "1990"
+  },
+  "sections": [
+    {
+      "id": "sec-dd5766a9-8183-4bf4-9863-e5c72e2918eb",
+      "label": "Verse 1",
+      "content": [
+        "Dm C A7",
+        "I will stop, I will stop at nothing",
+        "",
+        "",
+        "Dm C A7",
+        "Say the right things when electioneering",
+        "",
+        "",
+        "Dm A7",
+        "I trust I can rely on your vote"
+      ]
+    },
+    {
+      "id": "sec-5e4bcc13-6acb-44f4-a11d-3f567295a7bf",
+      "label": "Chorus 1",
+      "content": [
+        "Dm Em F G",
+        "When I go forwards",
+        "",
+        "",
+        "Dm Em F G",
+        "you go backwards",
+        "",
+        "",
+        "Dm Em F G A G F Em",
+        "And somewhere we will meet",
+        "",
+        "",
+        "Dm Em F G",
+        "When I go forwards",
+        "",
+        "",
+        "Dm Em F G",
+        "you go backwards",
+        "",
+        "",
+        "Dm Em F G A G F Em",
+        "And somewhere we will meet"
+      ]
+    },
+    {
+      "id": "sec-83507b7e-314e-42c0-9ba8-c771eb510f2d",
+      "label": "Verse 2",
+      "content": [
+        "Dm C A7",
+        "Riot shields, voodoo economics",
+        "",
+        "",
+        "Dm C A7",
+        "It's just business, cattle prods and the I.M.F.",
+        "",
+        "",
+        "Dm A7",
+        "I trust I can rely on your vote"
+      ]
+    },
+    {
+      "id": "sec-3ffb7556-60ee-4ac2-922e-7ac9e9f3b019",
+      "label": "Chorus 2",
+      "content": [
+        "Dm Em F G",
+        "When I go forwards",
+        "",
+        "",
+        "Dm Em F G",
+        "you go backwards",
+        "",
+        "",
+        "Dm Em F G A G F Em",
+        "And somewhere we will meet",
+        "",
+        "",
+        "Dm Em F G",
+        "When I go forwards",
+        "",
+        "",
+        "Dm Em F G",
+        "you go backwards",
+        "",
+        "",
+        "Dm Em F G A G F Em",
+        "And somewhere we will meet"
+      ]
+    },
+    {
+      "id": "sec-9c01084a-c051-4cef-a6ef-e4828d744b17",
+      "label": "Outro 1",
+      "content": [
+        "G A Bm7 C11 Em Asus2"
+      ]
+    },
+    {
+      "id": "sec-a98ae7d3-6cf1-40aa-b629-dec39b61cbf2",
+      "label": "Instrumental 1",
+      "content": [
+        "Dm Dmmaj7",
+        "Dm Ddim Dsus Dm",
+        "Dm Ddim Dsus Dm",
+        "Dm Ddim Dsus Dm",
+        "Dm Ddim Dsus Dm",
+        "Dm"
+      ]
+    }
+  ]
+}
