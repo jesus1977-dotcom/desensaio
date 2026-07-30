@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "artist": "Radiohead",
+    "title": "Lucky",
+    "genre": "Alternative Rock",
+    "decade": "1990"
+  },
+  "sections": [
+    {
+      "id": "sec-1026b531-13e3-4df1-9500-754b7e645f66",
+      "label": "Verse 1",
+      "content": [
+        "Em Am G Bm Em",
+        "I'm on a roll, I'm on a roll this time",
+        "",
+        "",
+        "C G Bm Em",
+        "I feel my luck could change",
+        "",
+        "",
+        "Em Am",
+        "Kill me Sarah",
+        "",
+        "",
+        "G Bm Em",
+        "Kill me again with love",
+        "",
+        "",
+        "C G Bm Em",
+        "It's gonna be a glorious day"
+      ]
+    },
+    {
+      "id": "sec-9f212f29-7f62-49c2-b8e2-8d5f8be9bfb3",
+      "label": "Chorus 1",
+      "content": [
+        "A Em",
+        "Pull me out of the aircrash",
+        "",
+        "",
+        "A Em",
+        "Pull me out of the lake",
+        "",
+        "",
+        "A Em",
+        "'Cause I'm your superhero",
+        "",
+        "",
+        "C7 B7",
+        "We are standing on the edge"
+      ]
+    },
+    {
+      "id": "sec-8cf249b2-d5eb-4472-9242-4bfdcf75ce5a",
+      "label": "Instrumental 1",
+      "content": [
+        "Em      Em/F Em"
+      ]
+    },
+    {
+      "id": "sec-6d49d6aa-f9e1-449a-98a8-d1e2d9a61f2a",
+      "label": "Verse 2",
+      "content": [
+        "Em Am G Bm Em",
+        "The head of state has called for me by name",
+        "",
+        "",
+        "C G Bm Em",
+        "But I don't have time for him",
+        "",
+        "",
+        "Em Am G Bm Em",
+        "It's gonna be a glorious day",
+        "",
+        "",
+        "C G Bm Em",
+        "I feel my luck could change"
+      ]
+    },
+    {
+      "id": "sec-633ec79c-3638-4a09-b700-8f75a8068a54",
+      "label": "Chorus 2",
+      "content": [
+        "A Em",
+        "Pull me out of the aircrash",
+        "",
+        "",
+        "A Em",
+        "Pull me out of the lake",
+        "",
+        "",
+        "A Em",
+        "'Cause I'm your superhero",
+        "",
+        "",
+        "C7 B7",
+        "We are standing on the edge"
+      ]
+    },
+    {
+      "id": "sec-296769d2-62af-4dbd-a42c-68d8b71a8e91",
+      "label": "Bridge 1",
+      "content": [
+        "| Emadd9 Em G5/D | C Em/F# |",
+        "| Emadd9 Em G5/D | C Em/F# |",
+        "| Emadd9 Em G5/D | C Em/F# |",
+        "| Emadd9 Em G5/D | C Em/F# |",
+        "| Em | Em |"
+      ]
+    },
+    {
+      "id": "sec-c7b13100-3e61-4965-80bf-61aa4f35fcdc",
+      "label": "Chorus 3",
+      "content": [
+        "| A | Em | A | Em |",
+        "| A | Em",
+        "",
+        "",
+        "C7 B7",
+        "We are standing on the edge..."
+      ]
+    }
+  ]
+}
