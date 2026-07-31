@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "artist": "David Bowie",
+    "title": "China Girl",
+    "genre": "Pop",
+    "decade": "1970"
+  },
+  "sections": [
+    {
+      "id": "sec-fc3e0796-74fc-4915-b3a1-fb8920842ea9",
+      "label": "Intro 1",
+      "content": [
+        "e|-7-7-|-5-5-7-7--5--7-7-|-5-5-7-7-5-5-3-3-|-5-5--5--5---|-5-5--5--5--",
+        "B|-7-7-|-5-5-7-7--5--7-7-|-5-5-7-7-5-5-3-3-|-5-5--5--5---|-5-5--5--5--",
+        "G|-----|-----------------|-----------------|-------------|------------",
+        "D|-----|-----------------|-----------------|-------------|------------",
+        "A|-----|-----------------|-----------------|-------------|------------",
+        "E|-----|-----------------|-----------------|-------------|------------"
+      ]
+    },
+    {
+      "id": "sec-96e81b6c-19e6-4d96-9bdc-885f8cc4aa57",
+      "label": "Intro 2",
+      "content": [
+        "Em G Am",
+        "Oh oh oh oh-oh Little China",
+        "",
+        "",
+        "e|-7-7-|-5-5-7-7--5--7-7-|-5-5-7-7-5-5-3-3-|-5-5--5--5---|-5-5--5--5--",
+        "B|-7-7-|-5-5-7-7--5--7-7-|-5-5-7-7-5-5-3-3-|-5-5--5--5---|-5-5--5--5--",
+        "G|-----|-----------------|-----------------|-------------|------------",
+        "D|-----|-----------------|-----------------|-------------|------------",
+        "A|-----|-----------------|-----------------|-------------|------------",
+        "E|-----|-----------------|-----------------|-------------|------------"
+      ]
+    },
+    {
+      "id": "sec-ca20689b-ec56-42e9-813c-f1b4470942d8",
+      "label": "Intro 3",
+      "content": [
+        "Em Em G Am G",
+        "Girl Oh oh oh oh-oh Little China Girl",
+        "",
+        "",
+        "e|-7-7-|-5-5-7-7--5--7-7-|-5-5-7-7-5-5-3-3-|-5-5--5--5---|-5-5--5--5--",
+        "B|-7-7-|-5-5-7-7--5--7-7-|-5-5-7-7-5-5-3-3-|-5-5--5--5---|-5-5--5--5--",
+        "G|-----|-----------------|-----------------|-------------|------------",
+        "D|-----|-----------------|-----------------|-------------|------------",
+        "A|-----|-----------------|-----------------|-------------|------------",
+        "E|-----|-----------------|-----------------|-------------|------------"
+      ]
+    },
+    {
+      "id": "sec-e261fdd7-540b-461c-b4f9-eed01cd0e063",
+      "label": "Verse 1",
+      "content": [
+        "G Am",
+        "I could escape this feeling with my China Girl",
+        "",
+        "",
+        "G Am",
+        "I feel a wreck without my little China Girl",
+        "",
+        "",
+        "Em G",
+        "I feel her heart beating loud as thunder",
+        "",
+        "",
+        "Am B7",
+        "Saw they stars crashing"
+      ]
+    },
+    {
+      "id": "sec-d0965197-c1b3-4828-8d5e-82f8f7df07f3",
+      "label": "Verse 2",
+      "content": [
+        "G Am",
+        "I’m a mess without my little China Girl",
+        "",
+        "",
+        "G Am",
+        "Wake up in the mornings where’s my little China Girl",
+        "",
+        "",
+        "Em G",
+        "I hear her heart beating loud as thunder",
+        "",
+        "",
+        "Am B7",
+        "Saw they stars crashing down"
+      ]
+    },
+    {
+      "id": "sec-f05cb592-105e-445d-9fd2-c7c861536dcf",
+      "label": "Bridge 1",
+      "content": [
+        "G F",
+        "I feel a-tragic like I’m Marlon Brando",
+        "",
+        "",
+        "Em D",
+        "When I look at my China Girl",
+        "",
+        "",
+        "G F",
+        "I could pretend nothing really meant too much",
+        "",
+        "",
+        "Em D",
+        "When I look at my China Girl"
+      ]
+    },
+    {
+      "id": "sec-bbdafbc4-e449-4942-932d-c122c96fe268",
+      "label": "Instrumental 1",
+      "content": [
+        "Em   D   C   B"
+      ]
+    },
+    {
+      "id": "sec-7fb2c13a-9835-4c9d-bd9a-22a95f8fc6f7",
+      "label": "Verse 3",
+      "content": [
+        "Em D",
+        "I stumble into town just like a sacred cow",
+        "",
+        "",
+        "C",
+        "Visions of swastikas in my head",
+        "",
+        "",
+        "B",
+        "Plans for everyone",
+        "",
+        "",
+        "Em D C B7",
+        "It’s in the white of my eyes"
+      ]
+    },
+    {
+      "id": "sec-afc38f19-c7d9-4c60-bec4-e06b26e6f88c",
+      "label": "Verse 4",
+      "content": [
+        "Em",
+        "My little China Girl",
+        "",
+        "",
+        "D",
+        "You shouldn’t mess with me",
+        "",
+        "",
+        "C B",
+        "I’ll ruin everything you are (you know)",
+        "",
+        "",
+        "Em",
+        "I’ll give you television",
+        "",
+        "",
+        "D",
+        "I’ll give you eyes of blue",
+        "",
+        "",
+        "C B",
+        "I’ll give you a man who wants to rule the world"
+      ]
+    },
+    {
+      "id": "sec-f52a11b2-f1ef-45fb-8b79-56bcab9a32a1",
+      "label": "Bridge 2",
+      "content": [
+        "G",
+        "And when I get excited",
+        "",
+        "",
+        "F",
+        "My little China Girl says",
+        "",
+        "",
+        "Em D",
+        "Oh baby, just you shut your mouth"
+      ]
+    },
+    {
+      "id": "sec-ace3dcd4-2452-473f-8af8-ec6d0531e875",
+      "label": "Chorus 1",
+      "content": [
+        "Em D",
+        "She says sh-sh-shhh",
+        "",
+        "",
+        "C B",
+        "She says sh-sh-shhh"
+      ]
+    },
+    {
+      "id": "sec-d711f5da-cce3-4eab-afbd-98a999caec74",
+      "label": "Instrumental 2",
+      "content": [
+        "[Guitar Solo]",
+        "",
+        "",
+        "She Says She says",
+        "Em D C B Em D C B"
+      ]
+    },
+    {
+      "id": "sec-c45347c2-d4eb-4d4c-b675-d36088302f4b",
+      "label": "Verse 5",
+      "content": [
+        "G",
+        "And when I get excited",
+        "",
+        "",
+        "F",
+        "My little China Girl says",
+        "",
+        "",
+        "Em D",
+        "Oh baby, just you shut your mouth"
+      ]
+    },
+    {
+      "id": "sec-ae1ca7af-48d2-4f21-aa58-f4eb7b5a12bd",
+      "label": "Verse 6",
+      "content": [
+        "G",
+        "And when I get excited",
+        "",
+        "",
+        "F",
+        "My little China Girl says",
+        "",
+        "",
+        "Em D",
+        "Oh baby, just you shut your mouth"
+      ]
+    },
+    {
+      "id": "sec-20f0ca12-c3fa-46e5-bf73-acbe347d45dc",
+      "label": "Chorus 2",
+      "content": [
+        "Em D",
+        "She says sh-sh-shhh",
+        "",
+        "",
+        "C B",
+        "She says sh-sh-shhh"
+      ]
+    },
+    {
+      "id": "sec-d26fc2a5-4342-4191-90a4-e5a642db3419",
+      "label": "Instrumental 3",
+      "content": [
+        "She Says",
+        "        Em  D   C   B"
+      ]
+    },
+    {
+      "id": "sec-6782f170-94dc-4518-bf8f-1a21cd60e73e",
+      "label": "Outro 1",
+      "content": [
+        "Em G Am Em",
+        "Oh oh oh oh-oh Little China Girl",
+        "",
+        "",
+        "Em G Am Em",
+        "Oh oh oh oh-oh Little China Girl",
+        "",
+        "",
+        "Em G Am Em",
+        "Oh oh oh oh-oh Little China Girl",
+        "",
+        "",
+        "Em G Am Em",
+        "Oh oh oh oh-oh Little China Girl"
+      ]
+    }
+  ]
+}
