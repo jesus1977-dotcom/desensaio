@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "artist": "Radiohead",
+    "title": "Fake Plastic Trees",
+    "genre": "Alternative Rock",
+    "decade": "1990"
+  },
+  "sections": [
+    {
+      "id": "sec-1fdb9c0b-d0d8-4842-b5da-00eec158f864",
+      "label": "Verse 1",
+      "content": [
+        "A Asus4 Dmaj9/F#",
+        "Her green plastic watering can",
+        "",
+        "",
+        "Dmaj9/F# E6 Dsus2",
+        "For her fake chinese rubber plant",
+        "",
+        "",
+        "A Dsus2",
+        "In the fake plastic earth",
+        "",
+        "",
+        "A Asus4 Dmaj9/F#",
+        "That she bought from a rubber man",
+        "",
+        "",
+        "Dmaj9/F# E6 Dsus2",
+        "In a town full of rubber plans",
+        "",
+        "",
+        "A Dsus2",
+        "To get rid of itself"
+      ]
+    },
+    {
+      "id": "sec-676e412d-d137-467a-8693-96b9f207bda6",
+      "label": "Chorus 1",
+      "content": [
+        "Bm7add11 A",
+        "It wears her out It wears her out",
+        "",
+        "",
+        "Bm7add11 A Asus4",
+        "It wears her out It wears her out"
+      ]
+    },
+    {
+      "id": "sec-e9ce6955-823c-4907-a639-0e75ff1afe1d",
+      "label": "Verse 2",
+      "content": [
+        "A Asus4 Dmaj9/F#",
+        "She lives with a broken man",
+        "",
+        "",
+        "Dmaj9/F# E6 Dsus2",
+        "A cracked polystyrene man",
+        "",
+        "",
+        "A Dsus2",
+        "Who just crumbles and burns",
+        "",
+        "",
+        "A Asus4 Dmaj9/F#",
+        "He used to do sur - gery",
+        "",
+        "",
+        "Dmaj9/F# E6 Dsus2",
+        "For girls in the eight - ies",
+        "",
+        "",
+        "A Dsus2",
+        "But gravity always wins"
+      ]
+    },
+    {
+      "id": "sec-2df938aa-26df-4aef-9a3f-7ae60c172e7e",
+      "label": "Chorus 2",
+      "content": [
+        "Bm7add11 A",
+        "And it wears him out It wears him out",
+        "",
+        "",
+        "Bm7add11 Asus4 A",
+        "And it wears him out It we-ear - err - ers"
+      ]
+    },
+    {
+      "id": "sec-6e32c9fd-317e-45fc-98b1-b7725457ce28",
+      "label": "Verse 3",
+      "content": [
+        "A Asus4 Dmaj9/F#",
+        "She looks like the real thing",
+        "",
+        "",
+        "Dmaj9/F# E6 Dsus2",
+        "She tastes like the real thing",
+        "",
+        "",
+        "A Dsus2",
+        "My fake plastic love",
+        "",
+        "",
+        "A Asus4 Dmaj9/F#",
+        "But I can't help the feeling",
+        "",
+        "",
+        "Dmaj9/F# E6 Dsus2",
+        "I could blow through the ceil - ing",
+        "",
+        "",
+        "A Dsus2",
+        "If I just turn and run"
+      ]
+    },
+    {
+      "id": "sec-c55cf335-bb78-43f6-95d8-4932bcf7b1ab",
+      "label": "Chorus 3",
+      "content": [
+        "Bm7add11 A",
+        "And it wears me out It wears me out",
+        "",
+        "",
+        "Bm7add11 A Amaj7",
+        "It wears me out It wear - err - ers me out"
+      ]
+    },
+    {
+      "id": "sec-f096001d-99d9-47a2-a2c2-cae508d1759f",
+      "label": "Outro 1",
+      "content": [
+        "Bm7add11",
+        "And if I could be who you wanted",
+        "",
+        "",
+        "A",
+        "If I could be who you wanted",
+        "",
+        "",
+        "E6 Bm7add11 A E6",
+        "All the time All the time",
+        "",
+        "",
+        "Bm7add11 A E6 Bm7add11 A",
+        "mmmm mmmm mmmm"
+      ]
+    },
+    {
+      "id": "sec-b6e4f58f-c048-4d80-9f4c-bce37ed5b316",
+      "label": "Instrumental 1",
+      "content": [
+        "A        x02220",
+        "Asus4    x02230",
+        "Dmaj9/F# 2x0220",
+        "E6       022120",
+        "Dsus2    xx0230",
+        "Bm7add11 x20230",
+        "Amaj7    x02120"
+      ]
+    }
+  ]
+}
