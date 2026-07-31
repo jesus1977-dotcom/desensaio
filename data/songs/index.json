@@ -268,5 +268,14 @@
     "decade": "1990",
     "added": "2026-07-30T15:55:00.440Z",
     "plays": 0
+  },
+  {
+    "file": "david-bowie-china-girl.json",
+    "artist": "David Bowie",
+    "title": "China Girl",
+    "genre": "Pop",
+    "decade": "1970",
+    "added": "2026-07-31T13:48:25.038Z",
+    "plays": 0
   }
 ]
