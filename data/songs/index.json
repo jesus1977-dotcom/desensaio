@@ -277,5 +277,14 @@
     "decade": "1970",
     "added": "2026-07-31T13:48:25.038Z",
     "plays": 1
+  },
+  {
+    "file": "radiohead-fake-plastic-trees.json",
+    "artist": "Radiohead",
+    "title": "Fake Plastic Trees",
+    "genre": "Alternative Rock",
+    "decade": "1990",
+    "added": "2026-07-31T18:29:55.637Z",
+    "plays": 0
   }
 ]
