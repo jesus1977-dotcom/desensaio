@@ -286,5 +286,14 @@
     "decade": "1990",
     "added": "2026-07-31T18:29:55.637Z",
     "plays": 2
+  },
+  {
+    "file": "radiohead-paranoid-android.json",
+    "artist": "Radiohead",
+    "title": "Paranoid Android",
+    "genre": "Alternative Rock",
+    "decade": "1990",
+    "added": "2026-08-03T17:30:18.628Z",
+    "plays": 0
   }
 ]
