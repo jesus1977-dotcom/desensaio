@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "artist": "Radiohead",
+    "title": "Paranoid Android",
+    "genre": "Alternative Rock",
+    "decade": "1990"
+  },
+  "sections": [
+    {
+      "id": "sec-8d5902e6-554d-4946-bb42-b0bc40ed8b19",
+      "label": "Intro 1",
+      "content": [
+        "Cm Bb6add4 F9 F9/A",
+        "",
+        "",
+        "Gm Gm/A Gm/Bb Em7b5 E7sus4 Em7",
+        "",
+        "",
+        "Gm Gm/A Gm/Bb Em7b5 E7sus4 Em7"
+      ]
+    },
+    {
+      "id": "sec-b6620cb7-913c-4de2-a5ff-954f1f90ba1f",
+      "label": "Verse 1",
+      "content": [
+        "Cm Bb6add4 F9 F9/A",
+        "Please, could you stop the noise",
+        "",
+        "",
+        "Gm Gm/A Gm/Bb Em7b5 E7sus4 Em7",
+        "I'm tryin' a get some rest"
+      ]
+    },
+    {
+      "id": "sec-9af42d1e-eb71-43d7-bdc8-bde22ae014d9",
+      "label": "Instrumental 1",
+      "content": [
+        "Gm Gm/A Gm/Bb Em7b5  E7sus4 Em7"
+      ]
+    },
+    {
+      "id": "sec-eb1a535f-b0eb-4511-9715-84b764dfd51b",
+      "label": "Verse 2",
+      "content": [
+        "Cm Bb6add4 F9 F9/A Gm",
+        "From all the unborn chicken voices",
+        "",
+        "",
+        "Gm/A Gm/Bb Em7b5 E7sus4 Em7",
+        "In my head"
+      ]
+    },
+    {
+      "id": "sec-43345dd4-0f52-41ef-be62-66bb9503431b",
+      "label": "Chorus 1",
+      "content": [
+        "Gm6 Dmadd9/F E7 Gm6",
+        "What's that?",
+        "",
+        "",
+        "Dmadd9/F E7",
+        "What's that?"
+      ]
+    },
+    {
+      "id": "sec-d135157b-1deb-4ddc-8e5b-9eaba04263d6",
+      "label": "Verse 3",
+      "content": [
+        "Cm Bb6add4 F9",
+        "When I am king",
+        "",
+        "",
+        "F9/A Gm Gm/A Gm/Bb Em7b5 E7sus4 Em7",
+        "You will be first against the wall"
+      ]
+    },
+    {
+      "id": "sec-31efd3bd-870c-45a1-b06b-44a227e5b44e",
+      "label": "Instrumental 2",
+      "content": [
+        "Gm Gm/A Gm/Bb Em7b5  E7sus4 Em7"
+      ]
+    },
+    {
+      "id": "sec-2ceff983-3461-4da3-9076-ec51bcef140f",
+      "label": "Verse 4",
+      "content": [
+        "Cm Bb6add4 F9",
+        "With your opinions",
+        "",
+        "",
+        "F9/A Gm Gm/A Gm/Bb Em7b5 E7sus4 Em7 Gm6",
+        "Which are of no consequence at all"
+      ]
+    },
+    {
+      "id": "sec-62fef011-7d9b-43c0-90fa-8ccb1051260d",
+      "label": "Chorus 2",
+      "content": [
+        "Dmadd9/F E7 Gm6",
+        "What's that?",
+        "",
+        "",
+        "Dmadd9/F E7",
+        "What's that?"
+      ]
+    },
+    {
+      "id": "sec-bf172027-6985-4966-b220-f10af80de452",
+      "label": "Instrumental 3",
+      "content": [
+        "Am Ab x4"
+      ]
+    },
+    {
+      "id": "sec-57461496-6171-4b46-8381-805494cd79f6",
+      "label": "Bridge 1",
+      "content": [
+        "C Ab Bb",
+        "Yahhh - ahhh",
+        "",
+        "",
+        "C Ab Bb",
+        "Yahhh - ahhh",
+        "",
+        "",
+        "C Ab Bb",
+        "Yahhh - ahhh",
+        "",
+        "",
+        "C Ab Bb",
+        "Yahhh"
+      ]
+    },
+    {
+      "id": "sec-4cb7569d-55ce-425d-bd45-7bba121fc9cb",
+      "label": "Instrumental 4",
+      "content": [
+        "C B Bb Ab",
+        "",
+        "",
+        "|E|--------------------------------|---------------------------------|",
+        "|B|--------------------------------|---------------------------------|",
+        "|G|--------------------------------|---------------------------------|",
+        "|D|--------------------------------|------------------------(5)------|",
+        "|A|---------3--------------3-3-5-5-|---------3---------5-3---5-3---3-|",
+        "|E|--5--5-5---5-5-4--4-4-4---------|--5--5-5---5-5-4-4-----5-----5---|"
+      ]
+    },
+    {
+      "id": "sec-2a1f4a07-8097-42cd-9218-ba25e6ab8cd3",
+      "label": "Bridge 2",
+      "content": [
+        "Am Ab Am Ab",
+        "Am - bition makes you look pretty ugly",
+        "",
+        "",
+        "Am Ab Am Ab",
+        "Kicking, squealing, Gucci little piggy"
+      ]
+    },
+    {
+      "id": "sec-689eb72e-8960-4c46-9e02-ff65813950ca",
+      "label": "Bridge 3",
+      "content": [
+        "C Ab Bb",
+        "Yahhh - ahhh",
+        "",
+        "",
+        "C Ab Bb",
+        "Yahhh - ahhh",
+        "",
+        "",
+        "C Ab Bb",
+        "Yahhh - ahhh",
+        "",
+        "",
+        "C Ab Bb",
+        "Yahhh"
+      ]
+    },
+    {
+      "id": "sec-1e8b07a8-aad5-4bc0-931b-f937487257bb",
+      "label": "Instrumental 5",
+      "content": [
+        "C B Bb Ab"
+      ]
+    },
+    {
+      "id": "sec-ee49b6b6-5900-4b16-81e9-d10e7e277f58",
+      "label": "Bridge 4",
+      "content": [
+        "Am",
+        "You don't remember",
+        "",
+        "",
+        "Ab",
+        "You don't remember",
+        "",
+        "",
+        "Am Ab",
+        "Why don't you remember my name?",
+        "",
+        "",
+        "Ab",
+        "Off with his head, man",
+        "",
+        "",
+        "Ab",
+        "Off with his head, man",
+        "",
+        "",
+        "Am Ab",
+        "Why won't he remember my name?",
+        "",
+        "",
+        "C Ab Bb C Ab Bb",
+        "I guess he does!"
+      ]
+    },
+    {
+      "id": "sec-c89810d7-aebc-44cf-9d39-2243b9676240",
+      "label": "Instrumental 6",
+      "content": [
+        "C   Ab Bb  C B Bb Ab",
+        "Oooooooo-ahhhhh!"
+      ]
+    },
+    {
+      "id": "sec-79bd544c-eefe-4414-a4c5-2582ae6cde09",
+      "label": "Outro 1",
+      "content": [
+        "Cm G/B Gm/Bb A",
+        "Ahhh Ahhhh Ahhhh Ahhh",
+        "",
+        "",
+        "Dm A Dm Dm/C",
+        "Ahhh Ahhh Ahhhh Ahhh",
+        "",
+        "",
+        "Bb F/A Gm F",
+        "Ahhhh Ahhh Ahhh Ahhh",
+        "",
+        "",
+        "E Esus4 E A Aaddb6 A",
+        "Ahhh Ahhh Ahhhh Ahhhhhh"
+      ]
+    },
+    {
+      "id": "sec-494654eb-bf9d-4990-8903-bcf8be141a23",
+      "label": "Outro 2",
+      "content": [
+        "Cm G/B Gm/Bb A",
+        "Rain down, rain down",
+        "",
+        "",
+        "Dm A Dm Dm/C",
+        "Come on, rain down on me",
+        "",
+        "",
+        "Bb F/A",
+        "From a great height",
+        "",
+        "",
+        "Gm F E Esus4 E A Aaddb6 A",
+        "From a great height, height"
+      ]
+    },
+    {
+      "id": "sec-2df4d354-0bfd-46f3-bdda-c6b31968e947",
+      "label": "Outro 3",
+      "content": [
+        "Cm G/B Gm/Bb A",
+        "Rain down, rain down",
+        "",
+        "",
+        "Dm A Dm Dm/C",
+        "Come on, rain down on me",
+        "",
+        "",
+        "Bb F/A",
+        "From a great height",
+        "",
+        "",
+        "Gm F E Esus4 E A Aaddb6 A",
+        "From a great height, height"
+      ]
+    },
+    {
+      "id": "sec-80d10e5c-a799-464e-bda9-2dc282d29def",
+      "label": "Outro 4",
+      "content": [
+        "Cm G/B",
+        "That's it, sir, you're leaving",
+        " ",
+        " ",
+        "Gm/Bb A Dm",
+        "The crackle of pigskin",
+        " ",
+        " ",
+        "A Dm",
+        "The dust and the screaming",
+        " ",
+        " ",
+        "Dm/C Bb",
+        "The yuppies networking, Ah",
+        " ",
+        " ",
+        "F/A Gm",
+        "The panic, the vomit",
+        " ",
+        " ",
+        "F E",
+        "The panic, the vomit",
+        " ",
+        " ",
+        "Esus4 E",
+        "God loves his children",
+        " ",
+        " ",
+        "Esus4 E",
+        "God loves his children"
+      ]
+    }
+  ]
+}
