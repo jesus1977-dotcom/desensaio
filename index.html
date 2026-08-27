@@ -1275,6 +1275,18 @@ async function saveNewSong() {
 
     const fileName = `${slug}.json`;
 
+    // Garantir que o conteúdo actualmente editado
+// está sincronizado com newSections antes de gravar.
+document.querySelectorAll('#music .section').forEach((sec, index) => {
+  const pre = sec.querySelector('pre');
+
+  if (pre && newSections[index]) {
+    newSections[index].content = Array.from(
+      pre.querySelectorAll(':scope > div')
+    ).map(row => row.textContent);
+  }
+});
+
     // 3. OBJECTO DA MÚSICA
     const songData = {
       meta: { artist, title, genre, decade },
