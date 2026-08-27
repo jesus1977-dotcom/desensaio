@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "artist": "Skunk Anansie",
+    "title": "Follow me down",
+    "genre": "Rock",
+    "decade": "1990"
+  },
+  "sections": [
+    {
+      "id": "sec-31ed43ee-59ac-4ff6-854d-b67daf7ca6dd",
+      "label": "Verse 1",
+      "content": [
+        "",
+        "   F         Em             F",
+        "Survived, tonight, I may be going down",
+        "",
+        "          G                    F",
+        "'Cos everything goes round too tight",
+        "",
+        "   Em               F",
+        "Tonight, and as you watch me crawl",
+        "",
+        "    Esus4         E",
+        "You stand for more",
+        "",
+        "         Am             D                  F      Esus4  E",
+        "And your panic stricken blood will thicken up, tonight"
+      ]
+    },
+    {
+      "id": "sec-aacd7345-04d6-4779-9a2b-df2063f14781",
+      "label": "Chorus 1",
+      "content": [
+        "             C      G        E7     Am",
+        "'Cos I don't want you, to forgive me",
+        "",
+        "                 F                       D7/F#                  G",
+        "You'll follow me down, you'll follow me down, you'll follow me down"
+      ]
+    },
+    {
+      "id": "sec-f9095a8d-2323-4cb2-a127-9c42ffe1ab0e",
+      "label": "Verse 2",
+      "content": [
+        "   F        Em               F",
+        "Survive, tonight, I see your head's exposed",
+        "",
+        "            G                 F",
+        "So we shall kill constructive might",
+        "",
+        "       Em              F",
+        "It's alright, as your emotions fool you",
+        "",
+        "Page 1/2",
+        "   Esus4       E",
+        "My strong will rule you",
+        "",
+        "         Am             D                  F     Esus4  E",
+        "And your panic stricken blood will thicken up, tonight"
+      ]
+    },
+    {
+      "id": "sec-d99251eb-a916-45ea-9f88-084f659a9615",
+      "label": "Chorus 2",
+      "content": [
+        "             C      G        E7     Am",
+        "'Cos I don't want you, to forgive me",
+        "",
+        "                 F                       D7/F#                  G",
+        "You'll follow me down, you'll follow me down, you'll follow me down"
+      ]
+    },
+    {
+      "id": "sec-a6e4e0b6-a104-48a1-9e76-eceb61d11a98",
+      "label": "Bridge 1",
+      "content": [
+        "        Bb        Am",
+        "I won't feel restraint",
+        "",
+        "Em                       G",
+        "Watching you close sense down",
+        "",
+        "        Bb      Am",
+        "I can't compensate",
+        "",
+        "       E                     E7",
+        "That's more than I've got to give"
+      ]
+    },
+    {
+      "id": "sec-a26516af-80e6-49e4-b10c-ee14b390e2a3",
+      "label": "Instrumental 1",
+      "content": [
+        "| F    Em   | F    G    | F    Em   | F    Esus4 E |"
+      ]
+    },
+    {
+      "id": "sec-344813ad-2500-40c1-a75e-fda6dcccd651",
+      "label": "Verse 3",
+      "content": [
+        "         Am             D                  F      Esus4  E",
+        "And your panic stricken blood will thicken up, tonight"
+      ]
+    },
+    {
+      "id": "sec-45bbd766-e742-49b5-813e-90fead178ebc",
+      "label": "Chorus 3",
+      "content": [
+        "             C      G        E7     Am",
+        "'Cos I don't want you, to forgive me",
+        "",
+        "                 F                       D7/F#                  G",
+        "You'll follow me down, you'll follow me down, you'll follow me down",
+        "",
+        "             C      G        E7     Am",
+        "'Cos I don't want you, to forgive me",
+        "",
+        "                  F                      D7/F#                  G",
+        "You'll follow me down, you'll follow me down, you'll follow me down"
+      ]
+    },
+    {
+      "id": "sec-6f4e475f-7c24-49a4-a9c6-e572acbbacfe",
+      "label": "Outro 1",
+      "content": [
+        "Fmaj7  Em7"
+      ]
+    }
+  ]
+}
