@@ -217,6 +217,11 @@ h1 {
   white-space: pre-wrap;
 }
 
+.blank-row {
+  height: 14px;
+  line-height: 14px;
+}  
+
 /* =========================
    PAINEL DIREITO
 ========================= */
@@ -1208,12 +1213,16 @@ pre.contentEditable = true;
 section.content.forEach(line => {
   const row = document.createElement('div');
 
-  const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
+  // Linha vazia = espaço entre uma sequência e a seguinte
+  if (line.trim() === '') {
+    row.className = 'blank-row';
+  } else {
+    const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
+    row.className = isChord ? 'chord-row' : 'lyric-row';
 
-  row.className = isChord ? 'chord-row' : 'lyric-row';
-
-  // textContent preserva literalmente os espaços do texto.
-  row.textContent = line;
+    // Preserva exactamente os espaços existentes na linha.
+    row.textContent = line;
+  }
 
   pre.appendChild(row);
 });
