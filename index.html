@@ -205,15 +205,16 @@ h1 {
   margin: 0;
   padding: 0;
   line-height: 1.05;
+  white-space: pre-wrap;
 }
 
-/* letra */
 .lyric-row {
   color: var(--text-main);
   font-weight: normal;
   margin: 0 0 2px 0;
   padding: 0;
   line-height: 1.05;
+  white-space: pre-wrap;
 }
 
 /* =========================
@@ -1048,8 +1049,11 @@ async function toggleEdit() {
       if (!label) {
         throw new Error('Há secções com título vazio.');
       }
-      const content = sec.querySelector('pre').innerText.split('\n');
-      updatedSections.push({ id, label, content });
+      const content = Array.from(
+  sec.querySelectorAll('pre > div')
+).map(row => row.textContent);
+
+updatedSections.push({ id, label, content });
     });
 
     const res = await fetch(`data/songs/${fileParam}`);
@@ -1078,18 +1082,28 @@ async function toggleEdit() {
 ====================================================== */
 
 function createSectionsFromText() {
-  const raw = document.getElementById('rawText').value.trim();
-  if (!raw) {
+  const raw = document.getElementById('rawText').value;
+
+  if (!raw.trim()) {
     alert('Cola primeiro o texto da música.');
     return;
   }
 
-  const blocks = raw.split(/\n\s*\n/);
-  newSections = blocks.map((block, i) => ({
-    id: `sec-${crypto.randomUUID()}`,
-    label: '',
-    content: block.split('\n')
-  }));
+  // Normaliza apenas o tipo de quebra de linha.
+  // NÃO mexe nos espaços existentes nas linhas.
+  const normalized = raw.replace(/\r\n/g, '\n');
+
+  // Uma linha completamente vazia separa secções.
+  // Os espaços das restantes linhas são preservados.
+  const blocks = normalized.split(/\n[ \t]*\n/);
+
+  newSections = blocks
+    .filter(block => block.trim() !== '')
+    .map(block => ({
+      id: `sec-${crypto.randomUUID()}`,
+      label: '',
+      content: block.split('\n')
+    }));
 
   renderNewSections();
 }
@@ -1185,19 +1199,29 @@ SECTION_BASES.forEach(base => {
     /* ---------- LETRA + ACORDES (SEM ESPAÇAMENTO RIDÍCULO) ---------- */
 
     const pre = document.createElement('pre');
-    pre.contentEditable = true;
+pre.contentEditable = true;
 
-    pre.innerHTML = section.content
-      .map(line => {
-        const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
-      return `<div class="${isChord ? 'chord-row' : 'lyric-row'}">${line === '' ? '&nbsp;' : line}</div>`;
+section.content.forEach(line => {
+  const row = document.createElement('div');
 
-      })
-      .join('');
+  const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
 
-    pre.onblur = () => {
-      section.content = pre.innerText.split('\n');
-    };
+  row.className = isChord ? 'chord-row' : 'lyric-row';
+
+  // textContent preserva literalmente os espaços do texto.
+  row.textContent = line;
+
+  pre.appendChild(row);
+});
+
+function syncSectionContent() {
+  section.content = Array.from(
+    pre.querySelectorAll(':scope > div')
+  ).map(row => row.textContent);
+}
+
+pre.addEventListener('input', syncSectionContent);
+pre.addEventListener('blur', syncSectionContent);
 
     secDiv.appendChild(pre);
     musicDiv.appendChild(secDiv);
