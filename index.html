@@ -949,16 +949,20 @@ document.getElementById('songText').innerText =
 
     const pre = document.createElement('pre');
 
-    pre.innerHTML = section.content
-      .map(line => {
-        const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
-        return `<div class="${isChord ? 'chord-row' : 'lyric-row'}">
-          ${line === '' ? '&nbsp;' : line}
-        </div>`;
-      })
-      .join('');
+section.content.forEach(line => {
+  const row = document.createElement('div');
 
-    secDiv.appendChild(pre);
+  const isChord = /^[A-G][#bm0-9/\s]*$/.test(line.trim());
+
+  row.className = isChord ? 'chord-row' : 'lyric-row';
+
+  // Preserva exactamente os espaços existentes na linha.
+  row.textContent = line;
+
+  pre.appendChild(row);
+});
+
+secDiv.appendChild(pre);
     musicDiv.appendChild(secDiv);
   });
 }
