@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "artist": "Pink Floyd",
+    "title": "Time",
+    "genre": "Rock",
+    "decade": "1980"
+  },
+  "sections": [
+    {
+      "id": "sec-7b533b24-df0f-4d66-857d-1cd78d1c8317",
+      "label": "Intro 1",
+      "content": [
+        "| E     |(E)    | F#m   |(F#m)  | x4",
+        "",
+        "| F#m   |(F#m)  | A     |(A)    |",
+        "",
+        "| E     |(E)    | F#m   |(F#m)  |"
+      ]
+    },
+    {
+      "id": "sec-a0bdf500-ff1f-447b-a92a-f31a02fd3fc8",
+      "label": "Verse 1",
+      "content": [
+        "F#m                                       A",
+        "Ticking away the moments that make up a dull day",
+        "",
+        "E                                          F#m",
+        "Fritter and waste the hours in an offhand way",
+        "",
+        "F#m                                         A",
+        "Kicking around on a piece of ground in your hometown",
+        "",
+        "E                                                 F#m",
+        "Waiting for someone or something to show you the way"
+      ]
+    },
+    {
+      "id": "sec-b7034efc-b9cd-46cf-8ce3-0622c0fbe756",
+      "label": "Chorus 1",
+      "content": [
+        "Dmaj7                           Amaj7",
+        "Tired of lying in the sunshine, staying home to watch the rain",
+        "",
+        "Dmaj7                               Amaj7",
+        "You are young and life is long, and there is time to kill today",
+        "",
+        "Dmaj7                          C#m7",
+        "     And then one day you find,   ten years have got behind you",
+        "",
+        "Bm7                           E",
+        "No one told you when to run ... You missed the starting gun"
+      ]
+    },
+    {
+      "id": "sec-3d5c309b-5640-4b0c-bbe8-4fb0cb45a9b7",
+      "label": "Solo 1",
+      "content": [
+        "F#m    A    E    F#m    x4",
+        "",
+        "Dmaj7  Amaj7  Dmaj7  Amaj7  Dmaj7  C#m7  Bm7  E"
+      ]
+    },
+    {
+      "id": "sec-4d51a158-e605-4b4a-a2c8-e1a3a41a2138",
+      "label": "Verse 2",
+      "content": [
+        "         F#m                                                A",
+        "And you run and you run to catch up with the Sun, but it's sinking.",
+        "",
+        "E                                     F#m",
+        "Racing around to come up behind you again.",
+        "",
+        "    F#m                                            A",
+        "The Sun is the same in a relative way, but you're older,",
+        "",
+        "E                                         F#m",
+        "shorter of breath, and one day closer to death."
+      ]
+    },
+    {
+      "id": "sec-da820532-e3ad-4abd-aa86-bd5a61f5cb21",
+      "label": "Chorus 2",
+      "content": [
+        "Dmaj7                          Amaj7",
+        "Every year is getting shorter, never seem to find the time.",
+        "",
+        "Dmaj7                                Amaj7",
+        "Plans that either come to naught, or half a page of scribbled lines.",
+        "",
+        "Dmaj7                     C#m7",
+        "Hanging on in quiet desperation is the English way.",
+        "",
+        "    Bm                              Bm7                   F/B",
+        "The time is gone, the song is over. Thought I'd something more to say."
+      ]
+    },
+    {
+      "id": "sec-552fb53e-baf0-4d43-beb3-c9ae9d49d34f",
+      "label": "Bridge 1",
+      "content": [
+        "Emadd9    A    Emadd9    A"
+      ]
+    },
+    {
+      "id": "sec-00ffefc9-47d9-4dd5-8824-e517b2db6f23",
+      "label": "Outro 1",
+      "content": [
+        "Em7            A7",
+        "  Home, home again",
+        "",
+        "Em7                      A7",
+        "I like to be here when I can",
+        "",
+        "Em7                          A7",
+        "  When I come home, cold and tired",
+        "",
+        "     Em7                               A7",
+        "It's good to warm my bones beside the fire",
+        "",
+        "Cmaj7",
+        "Far away, across the field",
+        "",
+        "    Bm7",
+        "The tolling of the iron bell",
+        "",
+        "Fmaj7",
+        "Calls the faithful to their knees",
+        "",
+        "G                  D7#9   D7b9  Bm",
+        "To hear the softly spoken magic spell"
+      ]
+    }
+  ]
+}
