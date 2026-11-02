@@ -304,5 +304,14 @@
     "decade": "1990",
     "added": "2026-08-27T10:07:26.470Z",
     "plays": 3
+  },
+  {
+    "file": "heart-alone.json",
+    "artist": "Heart",
+    "title": "Alone",
+    "genre": "Rock",
+    "decade": "1980",
+    "added": "2026-11-02T09:54:28.143Z",
+    "plays": 0
   }
 ]
