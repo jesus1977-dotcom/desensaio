@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "artist": "Heart",
+    "title": "Alone",
+    "genre": "Rock",
+    "decade": "1980"
+  },
+  "sections": [
+    {
+      "id": "sec-d8ec4730-e738-4941-9516-e930ec39ddf6",
+      "label": "Intro 1",
+      "content": [
+        "Bm   G   A   A7/G",
+        "Bm   G   A   F#"
+      ]
+    },
+    {
+      "id": "sec-86aca441-f1d9-41c2-beb4-26be59de8763",
+      "label": "Verse 1",
+      "content": [
+        "",
+        "Bm         G              A          A7/G            Bm           G    A   F#",
+        "I hear the ticking of the clock, I'm lying here the room's pitch dark",
+        "",
+        "Bm         G              A         A7/G           Bm          G   A   F#",
+        "I wonder where you are tonight, no answer on your telephone",
+        "",
+        "          G        D/F#       G/E       D",
+        "And the night goes by so very slow",
+        "",
+        "      G                  D/F#     G/E    Asus4  A",
+        "Oh I hope that it won't end so...",
+        "",
+        " D",
+        "Alone"
+      ]
+    },
+    {
+      "id": "sec-27ed1508-e143-45ae-9332-3da2348b7dc4",
+      "label": "Chorus 1",
+      "content": [
+        "",
+        "Em      C     G           D",
+        "    Till now, I always got by on my own",
+        "",
+        "Em  C              G            D",
+        "    I never really cared until I met you",
+        "",
+        "Em  C         G               D",
+        "    And now it chills me to the bone",
+        "",
+        "  G/B         C       D",
+        "    How do I get you alone",
+        "",
+        "  G/B         C       D       Dmaj7",
+        "    How do I get you alone"
+      ]
+    },
+    {
+      "id": "sec-a19efffd-2262-41f6-9087-abf7125ed1f2",
+      "label": "Verse 2",
+      "content": [
+        "",
+        "Bm         G              A",
+        "You don't know how long I have wanted,",
+        "",
+        "          A7/G            Bm           G    A   F#",
+        "       to touch your lips and hold you tight.",
+        "",
+        "Bm         G              A",
+        "You don't know how long I have waited,",
+        "",
+        "          A7/G            Bm           G    A   F#",
+        "       and I was gonna tell you tonight.",
+        "",
+        "        G        D/F#       G/E       D",
+        "But the secret is still my own,",
+        "",
+        "        G            D/F#       G/E     Asus4  A",
+        "And my love for you is still unknown",
+        "",
+        " D",
+        "Alone"
+      ]
+    },
+    {
+      "id": "sec-32d7bffc-feda-437b-bffe-74935f50d0ec",
+      "label": "Instrumental 1",
+      "content": [
+        "",
+        "Em   C     G   D",
+        "Em   C     G   D",
+        "     Alone ..."
+      ]
+    },
+    {
+      "id": "sec-d50caa80-dd32-4154-93f8-72e01eb8d498",
+      "label": "Chorus 2",
+      "content": [
+        "",
+        "Em      C     G           D",
+        "    Till now, I always got by on my own",
+        "",
+        "Em  C              G            D",
+        "    I never really cared until I met you",
+        "",
+        "Em  C         G               D",
+        "    And now it chills me to the bone",
+        "",
+        "  G/B         C       D",
+        "    How do I get you alone",
+        "",
+        "  G/B         C       D",
+        "    How do I get you alone"
+      ]
+    },
+    {
+      "id": "sec-3b9d4b7a-5f7c-4585-8ea6-faf02a438e7c",
+      "label": "Instrumental 2",
+      "content": [
+        "",
+        "Em   C     G   D",
+        "",
+        "Em   C     G   D",
+        "",
+        "C     G/B  Am   G",
+        "",
+        "D/F#  D/E  D    D7/C"
+      ]
+    },
+    {
+      "id": "sec-17044568-b2f7-4829-aaa9-e8119717a91d",
+      "label": "Bridge 1",
+      "content": [
+        "",
+        "G/B         C       D",
+        "  How do I get you alone",
+        "",
+        "G/B         C       D",
+        "  How do I get you alone",
+        "",
+        " G/B         C       D",
+        "Alone ...",
+        "",
+        " G/B         C       D",
+        "Alone ..."
+      ]
+    }
+  ]
+}
